@@ -1,0 +1,47 @@
+<article class="group relative bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+  {{ $imgSrc := "" }}
+  {{ if .Params.image }}
+    {{ $imagePath := .Params.image }}
+    {{ if reflect.IsSlice .Params.image }}{{ $imagePath = index .Params.image 0 }}{{ end }}
+    {{ $res := .Resources.GetMatch $imagePath }}
+    {{ if $res }}{{ $imgSrc = $res.RelPermalink }}{{ else }}{{ $imgSrc = $imagePath | relURL }}{{ end }}
+  {{ end }}
+  
+  {{ if $imgSrc }}
+  <div class="relative w-full overflow-hidden border-b border-gray-200 bg-white">
+    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 z-10"></div>
+    <img src="{{ $imgSrc }}" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700" alt="{{ .Title }}" />
+  </div>
+  {{ end }}
+  
+  <div class="p-6 md:p-8 flex flex-col items-start flex-grow">
+    <!-- Optional Categories -->
+    {{ $categories := .Params.categories }}
+    {{ if $categories }}
+    <div class="flex flex-wrap gap-2 mb-3">
+      {{ range $i, $p := $categories }}
+      <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="text-xs font-bold uppercase tracking-widest text-primary hover:text-dark transition-colors">{{ . | humanize }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <h3 class="w-full text-xl md:text-2xl font-black text-dark uppercase mb-4 line-clamp-2 group-hover:text-primary transition-colors">
+      <a href="{{ .RelPermalink }}" class="block">{{ .Title }}</a>
+    </h3>
+    
+    <p class="text-gray-600 text-sm mb-8 line-clamp-3">
+      {{ if .Params.description }}
+        {{ .Params.description | plainify }}
+      {{ else }}
+        {{ .Summary | plainify }}
+      {{ end }}
+    </p>
+    
+    <div class="mt-auto flex items-center w-full">
+      <a href="{{ .RelPermalink }}" class="inline-flex items-center text-primary group/btn overflow-hidden py-2">
+        <span class="font-bold text-sm tracking-widest uppercase opacity-0 -translate-x-4 max-w-0 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 group-hover/btn:max-w-xs group-hover/btn:mr-2 transition-all duration-500 ease-in-out whitespace-nowrap">View Product</span>
+        <svg class="w-6 h-6 transition-all duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+  </div>
+</article>

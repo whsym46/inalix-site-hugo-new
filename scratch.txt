@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ if eq .File.LogicalName "contact.md" }}
+    <!-- Inject Contact Layout -->
+    {{- /* We use the contact layout directly here */ -}}
+    {{- $layoutContent := resources.Get "contact/single.html" -}}
+    {{- /* Actually we can't 'include' a top-level template, but we can copy the contents or use a partial */ -}}
+  {{ end }}
+{{ end }}

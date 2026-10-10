@@ -1,0 +1,50 @@
+[full_name]
+other = "Full Name"
+
+[working_email]
+other = "Working Email"
+
+[contact_phone]
+other = "Phone Number"
+
+[contact_message]
+other = "How can we help?"
+
+[contact_message_placeholder]
+other = "Message goes here..."
+
+[read_more]
+other = "Read More"
+
+[tags]
+other = "Tags"
+
+[categories]
+other = "Categories"
+
+[home]
+other = "Home"
+
+[share]
+other = "Share"
+
+[related_posts]
+other = "Related Posts"
+
+[hero_airport_title]
+other = "Inalix Airport Solutions"
+
+[hero_airport_desc]
+other = "Inalix offers wide range of solutions for all of your airport system needs. Our track records can prove our worthy. We develop our own custom system for airport from Flight Information Display System (FIDS), Billing system, to Airport Operation Data Base (AODB). Either Landside or Airside, Inalix has the solutions."
+
+[hero_industrial_title]
+other = "Inalix Industrial Solutions"
+
+[hero_industrial_desc]
+other = "Inalix also offers wide range of solutions for all of your industrial needs. We can provide Control & Instrument, Mechanical, Electrical, and Electronical. Either Procurement or Instalation, Inalix has the solutions."
+
+[learn_more]
+other = "Learn More"
+
+[contact_us]
+other = "Contact Us"

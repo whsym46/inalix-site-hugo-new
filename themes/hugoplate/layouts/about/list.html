@@ -1,0 +1,194 @@
+{{ define "main" }}
+{{ partial "page-header" . }}
+
+<!-- History Section -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row gx-5 mb-8">
+      <div class="lg:col-5 flex items-center justify-center mb-10 lg:mb-0">
+        <div class="w-full lg:w-4/5">
+          {{ partial "logo" (dict "Class" "w-full h-auto text-dark dark:text-white") }}
+        </div>
+      </div>
+      <div class="lg:col-7">
+        <h2 class="mb-6">{{ .Params.history_title }}</h2>
+        <div class="content text-lg">
+          {{ $paragraphs := split .Content "</p>" }}
+          {{ range $i, $p := $paragraphs }}
+            {{ if and (lt $i 4) (ne (trim $p " \n\r") "") }}
+              {{ $p | safeHTML }}</p>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    
+    <div class="row gx-5">
+      <div class="lg:col-12">
+        <div class="content text-lg">
+          {{ $paragraphs := split .Content "</p>" }}
+          {{ range $i, $p := $paragraphs }}
+            {{ if and (ge $i 4) (ne (trim $p " \n\r") "") }}
+              {{ $p | safeHTML }}</p>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Culture Banner Section -->
+{{ with .Params.culture_banner }}
+<section class="section-sm bg-theme-light dark:bg-darkmode-theme-light">
+  <div class="container">
+    <div class="row items-center">
+      <div class="lg:col-5 mb-10 lg:mb-0">
+        <h2 class="mb-6">{{ .title }}</h2>
+        <p class="text-lg text-text dark:text-darkmode-text">{{ .text }}</p>
+      </div>
+      <div class="lg:col-7 relative overflow-hidden">
+        <!-- Slider Horizontal Infinite -->
+        <div class="flex animate-scroll w-max">
+          {{ $cultureImages := .images }}
+          {{ $pageContext := $ }}
+          {{ range seq 10 }}
+            {{ range $cultureImages }}
+              {{ $imgSrc := "" }}
+              {{ $res := $pageContext.Resources.GetMatch .image }}
+              {{ if $res }}
+                {{ $imgSrc = $res.RelPermalink }}
+              {{ else }}
+                {{ $imgSrc = .image | relURL }}
+              {{ end }}
+              <div class="px-3 w-[280px] md:w-[400px] shrink-0">
+                <img src="{{ $imgSrc }}" alt="Culture" class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg">
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+</style>
+
+<!-- Values & Solutions -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <!-- Values -->
+      <div class="lg:col-6 mb-10 lg:mb-0">
+        <h2 class="mb-8">{{ .Params.values_title }}</h2>
+        <div class="space-y-8">
+          {{ range .Params.values }}
+          <div class="flex">
+            <div class="mr-6">
+              <span
+                class="material-symbols-outlined text-primary bg-theme-light dark:bg-darkmode-theme-light p-4 rounded-full"
+                style="font-size: 36px;">{{ .icon }}</span>
+            </div>
+            <div>
+              <h4 class="h5 mb-2">{{ .title }}</h4>
+              <p>{{ .description }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      <!-- Solutions -->
+      <div class="lg:col-6">
+        <h2 class="mb-8">{{ .Params.solution_title }}</h2>
+        <div class="content">
+          {{ .Params.solution_text | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Banner Quote -->
+{{ if .Params.banner_quote }}
+<section class="section-sm bg-primary text-white text-center rounded-lg mx-4 lg:mx-auto container shadow-lg">
+  <div class="py-12 px-6">
+    <h2 class="text-white font-medium italic">"{{ .Params.banner_quote }}"</h2>
+  </div>
+</section>
+{{ end }}
+
+<!-- FAQs & Sidebar Card -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <!-- FAQs -->
+      <div class="lg:col-8 mb-10 lg:mb-0">
+        <h2 class="mb-8">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {{ range .Params.faqs }}
+          <details name="faq-accordion" class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg group">
+            <summary
+              class="p-6 cursor-pointer font-bold list-none flex justify-between items-center focus:outline-none">
+              {{ .question }}
+              <span class="text-primary group-open:rotate-45 transition-transform duration-300">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </summary>
+            <div class="p-6 pt-0 content text-text dark:text-darkmode-text">
+              {{ .answer | markdownify }}
+            </div>
+          </details>
+          {{ end }}
+        </div>
+        <script>
+          document.querySelectorAll('details[name="faq-accordion"]').forEach((el) => {
+            el.addEventListener('toggle', (e) => {
+              if (e.target.open) {
+                document.querySelectorAll('details[name="faq-accordion"]').forEach((other) => {
+                  if (other !== e.target) other.removeAttribute('open');
+                });
+              }
+            });
+          });
+        </script>
+      </div>
+
+      <!-- Sidebar Card -->
+      <div class="lg:col-4">
+        {{ with .Params.sidebar_card }}
+        <div
+          class="p-8 rounded-lg text-center bg-theme-light dark:bg-darkmode-theme-light relative overflow-hidden h-full flex flex-col justify-center items-center">
+          {{ if .bg_image }}
+          <div class="absolute inset-0 opacity-10 z-0">
+            <img src="{{ .bg_image }}" class="w-full h-full object-cover" alt="Sidebar Background" />
+          </div>
+          {{ end }}
+          <div class="relative z-10">
+            <div class="mb-6">
+              <!-- Support font-awesome or fallback -->
+              {{ if hasPrefix .icon "stmicon" }}
+              <i class="fa-solid fa-chart-line text-primary text-5xl"></i> <!-- WordPress icon fallback -->
+              {{ else }}
+              <span class="material-symbols-outlined text-primary" style="font-size: 64px;">{{ .icon }}</span>
+              {{ end }}
+            </div>
+            <h3 class="h4 mb-4">{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

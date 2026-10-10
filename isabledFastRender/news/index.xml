@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on Inalix - Airport &amp; Industrial Solutions</title>
+    <link>http://localhost:1313/news/</link>
+    <description>Recent content in News on Inalix - Airport &amp; Industrial Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Oct 2023 05:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vacation – Backend Developer</title>
+      <link>http://localhost:1313/news/vacation-backend-developer/</link>
+      <pubDate>Sat, 21 Oct 2023 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/vacation-backend-developer/</guid>
+      <description>Join Our Team as a Back-End Developer at Inalix&#xA;Are you ready to embark on a journey where your coding skills can redefine the future of airport solutions?</description>
+    </item>
+    <item>
+      <title>Inalix ACDM Implementation at Juanda International Airport &amp; I Gusti Ngurah Rai Airport</title>
+      <link>http://localhost:1313/news/inalix-acdm-implementation-at-juanda-international-airport-i-gusti-ngurah-rai-airport/</link>
+      <pubDate>Fri, 25 Aug 2023 18:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/inalix-acdm-implementation-at-juanda-international-airport-i-gusti-ngurah-rai-airport/</guid>
+      <description>Inalix takes immense pride in introducing the pioneering Inalix ACDM, a homegrown Airport Collaboration Decision Making application in Indonesia.</description>
+    </item>
+    <item>
+      <title>How Airport Master Clocks Keep Air Travel Safe and On Time</title>
+      <link>http://localhost:1313/news/how-airport-master-clocks-keep-air-travel-safe-and-on-time/</link>
+      <pubDate>Fri, 30 Jun 2023 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/how-airport-master-clocks-keep-air-travel-safe-and-on-time/</guid>
+      <description>Have you ever wondered how airports keep track of time and ensure that flights depart and arrive on schedule?</description>
+    </item>
+    <item>
+      <title>5 Key Features of an Effective Airport Announcement System</title>
+      <link>http://localhost:1313/news/5-key-features-of-an-effective-airport-announcement-system/</link>
+      <pubDate>Fri, 16 Jun 2023 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/5-key-features-of-an-effective-airport-announcement-system/</guid>
+      <description>An airport announcement system is a critical component of any airport’s operations.</description>
+    </item>
+    <item>
+      <title>5 Benefits of Implementing an Aeronautical Billing System</title>
+      <link>http://localhost:1313/news/5-benefits-of-implementing-an-aeronautical-billing-system/</link>
+      <pubDate>Fri, 02 Jun 2023 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/5-benefits-of-implementing-an-aeronautical-billing-system/</guid>
+      <description>If you run an aviation business, you know how important it is to keep track of billing and invoicing.</description>
+    </item>
+    <item>
+      <title>How Inalix Airport FIDS Software Can Improve Passenger Experience</title>
+      <link>http://localhost:1313/news/how-inalix-airport-fids-software-can-improve-passenger-experience/</link>
+      <pubDate>Fri, 19 May 2023 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/how-inalix-airport-fids-software-can-improve-passenger-experience/</guid>
+      <description>Inalix Airport FIDS software is a powerful tool that can help airports manage their operations more efficiently and provide a better experience for passengers.</description>
+    </item>
+    <item>
+      <title>Inalix Airport Solutions : FIDS &amp; Digital Signage at Ngurah Rai International Airport</title>
+      <link>http://localhost:1313/news/fids-digital-signage-at-ngurah-rai-international-airport/</link>
+      <pubDate>Wed, 22 Jun 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/fids-digital-signage-at-ngurah-rai-international-airport/</guid>
+      <description>Airport Inalix solutions include FIDS and Digital Signage Systems. In this post we will show our solutions that implemented at Ngurah Rai International Airport, Bali.</description>
+    </item>
+  </channel>
+</rss>

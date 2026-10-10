@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inalix Projects on Inalix - Airport &amp; Industrial Solutions</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Inalix Projects on Inalix - Airport &amp; Industrial Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jul 2019 05:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SIOPSKOM Application - Angkasa Pura I (Phase 2)</title>
+      <link>http://localhost:1313/projects/siopskom-application-angkasa-pura-i-phase-2/</link>
+      <pubDate>Fri, 19 Jul 2019 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/siopskom-application-angkasa-pura-i-phase-2/</guid>
+      <description>The &amp;ldquo;Airport Operational Database (AODB)/SIOPSKOM Implementation for Angkasa Pura I&amp;rdquo; project aimed to centralize and optimize the management of airport operations data across multiple airports.</description>
+    </item>
+    <item>
+      <title>I Gusti Ngurah Rai International Airport - FIDS</title>
+      <link>http://localhost:1313/projects/i-gusti-ngurah-rai-international-airport-fids/</link>
+      <pubDate>Wed, 28 Jul 2004 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/i-gusti-ngurah-rai-international-airport-fids/</guid>
+      <description>The &amp;ldquo;Development &amp;amp; Implementation of the Flight Information Display System (FIDS) for Ngurah Rai International Airport, Denpasar - Bali&amp;rdquo; project focused on creating an advanced, real-time display system to manage and present critical flight information across the airport.</description>
+    </item>
+    <item>
+      <title>Polonia International Airport Medan - Automatic Announcement System</title>
+      <link>http://localhost:1313/projects/polonia-international-airport-medan-automatic-announcement-system/</link>
+      <pubDate>Wed, 28 Jul 2004 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/polonia-international-airport-medan-automatic-announcement-system/</guid>
+      <description>The &amp;ldquo;Development &amp;amp; Implementation of the Airport Automatic Announcement System at Polonia Airport Medan&amp;rdquo; project involved designing, developing, and deploying an automated announcement system to enhance the passenger experience and streamline operations.</description>
+    </item>
+    <item>
+      <title>Hasanuddin International Airport - FIDS</title>
+      <link>http://localhost:1313/projects/hasanuddin-international-airport-fids/</link>
+      <pubDate>Thu, 15 Apr 2004 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/hasanuddin-international-airport-fids/</guid>
+      <description>Development &amp;amp; Implementation of Airport FIDS at Hasannudin International Airpot, Ujungpandang.</description>
+    </item>
+    <item>
+      <title>Sam Ratulangi Airport - FIDS</title>
+      <link>http://localhost:1313/projects/sam-ratulangi-airport-fids/</link>
+      <pubDate>Wed, 15 Jan 2003 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/sam-ratulangi-airport-fids/</guid>
+      <description>Implementation of Airport FIDS at Sam Ratulangi Airpot, North Sulawesi. Inalix solution for better Airport operation and better experience for passengers.</description>
+    </item>
+    <item>
+      <title>Sepinggan International Airport - FIDS Software Development &amp; Migration from Existing System</title>
+      <link>http://localhost:1313/projects/sepinggan-international-airport-fids/</link>
+      <pubDate>Wed, 15 Jan 2003 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/sepinggan-international-airport-fids/</guid>
+      <description>Development Airport FIDS at Sepinggan International Airpot. We also provide migration from existing system.</description>
+    </item>
+    <item>
+      <title>Juanda International Airport - FIDS, New Installation &amp; System Maintenance</title>
+      <link>http://localhost:1313/projects/juanda-international-airport/</link>
+      <pubDate>Wed, 15 May 2002 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/juanda-international-airport/</guid>
+      <description>New installation of Inalix FIDS at Juanda International Airpot. We also provide system maintenance to make sure that system running well and optimized.</description>
+    </item>
+    <item>
+      <title>Hang Nadim Airport - FIDS, System Maintenance &amp; Migration From Existing System</title>
+      <link>http://localhost:1313/projects/project1-hangnadim/</link>
+      <pubDate>Fri, 12 Jan 2001 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project1-hangnadim/</guid>
+      <description>This is our first project that giving us motivation to enter the airport solution business.</description>
+    </item>
+  </channel>
+</rss>

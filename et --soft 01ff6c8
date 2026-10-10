@@ -1,0 +1,13 @@
+[33mfc90bf4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m01ff6c8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: commit: fix: update Node.js to 22.x for Hugo PostCSS compatibility
+[33mfc90bf4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{2}: commit: chore: update baseURL to inalix.conime.id
+[33m9c817f9[m HEAD@{3}: commit: fix: update hugo version to latest
+[33m1229e91[m HEAD@{4}: commit: fix: revert npx hugo to hugo
+[33m1eeeeae[m HEAD@{5}: commit: update static.yml
+[33m90aace6[m HEAD@{6}: commit: update static.yml
+[33m4335109[m HEAD@{7}: commit: update package.lock.json
+[33md22b6c9[m HEAD@{8}: pull: Fast-forward
+[33m5308add[m HEAD@{9}: reset: moving to HEAD
+[33m5308add[m HEAD@{10}: commit: update
+[33m7d44de5[m HEAD@{11}: Branch: renamed refs/heads/master to refs/heads/main
+[33m7d44de5[m HEAD@{13}: commit (initial): first commit

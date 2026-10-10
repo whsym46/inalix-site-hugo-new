@@ -1,0 +1,54 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "About"
+pageRef = "/pages/about"
+weight = 2
+
+[[main]]
+name = "History"
+pageRef = "/pages/history"
+weight = 3
+
+[[main]]
+name = "Products"
+pageRef = "/products"
+weight = 4
+
+
+[[main]]
+name = "Projects"
+pageRef = "/projects"
+weight = 5
+
+
+[[main]]
+name = "News"
+pageRef = "/news"
+weight = 6
+
+[[main]]
+name = "Contact"
+pageRef = "/pages/contact"
+weight = 7
+
+
+
+
+# footer menu
+[[footer]]
+name = "About"
+pageRef = "/pages/about"
+weight = 1
+
+
+[[footer]]
+name = "Privacy Policy"
+pageRef = "/pages/privacy-policy"
+weight = 2

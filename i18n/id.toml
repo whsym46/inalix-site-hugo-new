@@ -1,0 +1,50 @@
+[full_name]
+other = "Nama Lengkap"
+
+[working_email]
+other = "Email Aktif"
+
+[contact_phone]
+other = "Nomor Telepon"
+
+[contact_message]
+other = "Pesan Anda"
+
+[contact_message_placeholder]
+other = "Tulis pesan Anda di sini..."
+
+[read_more]
+other = "Baca Selengkapnya"
+
+[tags]
+other = "Label"
+
+[categories]
+other = "Kategori"
+
+[home]
+other = "Beranda"
+
+[share]
+other = "Bagikan"
+
+[related_posts]
+other = "Artikel Terkait"
+
+[hero_airport_title]
+other = "Solusi Bandara Inalix"
+
+[hero_airport_desc]
+other = "Inalix menawarkan berbagai macam solusi untuk semua kebutuhan sistem bandara Anda. Rekam jejak kami dapat membuktikan kelayakan kami. Kami mengembangkan sistem kustom kami sendiri untuk bandara mulai dari Flight Information Display System (FIDS), Sistem Billing, hingga Airport Operation Data Base (AODB). Baik Landside maupun Airside, Inalix punya solusinya."
+
+[hero_industrial_title]
+other = "Solusi Industri Inalix"
+
+[hero_industrial_desc]
+other = "Inalix juga menawarkan berbagai macam solusi untuk semua kebutuhan industri Anda. Kami dapat menyediakan Kontrol & Instrumen, Mekanikal, Elektrikal, dan Elektronikal. Baik Pengadaan maupun Pemasangan, Inalix punya solusinya."
+
+[learn_more]
+other = "Pelajari Lebih Lanjut"
+
+[contact_us]
+other = "Hubungi Kami"

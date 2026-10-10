@@ -1,0 +1,40 @@
+// Add your own custom styles here
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+    }
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #4F46E5 !important;
+    }
+
+    .slider {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+    }
+    .slide {
+        min-width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+    .slider-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    .slider-nav button {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .theme-switcher {
+        display: none !important;
+    }

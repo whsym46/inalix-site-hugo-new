@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Products on Inalix - Airport &amp; Industrial Solutions</title>
+    <link>http://localhost:1313/products/</link>
+    <description>Recent content in Products on Inalix - Airport &amp; Industrial Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Apr 2022 05:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aeronautical Billing System</title>
+      <link>http://localhost:1313/products/aeronautical-billing/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/aeronautical-billing/</guid>
+      <description>Inalix Aero Billing System (X-ABS) caters to your needs for aeronautical calculation and billing system.</description>
+    </item>
+    <item>
+      <title>Airport Collaboration Decision Making</title>
+      <link>http://localhost:1313/products/x-acdm/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/x-acdm/</guid>
+      <description>Operational Improvement is the goal of many airports. While some airports are still expandable in terms of additional resources, other airports will have to make some improvement as well.</description>
+    </item>
+    <item>
+      <title>Airport Operational Database System</title>
+      <link>http://localhost:1313/products/x-aodb/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/x-aodb/</guid>
+      <description>INALIX Airport Operation Data Base (X-AODB) System is a centralized data center that links minimum two or more IT systems which can be managed into an integrated airport operational information database.</description>
+    </item>
+    <item>
+      <title>Airport Portal</title>
+      <link>http://localhost:1313/products/airport-portal/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/airport-portal/</guid>
+      <description>Airport partners and stakeholders are always in need for updated flight information, the usual way to communicate those real time information update is usually done by using traditional ways such as using phones, walkie-talkie or even partners will come to the related office unit just to ask about the flight information update.</description>
+    </item>
+    <item>
+      <title>Airport Resource Management System</title>
+      <link>http://localhost:1313/products/airport-resource-management-system/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/airport-resource-management-system/</guid>
+      <description>Real-time flight management is a critical point to have in all of Airport operation business.</description>
+    </item>
+    <item>
+      <title>Automatic Announcement System</title>
+      <link>http://localhost:1313/products/automatic-announcement-system/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/automatic-announcement-system/</guid>
+      <description>INALIX Automatic Announcement System (X-AAS) provides real-time automation of voice announcements for passengers throughout the terminal.</description>
+    </item>
+    <item>
+      <title>Digital Signage &amp; Videowall System</title>
+      <link>http://localhost:1313/products/digital-signagne-videowall-system/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/digital-signagne-videowall-system/</guid>
+      <description>INALIX Digital Signage &amp;amp; Videowall System (X-DSVS) is a visual technology that processes, controls and displays multimedia files in a visual environment that can be configured as needed.</description>
+    </item>
+    <item>
+      <title>Flight Information Display System</title>
+      <link>http://localhost:1313/products/x-fids/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/x-fids/</guid>
+      <description>INALIX Flight Information Display System (X-FIDS) is the go to system for displaying up-to-date flight information status that is intended for passengers, general public, airport tenants, airport management and airport operational staff throughout the Airport.</description>
+    </item>
+    <item>
+      <title>Master Clock System</title>
+      <link>http://localhost:1313/products/master-clock/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/master-clock/</guid>
+      <description>Inalix Master Clock System (X-MCS) is a centralized time protocol which provides synchronized and accurate time right to the seconds to networks of any size.</description>
+    </item>
+    <item>
+      <title>Resources Management System</title>
+      <link>http://localhost:1313/products/x-rms/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/x-rms/</guid>
+      <description>Real-time flight management is a critical point to have in all of Airport operation business.</description>
+    </item>
+    <item>
+      <title>X-Aivision</title>
+      <link>http://localhost:1313/products/x-aivision/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/x-aivision/</guid>
+      <description>X-AiVision is an advanced solution that uses artificial intelligence to analyze, understand, and interpret digital images and videos.</description>
+    </item>
+  </channel>
+</rss>

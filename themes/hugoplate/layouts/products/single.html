@@ -1,0 +1,119 @@
+{{ define "main" }}
+  {{ $imgSrc := "" }}
+  {{ $image := .Params.image }}
+  {{ if reflect.IsSlice $image }}{{ $image = index $image 0 }}{{ end }}
+  {{ if $image }}
+    {{ $res := .Resources.GetMatch $image }}
+    {{ if $res }}{{ $imgSrc = $res.RelPermalink }}{{ else }}{{ $imgSrc = $image | relURL }}{{ end }}
+  {{ end }}
+
+  <!-- Product Hero (Split) -->
+  <div class="w-full bg-[#111215] pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden border-b-4 border-primary relative">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent skew-x-12 transform translate-x-32 hidden lg:block pointer-events-none"></div>
+    
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        
+        <!-- Left: Text & CTA -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+          <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ if .Params.solution }}{{ .Params.solution }}{{ else }}Our Product{{ end }}</h4>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-tight mb-8">
+            {{ .Title }}
+          </h1>
+          <p class="text-gray-400 text-lg md:text-xl leading-relaxed mb-10">
+            {{ .Params.description | default "Discover our premium solutions designed for efficiency, sustainability, and innovation." }}
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="{{ `contact/` | relLangURL }}" class="w-full sm:w-auto bg-primary hover:bg-dark text-white hover:text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors">
+              Request Demo
+            </a>
+            <a href="#details" class="w-full sm:w-auto bg-transparent hover:bg-white/5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right: Image -->
+        <div class="w-full lg:w-1/2 relative">
+          {{ if $imgSrc }}
+            <div class="relative z-10 p-2 bg-white/5 border border-white/10 shadow-2xl rounded-sm transform lg:-rotate-2 hover:rotate-0 transition-transform duration-500">
+              <img src="{{ $imgSrc }}" alt="{{ .Title }}" class="w-full h-auto object-cover">
+            </div>
+            <!-- Blob / Glow behind image -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/20 blur-3xl rounded-full z-0 pointer-events-none"></div>
+          {{ else }}
+            <div class="relative z-10 p-20 bg-white/5 border border-white/10 shadow-2xl rounded-sm transform lg:-rotate-2 flex flex-col items-center justify-center text-gray-500">
+               <i class="fa-solid fa-cube text-9xl mb-6"></i>
+               <span class="uppercase tracking-widest font-bold">Premium Solution</span>
+            </div>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section id="details" class="py-24 bg-gray-50 dark:bg-darkmode-body transition-colors">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <div class="flex flex-col lg:flex-row gap-16">
+        
+        <!-- Left: Sticky TOC -->
+        <aside class="hidden lg:block w-1/4 shrink-0">
+          <div class="sticky top-32 bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-darkmode-border p-8 shadow-lg">
+            <h4 class="text-lg font-bold text-dark dark:text-white uppercase tracking-wider mb-6 pb-2 border-b-2 border-primary inline-block">Page Contents</h4>
+            <div class="toc prose prose-a:text-gray-600 dark:prose-a:text-gray-400 hover:prose-a:text-primary dark:hover:prose-a:text-primary prose-a:no-underline prose-ul:list-none prose-ul:pl-0 prose-li:my-2 prose-li:font-medium text-sm">
+              {{ .TableOfContents }}
+            </div>
+          </div>
+        </aside>
+        
+        <!-- Right: Main Product Content -->
+        <article class="w-full lg:w-3/4">
+          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-darkmode-border p-8 md:p-14 shadow-xl">
+            <div class="content prose prose-lg dark:prose-invert max-w-none 
+                        prose-headings:font-bold prose-headings:uppercase prose-headings:tracking-wider prose-headings:text-dark dark:prose-headings:text-white
+                        prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-darkmode-border prose-h2:pb-4 prose-h2:mt-12
+                        prose-a:text-primary hover:prose-a:text-dark 
+                        prose-img:shadow-xl prose-img:border prose-img:border-gray-100 dark:prose-img:border-darkmode-border
+                        prose-ul:list-none prose-li:relative prose-li:pl-6
+                        prose-p:text-gray-600 dark:prose-p:text-gray-300">
+              
+              <!-- Custom CSS for checkmark lists via Hugo Markdown -->
+              <style>
+                .content ul li::before {
+                  content: '\f00c';
+                  font-family: 'Font Awesome 6 Free';
+                  font-weight: 900;
+                  color: var(--color-primary, #D2153D);
+                  position: absolute;
+                  left: 0;
+                  top: 0.1em;
+                }
+              </style>
+              
+              {{ .Content }}
+            </div>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Call to Action -->
+  <section class="py-24 bg-dark dark:bg-[#0a0a0c] relative overflow-hidden">
+    <div class="absolute inset-0 bg-primary/5 pattern-dots pointer-events-none"></div>
+    <div class="container mx-auto px-4 lg:px-8 max-w-4xl relative z-10 text-center">
+      <h2 class="text-4xl md:text-5xl font-black text-white uppercase leading-tight mb-6">
+        Ready to optimize your operations?
+      </h2>
+      <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+        Contact our team of experts today to discuss how {{ .Title }} can be integrated into your infrastructure.
+      </p>
+      <a href="{{ `contact/` | relLangURL }}" class="inline-block bg-primary hover:bg-white text-white hover:text-dark font-bold uppercase tracking-widest px-10 py-5 transition-colors shadow-2xl">
+        Get A Custom Quote
+      </a>
+    </div>
+  </section>
+{{ end }}

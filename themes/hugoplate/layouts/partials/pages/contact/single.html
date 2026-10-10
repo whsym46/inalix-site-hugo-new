@@ -1,0 +1,139 @@
+<!-- Modern Page Header -->
+<section class="relative w-full min-h-[400px] flex items-center justify-center overflow-hidden bg-white pt-32 pb-16 border-b border-gray-200">
+  <div class="container relative z-10 mx-auto px-4 text-center">
+    <h1 class="text-5xl md:text-7xl font-black text-dark uppercase tracking-tight mb-4">
+      {{ T (printf "%s" (lower .Title)) | default .Title | title }}
+    </h1>
+    {{ partial "components/breadcrumb" (dict "Context" . "Class" "mt-6 flex justify-center text-gray-500 font-medium tracking-widest uppercase text-sm") }}
+  </div>
+</section>
+
+<!-- Modern Contact Content -->
+<section class="bg-gray-50 text-dark py-24 relative overflow-hidden">
+  <div class="container mx-auto px-4 max-w-7xl relative z-10">
+    <div class="flex flex-col lg:flex-row gap-16">
+      
+      <!-- Left Side: Info -->
+      <div class="w-full lg:w-5/12">
+        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">We are here to help you</h4>
+        <h2 class="text-4xl lg:text-5xl font-black uppercase leading-[1.1] mb-8 text-dark">
+          Let's Start Working <span class="text-primary">Together Now</span>
+        </h2>
+        <p class="text-gray-600 text-lg mb-12 border-l-4 border-primary pl-6 py-2">
+          Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email, or visit our offices.
+        </p>
+
+        <!-- Offices Loop -->
+        <div class="space-y-8">
+          {{ range .Params.offices }}
+          {{ $officePage := site.GetPage (printf "/office/%s" .office) }}
+          {{ with $officePage }}
+          <div class="bg-white border border-gray-200 p-8 hover:-translate-y-2 transition-transform duration-300 group shadow-sm hover:shadow-xl">
+            
+            <h3 class="text-2xl font-bold uppercase text-dark mb-6 border-b border-gray-100 pb-4">
+              {{ .Params.name }} <span class="text-primary text-sm ml-2 font-medium tracking-widest">{{ .Params.location }}</span>
+            </h3>
+            
+            <ul class="space-y-6 text-gray-600">
+              {{ if .Params.address }}
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                  <i class="fa-solid fa-location-dot text-primary"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">We are Here:</div>
+                  <div class="leading-relaxed font-medium">{{ .Params.address | markdownify }}</div>
+                </div>
+              </li>
+              {{ end }}
+              
+              {{ if .Params.phone }}
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                  <i class="fa-solid fa-phone text-primary"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Call Us:</div>
+                  <a href="tel:{{ .Params.phone | replaceRE ` [^0-9+]` `` }}" class="text-dark hover:text-primary text-lg font-bold transition-colors">{{ .Params.phone }}</a>
+                </div>
+              </li>
+              {{ end }}
+              
+              {{ if .Params.email }}
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                  <i class="fa-solid fa-envelope text-primary"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Email Us:</div>
+                  <a href="mailto:{{ .Params.email }}" class="text-dark hover:text-primary transition-colors font-medium">{{ .Params.email }}</a>
+                </div>
+              </li>
+              {{ end }}
+              
+              {{ if .Params.hours }}
+              <li class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                  <i class="fa-regular fa-clock text-primary"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Business Hours:</div>
+                  <div class="font-medium">{{ .Params.hours }}</div>
+                </div>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="w-full lg:w-7/12 mt-12 lg:mt-0">
+        <div class="bg-white border border-gray-200 p-8 lg:p-12 shadow-xl relative overflow-hidden">
+          
+          <h3 class="text-3xl font-black uppercase text-dark mb-2">Drop Us a Line</h3>
+          <p class="text-gray-500 text-sm mb-10 pb-6 border-b border-gray-100">Your email address will not be published. Required fields are marked *</p>
+          
+          <form action="{{ site.Params.contact_form_action }}" method="POST" class="relative z-10">
+            <div class="mb-6">
+              <input id="name" name="name" class="w-full bg-gray-50 border border-gray-200 focus:border-primary px-6 py-4 text-dark rounded-none placeholder-gray-400 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="Your Name *" type="text" required />
+            </div>
+            <div class="mb-6">
+              <input id="email" name="email" class="w-full bg-gray-50 border border-gray-200 focus:border-primary px-6 py-4 text-dark rounded-none placeholder-gray-400 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="Your Email *" type="email" required />
+            </div>
+            <div class="mb-6">
+              <input id="phone" name="phone" class="w-full bg-gray-50 border border-gray-200 focus:border-primary px-6 py-4 text-dark rounded-none placeholder-gray-400 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="Contact Phone *" type="tel" required />
+            </div>
+            <div class="mb-10">
+              <textarea id="message" name="message" class="w-full bg-gray-50 border border-gray-200 focus:border-primary px-6 py-4 text-dark rounded-none placeholder-gray-400 outline-none transition-all focus:ring-1 focus:ring-primary resize-none" placeholder="Your Comment *" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="group relative inline-flex items-center justify-center bg-primary text-white font-bold uppercase tracking-widest px-10 py-5 rounded-none overflow-hidden transition-all hover:bg-dark hover:text-white w-full shadow-md hover:shadow-xl">
+              <span class="relative z-10 flex items-center gap-3">
+                GET IN TOUCH 
+                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- google map -->
+{{ with site.Params.google_map }}
+{{ if .enable }}
+<div id="map" class="w-full h-[500px] grayscale opacity-80" data-latitude="{{ .map_latitude }}" data-longitude="{{ .map_longitude }}"
+  data-marker="{{ .map_marker | relURL }}" data-marker-name="{{ site.Title }}"></div>
+{{ end }}
+{{ end }}
+
+{{ if site.Params.google_map.enable }}
+{{ $gmap:= resources.Get "plugins/maps/google-map.js" }}
+<script defer src="{{ $gmap.RelPermalink }}"></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key={{ site.Params.google_map.map_api_key }}&libraries=places"></script>
+{{ end }}

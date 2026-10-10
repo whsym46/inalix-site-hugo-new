@@ -1,0 +1,67 @@
+<article class="group bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative flex flex-col h-full">
+  <!-- Image Container -->
+  {{ $image := .Params.image }}
+  {{ if reflect.IsSlice $image }}
+    {{ $image = index $image 0 }}
+  {{ end }}
+  
+  {{ if $image }}
+  <div class="relative w-full aspect-video overflow-hidden border-b border-gray-200">
+    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 z-10"></div>
+    {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700") }}
+    
+    <!-- Date Badge -->
+    <div class="absolute top-4 left-4 bg-primary text-white px-3 py-2 text-center z-20 font-bold uppercase tracking-widest shadow-md">
+      <span class="block text-2xl leading-none mb-1">{{ time.Format "02" .PublishDate }}</span>
+      <span class="block text-xs">{{ time.Format "Jan" .PublishDate }}</span>
+    </div>
+  </div>
+  {{ end }}
+  
+  <!-- Content -->
+  <div class="p-6 md:p-8 flex flex-col flex-grow">
+    <!-- Meta -->
+    {{ $categories:= .Params.categories }}
+    <div class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
+      {{ if .Params.author }}
+      <span class="flex items-center gap-2 hover:text-primary transition-colors">
+        <i class="fa-solid fa-user text-primary"></i> 
+        <a href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">{{ .Params.author }}</a>
+      </span>
+      {{ end }}
+      ▪
+      {{ if $categories }}
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-folder text-primary"></i>
+        {{ range $i,$p:= $categories }}
+          <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="hover:text-primary transition-colors">
+            {{ . | humanize }}
+          </a>{{ if ne $i (sub (len $categories) 1) }}, {{ end }}
+        {{ end }}
+      </span>
+      {{ end }}
+    </div>
+
+    <!-- Title -->
+    <h3 class="text-xl md:text-2xl font-black text-dark uppercase leading-tight mb-4 group-hover:text-primary transition-colors line-clamp-2">
+      <a href="{{ .RelPermalink }}" class="block w-full h-full">{{ .Title }}</a>
+    </h3>
+
+    <!-- Excerpt -->
+    <p class="text-gray-500 text-sm mb-8 line-clamp-3 leading-relaxed flex-grow">
+      {{ if .Params.description }}
+        {{ .Params.description | plainify | truncate 140 }}
+      {{ else }}
+        {{ .Summary | plainify | truncate 140 }}
+      {{ end }}
+    </p>
+
+    <!-- Read More Button -->
+    <div class="mt-auto flex items-center w-full">
+      <a href="{{ .RelPermalink }}" class="inline-flex items-center text-primary group/btn overflow-hidden py-2">
+        <span class="font-bold text-sm tracking-widest uppercase opacity-0 -translate-x-4 max-w-0 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 group-hover/btn:max-w-xs group-hover/btn:mr-2 transition-all duration-500 ease-in-out whitespace-nowrap">Read More</span>
+        <svg class="w-6 h-6 transition-all duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+  </div>
+</article>

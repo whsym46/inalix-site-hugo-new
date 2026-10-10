@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Inalix - Airport &amp; Industrial Solutions</title>
+    <link>http://localhost:1313/id/categories/data/</link>
+    <description>Recent content in Data on Inalix - Airport &amp; Industrial Solutions</description>
+    <generator>Hugo</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Mon, 04 Apr 2022 05:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/id/categories/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AODB</title>
+      <link>http://localhost:1313/id/products/product2/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/id/products/product2/</guid>
+      <description>Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat.</description>
+    </item>
+    <item>
+      <title>AODB Ngurah Rai International Airport</title>
+      <link>http://localhost:1313/id/projects/project1/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/id/projects/project1/</guid>
+      <description>PROJECT AODB NGURAH RAI INTERNATIONAL AIRPORT Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna.</description>
+    </item>
+    <item>
+      <title>FIDS</title>
+      <link>http://localhost:1313/id/products/product1/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/id/products/product1/</guid>
+      <description>Ini adalah keterangan FIDS Bahasa Indonesia Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna.</description>
+    </item>
+    <item>
+      <title>RMS New Yogyakarta International Airport</title>
+      <link>http://localhost:1313/id/projects/project2/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/id/projects/project2/</guid>
+      <description>PROJECT RMS NYIA Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+{{ range first 3 (where .Site.RegularPages "Section" "news") }}
+<div class="flex flex-col group transition-all duration-300 overflow-hidden">
+  {{ $imgSrc := "" }}
+  {{ if .Params.image }}
+    {{ $imagePath := .Params.image }}
+    {{ if reflect.IsSlice .Params.image }}
+      {{ $imagePath = index .Params.image 0 }}
+    {{ end }}
+    {{ $res := .Resources.GetMatch $imagePath }}
+    {{ if $res }}
+      {{ $imgSrc = $res.RelPermalink }}
+    {{ else }}
+      {{ $imgSrc = $imagePath | relURL }}
+    {{ end }}
+  {{ end }}
+  
+  {{ if $imgSrc }}
+  <div class="relative w-full h-[240px] md:h-[300px] overflow-hidden mb-6">
+    <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <img src="{{ $imgSrc }}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" alt="{{ .Title }}" />
+  </div>
+  {{ end }}
+  
+  <div class="flex flex-col flex-1 px-2">
+    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 flex items-center">
+      {{ $cats := .Params.categories }}
+      {{ if $cats }}
+        {{ range first 1 $cats }}
+          <span class="text-gray-500">{{ . }}</span>
+        {{ end }}
+      {{ else }}
+        <span class="text-gray-500">News</span>
+      {{ end }}
+      <span class="mx-3 text-gray-400">▪</span>
+      <span class="text-gray-500">{{ time.Format "January 2, 2006" .PublishDate }}</span>
+    </div>
+    
+    <h3 class="w-full text-2xl md:text-3xl font-black text-dark dark:text-white leading-tight mb-6">
+      <a href="{{ .RelPermalink }}" class="hover:text-primary transition-colors">{{ .Title }}</a>
+    </h3>
+    
+    <div class="mt-auto overflow-hidden h-8 relative">
+      <a href="{{ .RelPermalink }}" class="inline-flex items-center text-primary transition-all duration-300">
+        <span class="font-bold text-sm tracking-widest uppercase opacity-0 transform -translate-x-4 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">Read More</span>
+        <svg class="absolute w-6 h-6 transform left-0 group-hover:left-[100px] transition-all duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+{{ end }}

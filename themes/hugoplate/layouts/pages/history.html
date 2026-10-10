@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ partial "page-header" . }}
 
-<section class="py-24 bg-white dark:bg-darkmode-body overflow-hidden">
+<section class="py-24 bg-white dark:bg-inalix-dark overflow-hidden">
   <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
     
     <!-- Timeline Container -->
@@ -24,7 +24,7 @@
           <div class="w-full md:w-1/2 pl-8 md:pl-0 {{ if eq (mod $index 2) 0 }}md:pr-16 md:text-right{{ else }}md:pl-16 text-left{{ end }} pt-0">
             <div class="inline-block px-6 py-2 bg-dark text-white font-black text-2xl tracking-widest mb-6">{{ .year }}</div>
             <h3 class="text-3xl font-black text-dark uppercase mb-4 leading-tight">{{ .title }}</h3>
-            <div class="text-gray-600 leading-relaxed text-lg prose {{ if eq (mod $index 2) 0 }}md:text-right md:ml-auto{{ end }}">
+            <div class=" text-gray-600 dark:text-gray-400 leading-relaxed text-lg prose {{ if eq (mod $index 2) 0 }}md:text-right md:ml-auto{{ end }}">
               {{ .description | markdownify }}
             </div>
           </div>
@@ -32,7 +32,7 @@
           <!-- Image Side -->
           <div class="w-full md:w-1/2 pl-8 md:pl-0 mt-8 md:mt-0 {{ if eq (mod $index 2) 0 }}md:pl-16{{ else }}md:pr-16{{ end }}">
             {{ if .image }}
-            <div class="bg-gray-50 p-3 shadow-xl border border-gray-200 group">
+            <div class="bg-white dark:bg-inalix-dark p-3 shadow-xl border border-gray-200 dark:border-white/5 group">
               <div class="overflow-hidden relative">
                 <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 <img src="{{ .image | relURL }}" alt="{{ .title }}" class="w-full h-auto aspect-video object-cover transform group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0">
@@ -87,7 +87,7 @@ document.addEventListener('scroll', function() {
 
 <!-- Culture Banner Section -->
 {{ with .Params.culture_banner }}
-<section class="section-sm bg-theme-light dark:bg-darkmode-theme-light">
+<section class="section-sm bg-white dark:bg-inalix-dark">
   <div class="container">
     <div class="row items-center">
       <div class="lg:col-5 mb-10 lg:mb-0">
@@ -142,7 +142,7 @@ document.addEventListener('scroll', function() {
           <div class="flex">
             <div class="mr-6">
               <span
-                class="material-symbols-outlined text-primary bg-theme-light dark:bg-darkmode-theme-light p-4 rounded-full"
+                class="material-symbols-outlined text-primary bg-white dark:bg-inalix-dark p-4 rounded-full"
                 style="font-size: 36px;">{{ .icon }}</span>
             </div>
             <div>
@@ -182,7 +182,7 @@ document.addEventListener('scroll', function() {
         <h2 class="mb-8">Frequently Asked Questions</h2>
         <div class="space-y-4">
           {{ range .Params.faqs }}
-          <details name="faq-accordion" class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg group">
+          <details name="faq-accordion" class="bg-white dark:bg-inalix-dark rounded-lg group">
             <summary
               class="p-6 cursor-pointer font-bold list-none flex justify-between items-center focus:outline-none">
               {{ .question }}
@@ -213,7 +213,7 @@ document.addEventListener('scroll', function() {
       <div class="lg:col-4">
         {{ with .Params.sidebar_card }}
         <div
-          class="p-8 rounded-lg text-center bg-theme-light dark:bg-darkmode-theme-light relative overflow-hidden h-full flex flex-col justify-center items-center">
+          class="p-8 rounded-lg text-center bg-white dark:bg-inalix-dark relative overflow-hidden h-full flex flex-col justify-center items-center">
           {{ if .bg_image }}
           <div class="absolute inset-0 opacity-10 z-0">
             <img src="{{ .bg_image }}" class="w-full h-full object-cover" alt="Sidebar Background" />

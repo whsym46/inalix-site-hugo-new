@@ -2,7 +2,7 @@
 
 # main menu
 [[main]]
-name = "Home"
+name = "Beranda"
 pageRef = "/"
 weight = 1
 
@@ -43,16 +43,12 @@ weight = 7
 
 # footer menu
 [[footer]]
-name = "About"
+name = "Tentang"
 pageRef = "/pages/about"
 weight = 1
 
-[[footer]]
-name = "Elements"
-pageRef = "/elements"
-weight = 2
 
 [[footer]]
-name = "Privacy Policy"
+name = "Kebijakan Privasi"
 pageRef = "/pages/privacy-policy"
-weight = 3
+weight = 2

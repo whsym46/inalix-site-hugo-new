@@ -7,11 +7,12 @@
 {{ $pageLink := replace (replace $context.RelPermalink (add $pageLang "/") "") $base.Path "/" }}
 
 {{ if $context.IsTranslated }}
-  <select class="{{ $class }}" onchange="location = this.value">
+  <select class="{{ $class }} text-dark dark:text-white bg-transparent dark:bg-transparent hover:bg-gray-200 dark:hover:bg-white/10 outline-none border border-gray-200 dark:border-white/5 cursor-pointer" onchange="location = this.value">
     {{ range $siteLanguages }}
       {{ if eq $pageLang .Language.Lang }}
         <option
           id="{{ .Language.Lang }}"
+          class="text-dark bg-white dark:text-white dark:bg-inalix-dark"
           value="{{ replace (add .RelPermalink $pageLink) `//` `/` }}"
           selected>
           {{ .Language.LanguageName | upper }}
@@ -19,6 +20,7 @@
       {{ else }}
         <option
           id="{{ .Language.Lang }}"
+          class="text-dark bg-white dark:text-white dark:bg-inalix-dark"
           value="{{ replace (add .RelPermalink $pageLink) `//` `/` }}">
           {{ .Language.LanguageName | upper }}
         </option>

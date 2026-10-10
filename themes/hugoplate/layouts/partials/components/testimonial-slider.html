@@ -1,14 +1,14 @@
-<section class="py-24 bg-gray-50 dark:bg-darkmode-theme-light transition-colors relative overflow-hidden">
+<section class="py-24 bg-gray-50 dark:bg-inalix-darker transition-colors relative overflow-hidden">
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-    <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4 text-center">Testimonials</h4>
-    <h2 class="text-3xl md:text-4xl font-black text-dark dark:text-white uppercase leading-tight mb-12 text-center">WHAT OUR CLIENTS SAY</h2>
+    <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4 text-center">{{ T "testimonials" | default "Testimonials" }}</h4>
+    <h2 class="text-3xl md:text-4xl font-black text-dark dark:text-white uppercase leading-tight mb-12 text-center">{{ T "what_clients_say" | default "WHAT OUR CLIENTS SAY" }}</h2>
     
     <div class="flex flex-col lg:flex-row items-stretch max-w-5xl mx-auto h-auto lg:h-[500px]">
       
       <!-- STATIC Image on Left -->
       <div class="w-full lg:w-[60%] relative z-10 lg:py-6 h-[300px] lg:h-full">
         {{ $testimonials := where .Site.RegularPages "Type" "testimonials" }}
-        <img src="/images/slider-new1.jpg" alt="Testimonials" class="w-full h-full object-cover shadow-lg grayscale transition-all duration-700 hover:grayscale-0">
+        <img src="/images/slider-new1.jpg" alt="{{ T "testimonials" | default "Testimonials" }}" class="w-full h-full object-cover shadow-lg grayscale transition-all duration-700 hover:grayscale-0">
       </div>
       
       <!-- SWIPER Card on Right -->

@@ -66,7 +66,7 @@
                 <span class="text-sm font-bold text-dark dark:text-white uppercase tracking-widest mr-2"><i class="fa-solid fa-tags text-primary mr-2"></i>{{ T "tags" }}:</span>
                 {{ if $tags }}
                   {{ range $i,$p:= $tags }}
-                    <a class="bg-gray-100 dark:bg-white/5 hover:bg-primary dark:hover:bg-primary hover:text-white transition-colors text-gray-600 dark:text-gray-300 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-sm"
+                    <a class="bg-gray-100 dark:bg-white/5 hover:bg-primary dark:hover:bg-primary hover:text-white transition-colors  text-gray-600 dark:text-gray-400 dark:text-gray-300 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-sm"
                       href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/">
                       {{ . | humanize }}
                     </a>
@@ -77,9 +77,9 @@
               <div class="flex items-center gap-4">
                 <span class="text-sm font-bold text-dark dark:text-white uppercase tracking-widest">{{ T "share" | default "Share" }}:</span>
                 <div class="flex gap-2">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@
               <div>
                 <h5 class="text-xs uppercase tracking-widest text-primary font-bold mb-1">{{ T "about_author" | default "About Author" }}</h5>
                 <h3 class="text-xl font-bold text-dark dark:text-white mb-3">{{ .Params.author }}</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">{{ T "author_description" | default "We are committed to delivering the best insights and updates in the aviation and technology sectors. Written by our expert team." }}</p>
+                <p class=" text-gray-600 dark:text-gray-400 dark:text-gray-400 text-sm leading-relaxed mb-4">{{ T "author_description" | default "We are committed to delivering the best insights and updates in the aviation and technology sectors. Written by our expert team." }}</p>
                 <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/" class="text-sm font-bold uppercase tracking-widest text-dark dark:text-white hover:text-primary transition-colors">{{ T "view_profile" | default "View Profile" }} <i class="fa-solid fa-arrow-right ml-1"></i></a>
               </div>
             </div>
@@ -118,7 +118,7 @@
             <ul class="flex flex-col gap-3">
               {{ range $name, $items := .Site.Taxonomies.categories }}
               <li>
-                <a href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}/" class="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium">
+                <a href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}/" class="flex items-center justify-between  text-gray-600 dark:text-gray-400 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium">
                   <span class="uppercase tracking-wide"><i class="fa-solid fa-angle-right text-primary mr-2 text-xs"></i>{{ $name | humanize }}</span>
                   <span class="bg-gray-100 dark:bg-white/5 text-xs px-2 py-1 rounded-sm">{{ len $items }}</span>
                 </a>

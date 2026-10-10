@@ -40,7 +40,7 @@
 
 <!-- Culture Banner Section -->
 {{ with .Params.culture_banner }}
-<section class="section-sm bg-theme-light dark:bg-darkmode-theme-light">
+<section class="section-sm bg-white dark:bg-inalix-dark border-gray-200 dark:border-white/5">
   <div class="container">
     <div class="row items-center">
       <div class="lg:col-5 mb-10 lg:mb-0">
@@ -95,7 +95,7 @@
           <div class="flex">
             <div class="mr-6">
               <span
-                class="material-symbols-outlined text-primary bg-theme-light dark:bg-darkmode-theme-light p-4 rounded-full"
+                class="material-symbols-outlined text-primary bg-white dark:bg-inalix-dark border-gray-200 dark:border-white/5 p-4 rounded-full"
                 style="font-size: 36px;">{{ .icon }}</span>
             </div>
             <div>
@@ -135,7 +135,7 @@
         <h2 class="mb-8">Frequently Asked Questions</h2>
         <div class="space-y-4">
           {{ range .Params.faqs }}
-          <details name="faq-accordion" class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg group">
+          <details name="faq-accordion" class="bg-white dark:bg-inalix-dark border-gray-200 dark:border-white/5 rounded-lg group">
             <summary
               class="p-6 cursor-pointer font-bold list-none flex justify-between items-center focus:outline-none">
               {{ .question }}
@@ -166,7 +166,7 @@
       <div class="lg:col-4">
         {{ with .Params.sidebar_card }}
         <div
-          class="p-8 rounded-lg text-center bg-theme-light dark:bg-darkmode-theme-light relative overflow-hidden h-full flex flex-col justify-center items-center">
+          class="p-8 rounded-lg text-center bg-white dark:bg-inalix-dark border-gray-200 dark:border-white/5 relative overflow-hidden h-full flex flex-col justify-center items-center">
           {{ if .bg_image }}
           <div class="absolute inset-0 opacity-10 z-0">
             <img src="{{ .bg_image }}" class="w-full h-full object-cover" alt="Sidebar Background" />

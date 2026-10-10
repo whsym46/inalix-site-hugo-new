@@ -23,7 +23,7 @@
           <svg class="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
         </a>
         <a href="{{ `contact/` | relLangURL }}" class="bg-transparent border border-white/30 text-white hover:bg-white/5 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-colors">
-          Contact Us
+          {{ T "contact_us_nav" | default "Contact Us" }}
         </a>
       </div>
     </div>
@@ -35,8 +35,8 @@
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div>
-        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">What we do best</h4>
-        <h2 class="text-4xl md:text-5xl font-black text-dark dark:text-white uppercase leading-tight mb-8">TRANSFORMING YOUR<br>SPACE WITH PRECISION</h2>
+        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "what_we_do_best" | default "What we do best" }}</h4>
+        <h2 class="text-4xl md:text-5xl font-black text-dark dark:text-white uppercase leading-tight mb-8">{{ T "transforming_space" | default "TRANSFORMING YOUR SPACE WITH PRECISION" }}</h2>
         <p class="text-light dark:text-gray-400 text-lg mb-8 leading-relaxed">
           {{ i18n "hero_airport_desc" }}
         </p>
@@ -60,15 +60,13 @@
     </div>
   </div>
 </section>
-
-<!-- Marquee removed per user request -->
-
+ 
 <!-- 4. Dark Accordion Section -->
 <section class="py-24 bg-inalix-dark">
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
-    <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Our Services</h4>
+    <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "our_services" | default "Our Services" }}</h4>
     <h2 class="text-4xl md:text-5xl font-black text-white uppercase leading-tight mb-16 max-w-2xl">
-      END-TO-END IT SOLUTIONS: EMPOWERING AIRPORT OPERATIONS
+      {{ T "end_to_end_it" | default "END-TO-END IT SOLUTIONS: EMPOWERING AIRPORT OPERATIONS" }}
     </h2>
     
     <div class="flex flex-col md:flex-row w-full h-[600px] gap-4">
@@ -121,33 +119,33 @@
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
       <div class="lg:col-span-1">
-        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Why Choose Us</h4>
-        <h2 class="text-3xl md:text-4xl font-black text-dark dark:text-white uppercase leading-tight mb-8">YOUR TRUSTED IT SOLUTIONS PARTNER</h2>
-        <a href="{{ `about/` | relLangURL }}" class="bg-primary text-white px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-darkmode-primary transition-colors inline-block">Read More</a>
+        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "why_choose_us" | default "Why Choose Us" }}</h4>
+        <h2 class="text-3xl md:text-4xl font-black text-dark dark:text-white uppercase leading-tight mb-8">{{ T "trusted_it_partner" | default "YOUR TRUSTED IT SOLUTIONS PARTNER" }}</h2>
+        <a href="{{ `about/` | relLangURL }}" class="bg-primary text-white px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-darkmode-primary transition-colors inline-block">{{ T "read_more" | default "Read More" }}</a>
       </div>
       <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- Icon block -->
         <div>
-          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">Expert Consulting</h3>
-          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">Providing deep industry knowledge and strategic guidance for complex airport and industrial developments.</p>
+          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">{{ T "expert_consulting" | default "Expert Consulting" }}</h3>
+          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">{{ T "expert_consulting_desc" | default "Providing deep industry knowledge and strategic guidance for complex airport and industrial developments." }}</p>
           <div class="text-primary"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg></div>
         </div>
         <!-- Icon block -->
         <div>
-          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">Innovative Technology</h3>
-          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">Leveraging the latest smart systems, from AODB to FIDS, to ensure future-proof infrastructure.</p>
+          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">{{ T "innovative_tech" | default "Innovative Technology" }}</h3>
+          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">{{ T "innovative_tech_desc" | default "Leveraging the latest smart systems, from AODB to FIDS, to ensure future-proof infrastructure." }}</p>
           <div class="text-primary"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
         </div>
         <!-- Icon block -->
         <div>
-          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">Timely Delivery</h3>
-          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">Precision project management ensures milestones are hit on schedule, every time.</p>
+          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">{{ T "timely_delivery" | default "Timely Delivery" }}</h3>
+          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">{{ T "timely_delivery_desc" | default "Precision project management ensures milestones are hit on schedule, every time." }}</p>
           <div class="text-primary"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
         </div>
         <!-- Icon block -->
         <div>
-          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">Sustainable Solutions</h3>
-          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">Committed to environmentally responsible building practices and energy-efficient designs.</p>
+          <h3 class="text-dark dark:text-white font-bold uppercase text-lg mb-3">{{ T "sustainable_solutions" | default "Sustainable Solutions" }}</h3>
+          <p class="text-light dark:text-gray-400 text-sm mb-4 leading-relaxed">{{ T "sustainable_solutions_desc" | default "Committed to environmentally responsible building practices and energy-efficient designs." }}</p>
           <div class="text-primary"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
         </div>
       </div>
@@ -158,12 +156,12 @@
 <!-- 6. Testimonial Slider Section -->
 {{ partial "components/testimonial-slider.html" . }}
 
-<!-- 6.5 Case Studies / Projects -->
+<!-- 6.5 {{ T "case_studies" | default "CASE STUDIES" }} / Projects -->
 <section class="py-24 bg-gray-50 dark:bg-inalix-darker transition-colors relative overflow-hidden">
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
     <div class="text-center mb-16">
-      <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Our Portfolios</h4>
-      <h2 class="text-4xl md:text-5xl font-black text-dark uppercase leading-tight">CASE STUDIES</h2>
+      <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "our_portfolios" | default "Our Portfolios" }}</h4>
+      <h2 class="text-4xl md:text-5xl font-black text-dark uppercase leading-tight">{{ T "case_studies" | default "CASE STUDIES" }}</h2>
       <div class="w-24 h-1.5 bg-primary mx-auto mt-6"></div>
     </div>
     
@@ -203,10 +201,10 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
     <div class="flex justify-between items-end mb-12">
       <div>
-        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Latest Updates</h4>
-        <h2 class="text-4xl font-black text-dark dark:text-white uppercase leading-tight">EXPLORE OUR<br>LATEST NEWS &amp; TIPS</h2>
+        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "latest_updates" | default "Latest Updates" }}</h4>
+        <h2 class="text-4xl font-black text-dark dark:text-white uppercase leading-tight">{{ T "explore_latest_news" | default "EXPLORE OUR LATEST NEWS & TIPS" }}</h2>
       </div>
-      <a href="{{ `news/` | relLangURL }}" class="hidden md:inline-block bg-primary text-white px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-darkmode-primary transition-colors">View All</a>
+      <a href="{{ `news/` | relLangURL }}" class="hidden md:inline-block bg-primary text-white px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-darkmode-primary transition-colors">{{ T "view_all" | default "View All" }}</a>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

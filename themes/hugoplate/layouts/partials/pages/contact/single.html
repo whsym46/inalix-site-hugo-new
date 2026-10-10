@@ -19,7 +19,7 @@
         <h2 class="text-4xl lg:text-5xl font-black uppercase leading-[1.1] mb-8 text-dark">
           Let's Start Working <span class="text-primary">Together Now</span>
         </h2>
-        <p class="text-gray-600 text-lg mb-12 border-l-4 border-primary pl-6 py-2">
+        <p class=" text-gray-600 dark:text-gray-400 text-lg mb-12 border-l-4 border-primary pl-6 py-2">
           Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email, or visit our offices.
         </p>
 
@@ -34,10 +34,10 @@
               {{ .Params.name }} <span class="text-primary text-sm ml-2 font-medium tracking-widest">{{ .Params.location }}</span>
             </h3>
             
-            <ul class="space-y-6 text-gray-600">
+            <ul class="space-y-6  text-gray-600 dark:text-gray-400">
               {{ if .Params.address }}
               <li class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                <div class="w-10 h-10 border border-gray-100 dark:border-white/5 flex items-center justify-center shrink-0 mt-1">
                   <i class="fa-solid fa-location-dot text-primary"></i>
                 </div>
                 <div>
@@ -49,7 +49,7 @@
               
               {{ if .Params.phone }}
               <li class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                <div class="w-10 h-10 border border-gray-100 dark:border-white/5 flex items-center justify-center shrink-0 mt-1">
                   <i class="fa-solid fa-phone text-primary"></i>
                 </div>
                 <div>
@@ -61,7 +61,7 @@
               
               {{ if .Params.email }}
               <li class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                <div class="w-10 h-10 border border-gray-100 dark:border-white/5 flex items-center justify-center shrink-0 mt-1">
                   <i class="fa-solid fa-envelope text-primary"></i>
                 </div>
                 <div>
@@ -73,7 +73,7 @@
               
               {{ if .Params.hours }}
               <li class="flex items-start gap-4">
-                <div class="w-10 h-10 bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 mt-1">
+                <div class="w-10 h-10 border border-gray-100 dark:border-white/5 flex items-center justify-center shrink-0 mt-1">
                   <i class="fa-regular fa-clock text-primary"></i>
                 </div>
                 <div>

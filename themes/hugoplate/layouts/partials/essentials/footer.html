@@ -11,7 +11,7 @@
 
       <!-- Column 2: Services -->
       <div>
-        <h3 class="text-white font-bold text-xl mb-6">Services</h3>
+        <h3 class="text-white font-bold text-xl mb-6">{{ T "services" | default "Services" }}</h3>
         <ul class="space-y-4">
           {{ range site.Menus.footer }}
           <li>
@@ -24,9 +24,9 @@
         </ul>
       </div>
 
-      <!-- Column 3: Contacts -->
+      <!-- Column 3: {{ T "contacts" | default "Contacts" }} -->
       <div>
-        <h3 class="text-white font-bold text-xl mb-6">Contacts</h3>
+        <h3 class="text-white font-bold text-xl mb-6">{{ T "contacts" | default "Contacts" }}</h3>
         <ul class="space-y-4 text-gray-400">
           {{ with site.GetPage "/office/head-office" }}
           <li>{{ .Params.address | markdownify }}</li>
@@ -45,7 +45,7 @@
 
       <!-- Column 4: Socials -->
       <div>
-        <h3 class="text-white font-bold text-xl mb-6">In Socials</h3>
+        <h3 class="text-white font-bold text-xl mb-6">{{ T "in_socials" | default "In Socials" }}</h3>
         <ul class="flex gap-4">
           {{ range site.Data.social.main }}
           <li>
@@ -140,8 +140,8 @@
         <div>{{ site.Params.copyright | markdownify }}</div>
         <div class="hidden md:block w-1 h-1 rounded-full bg-gray-600"></div>
         <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">{{ T "terms_of_use" | default "Terms of Use" }}</a>
+          <a href="#" class="hover:text-white transition-colors">{{ T "privacy_policy" | default "Privacy Policy" }}</a>
         </div>
       </div>
     </div>

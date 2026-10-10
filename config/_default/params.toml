@@ -15,7 +15,7 @@ logo_text = "Inalix"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
-theme_switcher = false
+theme_switcher = true
 theme_default = "dark" # available options [light/dark/system]
 # Main Sections
 mainSections = ["blog"]

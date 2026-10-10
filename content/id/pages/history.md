@@ -1,13 +1,13 @@
 ---
-title: "Sejarah Kami"
+title: Sejarah Kami
 layout: history
-type: "pages"
-description: "Temukan perjalanan perusahaan kami dari visi hingga menjadi kenyataan."
+type: pages
+description: Temukan perjalanan perusahaan kami dari visi hingga menjadi kenyataan.
 
 timeline:
-  - year: "2003"
-    title: "Pendirian dan Visi"
-    description: "Agensi ini memanfaatkan teknologi digital dan platform untuk menciptakan, mengimplementasikan, dan mengoptimalkan strategi pemasaran digital, proyek pengembangan web, dan inisiatif online lainnya."
+  - year: 2003
+    title: Pendirian dan Visi
+    description: Agensi ini memanfaatkan teknologi digital dan platform untuk menciptakan, mengimplementasikan, dan mengoptimalkan strategi pemasaran digital, proyek pengembangan web, dan inisiatif online lainnya.
     image: "/images/slider-new1.jpg"
   - year: "2010"
     title: "Pencapaian Pertama"

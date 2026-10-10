@@ -1,5 +1,5 @@
 {{ range first 3 (where .Site.RegularPages "Section" "news") }}
-<div class="flex flex-col group transition-all duration-300 overflow-hidden">
+<div class="flex flex-col group transition-all duration-300 overflow-hidden border border-gray-200 dark:border-white/5">
   {{ $imgSrc := "" }}
   {{ if .Params.image }}
     {{ $imagePath := .Params.image }}

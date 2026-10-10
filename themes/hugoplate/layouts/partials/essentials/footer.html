@@ -1,4 +1,4 @@
-<footer class="bg-[#1e1f22] text-white pt-24 pb-8 relative border-t-[8px] border-primary">
+<footer class="bg-inalix-dark dark:bg-inalix-dark text-white pt-24 pb-8 relative border-t-[8px] border-primary">
   <div class="container max-w-7xl mx-auto px-4 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
 
@@ -61,14 +61,88 @@
 
     <!-- Footer Bottom -->
     <div
-      class="border-t border-white/10 pt-8 pb-16 md:pb-8 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="text-gray-500 text-sm">
-        {{ site.Params.copyright | markdownify }}
+      class="border-t border-white/5 pt-8 pb-16 md:pb-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
+      
+      <!-- Theme Switcher in Footer -->
+      <div class="flex items-center">
+        {{ if site.Params.theme_switcher }}
+        <div class="theme-switcher-footer inline-flex items-center bg-white/5 rounded-full p-1 border border-white/5">
+          <button data-theme-btn="system" aria-label="System Theme" class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-full transition-colors text-gray-400 hover:text-white">
+            <i class="fa-solid fa-desktop"></i>
+          </button>
+          <button data-theme-btn="light" aria-label="Light Theme" class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-full transition-colors text-gray-400 hover:text-white">
+            <i class="fa-regular fa-sun"></i>
+          </button>
+          <button data-theme-btn="dark" aria-label="Dark Theme" class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-full transition-colors text-gray-400 hover:text-white">
+            <i class="fa-regular fa-moon"></i>
+          </button>
+          
+        </div>
+        <style>
+          .theme-switcher-footer .theme-btn.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+          }
+        </style>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const defaultTheme = "{{ site.Params.theme_default }}";
+            let currentSetting = localStorage.getItem("theme") || defaultTheme || "system";
+
+            const updateUI = (setting) => {
+              document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+                btn.classList.remove("active");
+                if (btn.getAttribute("data-theme-btn") === setting) {
+                  btn.classList.add("active");
+                }
+              });
+            };
+
+            const applyTheme = (setting) => {
+              let isDark = false;
+              if (setting === "dark") {
+                isDark = true;
+              } else if (setting === "light") {
+                isDark = false;
+              } else {
+                isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+              }
+              if (isDark) {
+                document.documentElement.classList.add("dark");
+              } else {
+                document.documentElement.classList.remove("dark");
+              }
+            };
+
+            updateUI(currentSetting);
+            applyTheme(currentSetting);
+
+            document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+              btn.addEventListener("click", () => {
+                const setting = btn.getAttribute("data-theme-btn");
+                localStorage.setItem("theme", setting);
+                updateUI(setting);
+                applyTheme(setting);
+              });
+            });
+
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+              if (localStorage.getItem("theme") === "system" || !localStorage.getItem("theme")) {
+                applyTheme("system");
+              }
+            });
+          });
+        </script>
+        {{ end }}
       </div>
 
-      <div class="flex items-center gap-6 pr-0 md:pr-16">
-        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Use</a>
-        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+      <div class="text-gray-500 text-sm flex flex-col md:flex-row items-center gap-4 pr-0 md:pr-16 text-center md:text-right">
+        <div>{{ site.Params.copyright | markdownify }}</div>
+        <div class="hidden md:block w-1 h-1 rounded-full bg-gray-600"></div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
       </div>
     </div>
   </div>

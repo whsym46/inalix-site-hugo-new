@@ -1,8 +1,8 @@
 ---
-title: "Our History"
+title: Our History
 layout: history
-type: "pages"
-description: "Discover the journey of our company from vision to reality."
+type: pages
+description: Discover the journey of our company from vision to reality.
 
 timeline:
   - year: "2003"

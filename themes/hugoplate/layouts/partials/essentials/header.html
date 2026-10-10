@@ -92,15 +92,14 @@
       {{ if .enable }}
       <button aria-label="search" {{ if and (not site.Params.navigation_button.enable) (not
         site.Params.theme_switcher)}}
-        class="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r lg:border-r-0 pr-5 lg:pr-0 text-xl dark:text-white dark:hover:text-darkmode-primary"
+        class="border-border text-dark hover:text-primary dark:border-white/5 mr-5 inline-block border-r lg:border-r-0 pr-5 lg:pr-0 text-xl dark:text-white dark:hover:text-darkmode-primary"
         {{ else }}
-        class="border-border text-dark hover:text-primary dark:border-darkmode-border mr-5 inline-block border-r pr-5 text-xl dark:text-white dark:hover:text-darkmode-primary"
+        class="border-border text-dark hover:text-primary dark:border-white/5 mr-5 inline-block border-r pr-5 text-xl dark:text-white dark:hover:text-darkmode-primary"
         {{ end }} data-target="search-modal">
         <i class="fa-solid fa-search"></i>
       </button>
       {{ end }}
       {{ end }}
-
       {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-theme-light uppercase rounded") }}
 
 
@@ -122,10 +121,10 @@
 
     function onScroll() {
       if (window.scrollY > 50) {
-        header.classList.add('bg-white', 'dark:bg-[#07080a]/95', 'backdrop-blur-md', 'border-gray-200', 'dark:border-white/10', 'shadow-md');
+        header.classList.add('bg-white', 'dark:bg-darkmode-body', 'border-gray-200', 'dark:border-white/5', 'shadow-md');
         header.classList.remove('border-transparent', 'nav-transparent');
       } else {
-        header.classList.remove('bg-white', 'dark:bg-[#07080a]/95', 'backdrop-blur-md', 'border-gray-200', 'dark:border-white/10', 'shadow-md');
+        header.classList.remove('bg-white', 'dark:bg-darkmode-body', 'border-gray-200', 'dark:border-white/5', 'shadow-md');
         header.classList.add('border-transparent', 'nav-transparent');
       }
     }
@@ -135,7 +134,7 @@
   });
 </script>
 
-{{ if .IsHome }}
+
 <style>
   /* Force white text when header is transparent (at the top) on HOME PAGE only */
   .nav-transparent .nav-link,
@@ -164,7 +163,6 @@
 
   .nav-transparent .btn-outline-primary:hover {
     background-color: white !important;
-    color: #1e1f22 !important;
+    color: theme('colors.inalix.dark') !important;
   }
 </style>
-{{ end }}

@@ -8,12 +8,12 @@
     {{ if $res }}{{ $imgSrc = $res.RelPermalink }}{{ else }}{{ $imgSrc = $imagePath | relURL }}{{ end }}
   {{ end }}
   
-  <div class="relative w-full bg-[#111215] pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+  <div class="relative w-full bg-inalix-dark dark:bg-inalix-dark pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
     {{ if $imgSrc }}
       <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" style="background-image: url('{{ $imgSrc }}');"></div>
     {{ end }}
-    <div class="absolute inset-0 bg-gradient-to-t from-[#111215] via-transparent to-transparent"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-[#111215] via-[#111215]/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-inalix-darker via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-inalix-darker via-inalix-darker/80 to-transparent"></div>
     
     <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10 text-center lg:text-left">
       {{ $categories:= .Params.categories }}
@@ -34,7 +34,7 @@
       <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-gray-400 text-sm font-medium">
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-pen-nib text-primary"></i>
-          <span>By <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/" class="text-white hover:text-primary transition-colors">{{ .Params.author }}</a></span>
+          <span>{{ T "by" | default "By" }} <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/" class="text-white hover:text-primary transition-colors">{{ .Params.author }}</a></span>
         </div>
         <div class="flex items-center gap-2">
           <i class="fa-regular fa-clock text-primary"></i>
@@ -50,7 +50,7 @@
         
         <!-- Main Content (75%) -->
         <article class="w-full lg:w-3/4">
-          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-darkmode-border p-8 lg:p-14 shadow-xl">
+          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-white/5 p-8 lg:p-14 shadow-xl">
             <div class="content prose prose-lg dark:prose-invert max-w-none 
                         prose-headings:font-bold prose-headings:uppercase prose-headings:tracking-wider 
                         prose-a:text-primary hover:prose-a:text-dark 
@@ -60,7 +60,7 @@
             </div>
             
             <!-- Footer: Tags & Share -->
-            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mt-16 pt-8 border-t border-gray-200 dark:border-darkmode-border">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mt-16 pt-8 border-t border-gray-200 dark:border-white/5">
               {{ $tags:= .Params.tags }}
               <div class="flex flex-wrap items-center gap-2">
                 <span class="text-sm font-bold text-dark dark:text-white uppercase tracking-widest mr-2"><i class="fa-solid fa-tags text-primary mr-2"></i>{{ T "tags" }}:</span>
@@ -75,7 +75,7 @@
               </div>
               
               <div class="flex items-center gap-4">
-                <span class="text-sm font-bold text-dark dark:text-white uppercase tracking-widest">Share:</span>
+                <span class="text-sm font-bold text-dark dark:text-white uppercase tracking-widest">{{ T "share" | default "Share" }}:</span>
                 <div class="flex gap-2">
                   <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
                   <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
@@ -90,10 +90,10 @@
                 <i class="fa-solid fa-user text-4xl text-gray-400 mt-4 ml-6"></i> <!-- Placeholder -->
               </div>
               <div>
-                <h5 class="text-xs uppercase tracking-widest text-primary font-bold mb-1">About Author</h5>
+                <h5 class="text-xs uppercase tracking-widest text-primary font-bold mb-1">{{ T "about_author" | default "About Author" }}</h5>
                 <h3 class="text-xl font-bold text-dark dark:text-white mb-3">{{ .Params.author }}</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">We are committed to delivering the best insights and updates in the aviation and technology sectors. Written by our expert team.</p>
-                <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/" class="text-sm font-bold uppercase tracking-widest text-dark dark:text-white hover:text-primary transition-colors">View Profile <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">{{ T "author_description" | default "We are committed to delivering the best insights and updates in the aviation and technology sectors. Written by our expert team." }}</p>
+                <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/" class="text-sm font-bold uppercase tracking-widest text-dark dark:text-white hover:text-primary transition-colors">{{ T "view_profile" | default "View Profile" }} <i class="fa-solid fa-arrow-right ml-1"></i></a>
               </div>
             </div>
             
@@ -104,17 +104,17 @@
         <aside class="w-full lg:w-1/4 flex flex-col gap-8">
           
           <!-- Search -->
-          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-darkmode-border p-8 shadow-md">
-            <h4 class="text-lg font-bold text-dark dark:text-white uppercase tracking-wider mb-6 pb-2 border-b-2 border-primary inline-block">Search</h4>
+          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-white/5 p-8 shadow-md">
+            <h4 class="text-lg font-bold text-dark dark:text-white uppercase tracking-wider mb-6 pb-2 border-b-2 border-primary inline-block">{{ T "search" | default "Search" }}</h4>
             <div class="relative cursor-pointer" data-target="search-modal">
-              <input type="text" placeholder="Click to Search..." readonly class="cursor-pointer w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-dark dark:text-white px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors pointer-events-none">
+              <input type="text" placeholder="{{ T "search_placeholder" | default "Click to Search..." }}" readonly class="cursor-pointer w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/5 text-dark dark:text-white px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors pointer-events-none">
               <button type="button" class="absolute right-0 top-0 bottom-0 px-4 text-gray-500 hover:text-primary transition-colors pointer-events-none"><i class="fa-solid fa-search"></i></button>
             </div>
           </div>
           
           <!-- Categories -->
-          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-darkmode-border p-8 shadow-md">
-            <h4 class="text-lg font-bold text-dark dark:text-white uppercase tracking-wider mb-6 pb-2 border-b-2 border-primary inline-block">Categories</h4>
+          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-white/5 p-8 shadow-md">
+            <h4 class="text-lg font-bold text-dark dark:text-white uppercase tracking-wider mb-6 pb-2 border-b-2 border-primary inline-block">{{ T "categories" | default "Categories" }}</h4>
             <ul class="flex flex-col gap-3">
               {{ range $name, $items := .Site.Taxonomies.categories }}
               <li>
@@ -128,8 +128,8 @@
           </div>
           
           <!-- Recent News -->
-          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-darkmode-border p-8 shadow-md">
-            <h4 class="text-lg font-bold text-dark dark:text-white uppercase tracking-wider mb-6 pb-2 border-b-2 border-primary inline-block">Recent News</h4>
+          <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-white/5 p-8 shadow-md">
+            <h4 class="text-lg font-bold text-dark dark:text-white uppercase tracking-wider mb-6 pb-2 border-b-2 border-primary inline-block">{{ T "recent_news" | default "Recent News" }}</h4>
             <div class="flex flex-col gap-6">
               {{ range first 3 (where .Site.RegularPages "Section" "news") }}
               <a href="{{ .RelPermalink }}" class="group flex gap-4 items-center">
@@ -159,14 +159,14 @@
       </div>
 
       <!-- Navigation (Next/Prev) -->
-      <div class="mt-16 bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-darkmode-border p-8 shadow-xl flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="mt-16 bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-white/5 p-8 shadow-xl flex flex-col md:flex-row justify-between items-center gap-6">
         {{ if .PrevInSection }}
         <a href="{{ .PrevInSection.RelPermalink }}" class="group flex items-center gap-4 text-left w-full md:w-1/2">
-          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-darkmode-border flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
+          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-white/5 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
             <i class="fa-solid fa-arrow-left"></i>
           </div>
           <div>
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Previous Post</div>
+            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{{ T "previous_post" | default "Previous Post" }}</div>
             <h4 class="text-sm font-bold text-dark dark:text-white group-hover:text-primary transition-colors line-clamp-1">{{ .PrevInSection.Title }}</h4>
           </div>
         </a>
@@ -177,10 +177,10 @@
         {{ if .NextInSection }}
         <a href="{{ .NextInSection.RelPermalink }}" class="group flex items-center gap-4 text-right justify-end w-full md:w-1/2">
           <div>
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Next Post</div>
+            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{{ T "next_post" | default "Next Post" }}</div>
             <h4 class="text-sm font-bold text-dark dark:text-white group-hover:text-primary transition-colors line-clamp-1">{{ .NextInSection.Title }}</h4>
           </div>
-          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-darkmode-border flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
+          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-white/5 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </a>

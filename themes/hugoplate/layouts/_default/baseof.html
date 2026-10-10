@@ -24,7 +24,7 @@
 
   </head>
 
-  <body>
+  <body class="bg-body dark:bg-inalix-dark text-text dark:text-darkmode-text font-primary">
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
       {{ partialCached "preloader.html" . }}
@@ -46,7 +46,7 @@
     {{ partial "search-modal.html" (dict "Context" . ) }}
 
 
-    <main class="{{ if not .IsHome }}pt-28{{ end }}">
+    <main>
       {{ block "main" . }}{{ end }}
     </main>
 

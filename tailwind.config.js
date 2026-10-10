@@ -45,6 +45,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        inalix: {
+          dark: '#1e1f22',
+          darker: '#111215',
+        },
         text: theme.colors.default.text_color.default,
         light: theme.colors.default.text_color.light,
         dark: theme.colors.default.text_color.dark,

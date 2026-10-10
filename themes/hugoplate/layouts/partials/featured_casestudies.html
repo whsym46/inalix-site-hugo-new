@@ -1,5 +1,5 @@
 {{ range first 3 (where .Site.RegularPages "Section" "projects" ) }}
-<div class="flex flex-col group bg-body dark:bg-darkmode-theme-light rounded-md border border-border dark:border-white/10 dark:shadow-raycast hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-[0_0_30px_rgba(255,99,99,0.2)] transition-all duration-300 overflow-hidden">
+<div class="flex flex-col group bg-body dark:bg-darkmode-theme-light rounded-md border border-border dark:border-white/5 dark:shadow-raycast hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-[0_0_30px_rgba(255,99,99,0.2)] transition-all duration-300 overflow-hidden">
   {{ $imgSrc := "" }}
   {{ if .Params.image }}
   {{ $imagePath := .Params.image }}

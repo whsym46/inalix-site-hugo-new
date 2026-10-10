@@ -1,4 +1,4 @@
-<article class="group bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 relative flex flex-col h-full">
+<article class="group bg-white dark:bg-inalix-dark border border-gray-200 dark:border-white/5 overflow-hidden hover:shadow-xl transition-all duration-300 relative flex flex-col h-full">
   <!-- Image Container -->
   {{ $image := .Params.image }}
   {{ if reflect.IsSlice $image }}
@@ -6,7 +6,7 @@
   {{ end }}
   
   {{ if $image }}
-  <div class="relative w-full aspect-video overflow-hidden border-b border-gray-200">
+  <div class="relative w-full aspect-video overflow-hidden border-b border-gray-200 dark:border-white/5">
     <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 z-10"></div>
     {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700") }}
     

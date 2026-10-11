@@ -36,7 +36,7 @@
     
     {{/* 3. Fallback default jika tidak ada gambar section */}}
     {{ if not $bgImage }}
-      {{ $bgImage = "/images/slider-new1.jpg" | relURL }}
+      {{ $bgImage = "/images/slider-new1.webp" | relURL }}
     {{ end }}
     
     <img src="{{ $bgImage }}" class="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale" alt="Header">

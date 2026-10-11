@@ -6,7 +6,7 @@
       <!-- STATIC Image on Left -->
       <div class="w-full lg:w-[60%] relative z-10 lg:py-6 h-[300px] lg:h-full">
         {{ $testimonials := where .Site.RegularPages "Type" "testimonials" }}
-        <img src="/images/slider-new11.jpg" alt="{{ T "testimonials" | default "Testimonials" }}" class="w-full h-full object-cover shadow-lg grayscale transition-all duration-700 hover:grayscale-0">
+        <img src="/images/slider-new9.webp" alt="{{ T "testimonials" | default "Testimonials" }}" class="w-full h-full object-cover shadow-lg grayscale transition-all duration-700 hover:grayscale-0">
       </div>
       
       <!-- SWIPER Card on Right -->
@@ -23,13 +23,20 @@
                   "{{ .Content | plainify | truncate 250 }}"
                 </p>
                 <div class="flex items-center gap-4 relative z-10 mt-auto pb-4">
-                  {{ if .Params.image }}
-                  <div class="w-14 h-14 bg-gray-700 rounded-full overflow-hidden shrink-0 border-2 border-primary">
-                    <img src="{{ .Params.image }}" alt="{{ .Name }}" class="w-full h-full object-cover">
+                  {{ $clientName := .Params.name | default .Title }}
+                  {{ $clientInitial := substr $clientName 0 1 | upper }}
+                  <div class="w-14 h-14 bg-gray-800 rounded-full overflow-hidden shrink-0 border-2 border-primary relative flex items-center justify-center shadow-md">
+                    <!-- Initials Fallback (Always rendered underneath) -->
+                    <span class="text-white font-black text-xl uppercase tracking-wider absolute inset-0 flex items-center justify-center bg-gray-800 select-none">
+                      {{ $clientInitial }}
+                    </span>
+                    <!-- Photo (if exists and valid, sits above initials; if error/404, removes itself) -->
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image }}" alt="{{ $clientName }}" class="w-full h-full object-cover relative z-10" onerror="this.remove();">
+                    {{ end }}
                   </div>
-                  {{ end }}
                   <div>
-                    <h5 class="text-white font-bold uppercase text-sm tracking-widest">{{ .Name }}</h5>
+                    <h5 class="text-white font-bold uppercase text-sm tracking-widest">{{ $clientName }}</h5>
                     <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">{{ .Params.designation }}</p>
                   </div>
                 </div>

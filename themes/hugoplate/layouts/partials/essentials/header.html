@@ -1,32 +1,34 @@
 <header id="main-header" class="header fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 border-b border-transparent">
   <nav id="main-nav"
     class="navbar w-full px-4 lg:px-8 py-2 flex flex-wrap lg:flex-nowrap items-center">
-    <!-- logo -->
+    
+    <!-- 1. Logo -->
     <div class="order-0">
-      <!-- navbar brand/logo -->
       <a class="navbar-brand block text-dark dark:text-white" href="{{ site.Home.RelPermalink }}">
         {{ partial "logo" }}
       </a>
     </div>
-    <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label for="nav-toggle"
-      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
-        <title>Menu Open</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-      </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
-        <title>Menu Close</title>
-        <polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2" transform="rotate(45 10 10)">
-        </polygon>
-      </svg>
-    </label>
-    <!-- /navbar toggler -->
 
-    <!-- main navbar -->
-    <ul id="nav-menu"
-      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8">
+    <!-- 2. Navbar Toggler (Mobile Button) -->
+    <!-- Mobile Backdrop Overlay: Clicking anywhere outside closes the popup -->
+    <div id="nav-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 hidden lg:hidden"></div>
+    <button id="nav-toggle-btn" type="button" aria-label="Toggle navigation menu"
+      class="order-3 cursor-pointer flex items-center justify-center p-1 lg:hidden text-dark dark:text-white lg:order-1 relative z-40 focus:outline-none">
+      <svg id="show-button" class="h-6 w-6 block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <title>Menu Open</title>
+        <line x1="4" y1="6" x2="20" y2="6"></line>
+        <line x1="4" y1="12" x2="20" y2="12"></line>
+        <line x1="4" y1="18" x2="20" y2="18"></line>
+      </svg>
+      <svg id="hide-button" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <title>Menu Close</title>
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- 3. DESKTOP NAVIGATION MENU (Only visible on lg:flex, horizontal inline) -->
+    <ul class="navbar-nav hidden lg:flex items-center space-x-2 xl:space-x-8 lg:order-1 lg:w-auto">
       {{ $currentPage := . }}
       {{ range site.Menus.main }}
       {{ $menuURL := .URL | absLangURL }}
@@ -34,31 +36,20 @@
       {{ $active := eq $menuURL $pageURL }}
       {{ if .HasChildren }}
       <li class="nav-item nav-dropdown group relative">
-        <span class="nav-link {{ range .Children }}
-                {{ $childURL := .URL | absLangURL }}
-                {{ $active := eq $childURL $pageURL }}
-                {{ if $active }}active{{ end }}
-              {{ end }} inline-flex items-center">
+        <span class="nav-link {{ if $active }}active{{ end }} inline-flex items-center cursor-pointer">
           {{ .Name }}
-          <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+          <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
           </svg>
         </span>
         <ul class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
           {{ range .Children }}
           {{ $childURL := .URL | absLangURL }}
-          {{ $active := eq $childURL $pageURL }}
+          {{ $childActive := eq $childURL $pageURL }}
           <li class="nav-dropdown-item">
-            <a class="nav-dropdown-link {{ if $active }}
-                      active
-                    {{- end -}}" {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }} href="{{- if findRE `^#` .URL -}}
-                      {{- if not $.IsHome -}}
-                        {{- site.Home.RelPermalink -}}
-                      {{- end }}
-                      {{- .URL -}}
-                    {{- else -}}
-                      {{- .URL | relLangURL -}}
-                    {{- end -}}">
+            <a class="nav-dropdown-link {{ if $childActive }}active{{ end }}"
+              href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+              {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
               {{ .Name }}
             </a>
           </li>
@@ -67,26 +58,17 @@
       </li>
       {{ else }}
       <li class="nav-item">
-        <a class="nav-link {{ if $active }}active{{- end -}}" {{ if findRE `^http` .URL }} target="_blank"
-          rel="noopener" {{ end }} href="{{- if findRE `^#` .URL -}}
-                {{- if not $.IsHome -}}
-                  {{- site.Home.RelPermalink -}}
-                {{- end }}{{- .URL -}}
-              {{- else -}}
-                {{- .URL | relLangURL -}}
-              {{- end -}}">{{ .Name }}</a>
-      </li>
-      {{ end }}
-      {{ end }}
-      {{ if site.Params.navigation_button.enable }}
-      <li class="mt-4 inline-block lg:hidden">
-        <a class="btn btn-outline-primary btn-sm" href="{{ site.Params.navigation_button.link | relLangURL }}">
-          {{ T "get_a_quote" | default site.Params.navigation_button.label }}
+        <a class="nav-link {{ if $active }}active{{ end }}"
+          href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+          {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
+          {{ .Name }}
         </a>
       </li>
       {{ end }}
+      {{ end }}
     </ul>
 
+    <!-- 4. RIGHT ACTIONS: Search, Language, Quote Button -->
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
       {{ with site.Params.search }}
       {{ if .enable }}
@@ -100,11 +82,10 @@
       </button>
       {{ end }}
       {{ end }}
+
       {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-4 pl-2 py-1 dark:bg-darkmode-theme-light uppercase rounded") }}
-     
 
-
-      <!-- navigation btn -->
+      <!-- Navigation btn (Desktop) -->
       {{ if site.Params.navigation_button.enable }}
       <a href="{{ site.Params.navigation_button.link | relLangURL }}"
         class="btn btn-outline-primary btn-sm hidden lg:inline-block">
@@ -112,14 +93,113 @@
       </a>
       {{ end }}
     </div>
+
+    <!-- 5. MOBILE POPUP MENU (Completely separate container with its own wrapper and background) -->
+    <div id="mobile-popup-menu" class="w-full hidden lg:hidden order-3 mt-3 transition-all duration-300 relative z-50">
+      <div class="bg-white dark:bg-inalix-dark border border-gray-200 dark:border-white/10 border-t-4 border-t-primary shadow-2xl p-4">
+        <ul class="flex flex-col divide-y divide-gray-100 dark:divide-white/5">
+          {{ $currentPage := . }}
+          {{ range site.Menus.main }}
+          {{ $menuURL := .URL | absLangURL }}
+          {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+          {{ $active := eq $menuURL $pageURL }}
+          <li>
+            <a class="block py-2.5 px-2 text-sm font-bold uppercase tracking-wider transition-colors {{ if $active }}text-primary{{ else }}text-dark dark:text-gray-200 hover:text-primary dark:hover:text-primary{{ end }}"
+              href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+              {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+          {{ if site.Params.navigation_button.enable }}
+          <li class="pt-4">
+            <a class="w-full text-center block bg-primary hover:bg-darkmode-primary text-white font-bold uppercase tracking-wider py-2.5 text-xs transition-colors shadow-md"
+              href="{{ site.Params.navigation_button.link | relLangURL }}">
+              {{ T "get_a_quote" | default site.Params.navigation_button.label }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
   </nav>
 </header>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const header = document.getElementById('main-header');
-    const nav = document.getElementById('main-nav');
+    const toggleBtn = document.getElementById('nav-toggle-btn');
+    const mobileMenu = document.getElementById('mobile-popup-menu');
+    const showIcon = document.getElementById('show-button');
+    const hideIcon = document.getElementById('hide-button');
+    const navOverlay = document.getElementById('nav-overlay');
 
+    let isMenuOpen = false;
+
+    function openMobileMenu() {
+      isMenuOpen = true;
+      if (mobileMenu) mobileMenu.classList.remove('hidden');
+      if (navOverlay) navOverlay.classList.remove('hidden');
+      if (showIcon) showIcon.classList.add('hidden');
+      if (hideIcon) hideIcon.classList.remove('hidden');
+    }
+
+    function closeMobileMenu() {
+      isMenuOpen = false;
+      if (mobileMenu) mobileMenu.classList.add('hidden');
+      if (navOverlay) navOverlay.classList.add('hidden');
+      if (showIcon) showIcon.classList.remove('hidden');
+      if (hideIcon) hideIcon.classList.add('hidden');
+    }
+
+    // Toggle button click (stop propagation so document click doesn't close it instantly)
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (isMenuOpen) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+    }
+
+    // Overlay click closes
+    if (navOverlay) {
+      navOverlay.addEventListener('click', function () {
+        closeMobileMenu();
+      });
+    }
+
+    // Click outside mobile menu closes
+    document.addEventListener('click', function (e) {
+      if (isMenuOpen) {
+        const isInsideMenu = mobileMenu && mobileMenu.contains(e.target);
+        const isInsideBtn = toggleBtn && toggleBtn.contains(e.target);
+        if (!isInsideMenu && !isInsideBtn) {
+          closeMobileMenu();
+        }
+      }
+    });
+
+    // Escape key closes
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isMenuOpen) {
+        closeMobileMenu();
+      }
+    });
+
+    // Nav link click inside mobile menu closes
+    if (mobileMenu) {
+      mobileMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          closeMobileMenu();
+        });
+      });
+    }
+
+    // Scroll effect: exact original behavior
     function onScroll() {
       if (window.scrollY > 50) {
         header.classList.add('bg-white', 'dark:bg-darkmode-body', 'border-gray-200', 'dark:border-white/5', 'shadow-md');
@@ -134,92 +214,3 @@
     onScroll(); // initialize
   });
 </script>
-
-
-<style>
-  /* Header transparent styling at top of home page */
-  .nav-transparent .fa-search,
-  .nav-transparent label[for="nav-toggle"],
-  .nav-transparent .theme-switcher-modern button {
-    color: white !important;
-  }
-
-  .nav-transparent .navbar-brand {
-    color: white !important;
-  }
-
-  /* Fix language switcher text if it exists */
-  .nav-transparent select,
-  .nav-transparent .form-select {
-    color: white !important;
-    background-color: transparent !important;
-  }
-
-  /* Make button white when transparent */
-  .nav-transparent .btn-outline-primary {
-    color: white !important;
-    border-color: rgba(255, 255, 255, 0.5) !important;
-  }
-
-  .nav-transparent .btn-outline-primary:hover {
-    background-color: white !important;
-    color: theme('colors.inalix.dark') !important;
-  }
-
-  /* Desktop navbar link colors when transparent */
-  @media (min-width: 1024px) {
-    .nav-transparent .nav-link {
-      color: white !important;
-    }
-  }
-
-  /* Mobile Navigation Menu Card Popup */
-  @media (max-width: 1023px) {
-    #nav-menu {
-      background-color: #ffffff;
-      border-radius: 1rem;
-      margin-top: 0.75rem;
-      padding: 1rem 1.25rem;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      width: 100%;
-    }
-
-    .dark #nav-menu {
-      background-color: #121723;
-      border-color: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Links inside mobile popup */
-    .nav-transparent #nav-menu .nav-link,
-    #nav-menu .nav-link {
-      color: #1e293b !important;
-      text-align: left;
-      font-weight: 700;
-      padding: 0.75rem 0.5rem;
-    }
-
-    .dark .nav-transparent #nav-menu .nav-link,
-    .dark #nav-menu .nav-link {
-      color: #f8fafc !important;
-    }
-
-    .nav-transparent #nav-menu .nav-link:hover,
-    #nav-menu .nav-link:hover {
-      color: theme('colors.primary') !important;
-    }
-
-    #nav-menu .nav-item {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .dark #nav-menu .nav-item {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    #nav-menu .nav-item:last-child {
-      border-bottom: none;
-    }
-  }
-</style>

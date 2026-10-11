@@ -43,3 +43,56 @@
     .theme-switcher {
         display: none !important;
     }
+
+// ==========================================
+// INALIX NAVBAR & MOBILE MENU STYLES
+// ==========================================
+
+// Header transparent styling at top of page
+.nav-transparent {
+  .fa-search,
+  label[for="nav-toggle"],
+  .theme-switcher-modern button {
+    color: white !important;
+  }
+
+  .navbar-brand {
+    color: white !important;
+  }
+
+  select,
+  .form-select {
+    color: white !important;
+    background-color: transparent !important;
+  }
+
+  .btn-outline-primary {
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+
+    &:hover {
+      background-color: white !important;
+      color: #1e1f22 !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+
+      &:hover,
+      &.active {
+        color: #E11D48 !important;
+      }
+    }
+  }
+}
+
+// Active link indicator on desktop
+@media (min-width: 1024px) {
+  .nav-link.active {
+    color: #E11D48 !important;
+    font-weight: 700;
+  }
+}
+

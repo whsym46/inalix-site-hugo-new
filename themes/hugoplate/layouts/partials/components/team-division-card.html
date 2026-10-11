@@ -1,0 +1,97 @@
+{{ $divName := .divName }}
+{{ $divSlug := .divSlug }}
+{{ $members := .members }}
+{{ $totalMembers := len $members }}
+{{ $maxShow := 4 }}
+
+<article class="group relative bg-white dark:bg-inalix-dark border border-gray-200 dark:border-white/5 rounded-2xl p-7 md:p-8 flex flex-col justify-between hover:border-primary/60 dark:hover:border-primary/60 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden h-full">
+  <!-- Glowing top line on hover -->
+  <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-red-500 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  
+  <!-- Subtle background glow -->
+  <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+  <!-- Header: Icon & Division Tag -->
+  <div class="relative z-10">
+    <div class="flex items-center justify-between mb-6">
+      <div class="w-12 h-12 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200/50 dark:border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+        {{ if or (eq $divSlug "ict-division") (eq $divSlug "ict") }}
+          <i class="fa-solid fa-laptop-code text-lg"></i>
+        {{ else if or (eq $divSlug "admin-finance-division") (eq $divSlug "finance") }}
+          <i class="fa-solid fa-chart-pie text-lg"></i>
+        {{ else if or (eq $divSlug "hse-division") (eq $divSlug "hse") }}
+          <i class="fa-solid fa-shield-halved text-lg"></i>
+        {{ else if or (eq $divSlug "marketing") }}
+          <i class="fa-solid fa-bullhorn text-lg"></i>
+        {{ else if or (eq $divSlug "legal-division") (eq $divSlug "legal") }}
+          <i class="fa-solid fa-scale-balanced text-lg"></i>
+        {{ else }}
+          <i class="fa-solid fa-briefcase text-lg"></i>
+        {{ end }}
+      </div>
+
+      <span class="inline-block text-[11px] font-extrabold uppercase tracking-widest text-primary bg-primary/10 dark:bg-primary/20 px-3.5 py-1.5 rounded-full">
+        {{ $totalMembers }} {{ if eq $totalMembers 1 }}{{ T "member" | default "Member" }}{{ else }}{{ T "members" | default "Members" }}{{ end }}
+      </span>
+    </div>
+
+    <!-- Main Title: Nama Divisi -->
+    <h3 class="text-2xl md:text-3xl font-black text-dark dark:text-white uppercase tracking-tight leading-tight group-hover:text-primary transition-colors mb-3">
+      {{ $divName }}
+    </h3>
+  </div>
+
+  <!-- Bottom: Avatar Stack (Foto-foto Bertumpuk ala Medsos) -->
+  <div class="relative z-10 mt-8 pt-6 border-t border-gray-100 dark:border-white/5">
+    <p class="text-[11px] text-gray-400 dark:text-gray-500 uppercase tracking-widest font-bold mb-3">
+      {{ T "team_personnel" | default "Team Personnel" }}
+    </p>
+
+    <div class="flex items-center justify-between">
+      <!-- Avatar Facepile / Stack -->
+      <div class="flex items-center -space-x-3 overflow-visible py-1">
+        {{ range $index, $member := $members }}
+          {{ if lt $index $maxShow }}
+            {{ $imgSrc := "" }}
+            {{ $image := $member.Params.photo }}
+            {{ if reflect.IsSlice $image }}{{ $image = index $image 0 }}{{ end }}
+            {{ if $image }}
+              {{ $res := $member.Resources.GetMatch $image }}
+              {{ if $res }}{{ $imgSrc = $res.RelPermalink }}{{ else }}{{ $imgSrc = $image | relURL }}{{ end }}
+            {{ end }}
+            {{ $mName := $member.Params.name | default $member.Title }}
+            {{ $mRole := $member.Params.title | default "Personnel" }}
+
+            <a href="{{ $member.RelPermalink }}"
+               title="{{ $mName }} - {{ $mRole }}"
+               class="relative inline-block w-12 h-12 md:w-14 md:h-14 rounded-full ring-2 ring-white dark:ring-inalix-dark hover:ring-primary dark:hover:ring-primary hover:scale-115 hover:z-30 transition-all duration-300 shadow-md overflow-hidden bg-gray-100 dark:bg-white/10 flex-shrink-0 group/avatar">
+              {{ if $imgSrc }}
+                <img src="{{ $imgSrc }}" alt="{{ $mName }}" class="w-full h-full object-cover rounded-full" loading="lazy">
+              {{ else }}
+                <div class="w-full h-full flex items-center justify-center text-primary text-xs font-bold">
+                  {{ substr $mName 0 1 }}
+                </div>
+              {{ end }}
+            </a>
+          {{ end }}
+        {{ end }}
+
+        <!-- Counter jika anggota melebihi batas maksimal -->
+        {{ if gt $totalMembers $maxShow }}
+          {{ $remaining := sub $totalMembers $maxShow }}
+          <div class="relative inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full ring-2 ring-white dark:ring-inalix-dark bg-primary/20 text-primary font-black text-xs md:text-sm shadow-md flex-shrink-0 z-10" title="{{ $remaining }} more personnel">
+            +{{ $remaining }}
+          </div>
+        {{ end }}
+      </div>
+
+      <!-- Arrow Button -->
+      {{ $firstMember := index $members 0 }}
+      <a href="{{ $firstMember.RelPermalink }}" 
+         class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 text-dark dark:text-white group-hover:bg-primary group-hover:text-white flex items-center justify-center transition-all duration-300 transform group-hover:translate-x-1 shadow-sm flex-shrink-0 ml-4"
+         title="{{ T "view_division_team" | default "View Profiles" }}">
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </div>
+</article>

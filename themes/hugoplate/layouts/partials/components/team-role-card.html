@@ -1,0 +1,71 @@
+{{ $imgSrc := "" }}
+{{ $image := .Params.photo }}
+{{ if reflect.IsSlice $image }}{{ $image = index $image 0 }}{{ end }}
+{{ if $image }}
+  {{ $res := .Resources.GetMatch $image }}
+  {{ if $res }}{{ $imgSrc = $res.RelPermalink }}{{ else }}{{ $imgSrc = $image | relURL }}{{ end }}
+{{ end }}
+{{ $name := .Params.name | default .Title }}
+{{ $role := .Params.title | default "Team Role" }}
+
+<article class="group relative bg-white dark:bg-inalix-dark border border-gray-200 dark:border-white/5 rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:border-primary/60 dark:hover:border-primary/60 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 overflow-hidden h-full">
+  <!-- Left accent bar on hover -->
+  <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+  <!-- Top: Division Tag & Role Icon -->
+  <div>
+    <div class="flex items-center justify-between gap-3 mb-4">
+      {{ with .Params.division }}
+        <span class="inline-block text-[11px] font-extrabold uppercase tracking-widest text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
+          {{ humanize . }}
+        </span>
+      {{ else }}
+        <span class="inline-block text-[11px] font-extrabold uppercase tracking-widest text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
+          INALIX Team
+        </span>
+      {{ end }}
+
+      <div class="w-10 h-10 rounded-xl bg-gray-50 dark:bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+        <i class="fa-solid fa-briefcase text-sm"></i>
+      </div>
+    </div>
+
+    <!-- Main Title: Role / Jabatan (Sesuai teks di list sebelumnya) -->
+    <h3 class="text-xl md:text-2xl font-black text-dark dark:text-white uppercase tracking-tight leading-snug group-hover:text-primary transition-colors mb-2">
+      <a href="{{ .RelPermalink }}">
+        {{ $role }}
+      </a>
+    </h3>
+
+    {{ with .Params.office }}
+      <div class="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500 mt-2">
+        <i class="fa-solid fa-location-dot text-primary text-[10px]"></i>
+        <span class="uppercase tracking-wider font-medium">{{ humanize . }}</span>
+      </div>
+    {{ end }}
+  </div>
+
+  <!-- Bottom: Personnel Name & Arrow -->
+  <div class="mt-6 pt-5 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      {{ if $imgSrc }}
+        <img src="{{ $imgSrc }}" alt="{{ $name }}" class="w-10 h-10 rounded-full object-cover ring-2 ring-gray-200 dark:ring-white/10 group-hover:ring-primary/60 transition-all duration-300" loading="lazy">
+      {{ else }}
+        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+          <i class="fa-solid fa-user text-xs"></i>
+        </div>
+      {{ end }}
+      <div>
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">{{ T "personnel" | default "Personnel" }}</p>
+        <h4 class="text-sm font-bold text-dark dark:text-white group-hover:text-primary transition-colors">
+          {{ $name }}
+        </h4>
+      </div>
+    </div>
+
+    <!-- Arrow Link Button -->
+    <a href="{{ .RelPermalink }}" class="w-9 h-9 rounded-full bg-gray-100 dark:bg-white/5 text-gray-400 group-hover:bg-primary group-hover:text-white flex items-center justify-center transition-all duration-300 transform group-hover:translate-x-1 shadow-sm" aria-label="{{ $role }}">
+      <i class="fa-solid fa-arrow-right text-xs"></i>
+    </a>
+  </div>
+</article>

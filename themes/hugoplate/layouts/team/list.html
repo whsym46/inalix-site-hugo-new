@@ -1,0 +1,72 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section bg-body dark:bg-darkmode-body py-16 lg:py-24">
+    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <!-- Section Intro Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-3">
+          {{ T "our_divisions" | default "Our Divisions" }}
+        </h4>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-dark dark:text-white uppercase tracking-tight leading-tight">
+          {{ T "divisions_title" | default "Divisions & People of INALIX" }}
+        </h2>
+        <div class="w-20 h-1 bg-primary mx-auto mt-5 rounded-full"></div>
+      </div>
+
+      <!-- ======================================================================= -->
+      <!-- OPSI 1 (AKTIF): Card Divisi dengan Foto Personel Bertumpuk ala Medsos    -->
+      <!-- Menampilkan nama divisi dan foto-foto bertumpuk (stacked avatars)       -->
+      <!-- ======================================================================= -->
+      {{ $divisions := where site.RegularPages "Section" "division" }}
+      {{ $allTeam := where site.RegularPages "Section" "team" }}
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{ range $divisions }}
+          {{ $divSlug := .File.BaseFileName }}
+          {{ $divName := .Params.name | default .Title }}
+
+          {{/* Cari semua anggota tim yang cocok dengan divisi ini */}}
+          {{ $members := slice }}
+          {{ range $allTeam }}
+            {{ $mDiv := .Params.division | default "" }}
+            {{ $mDivSlug := lower (replace (replace $mDiv " " "-") "&-" "") }}
+            {{ if or (eq $mDiv $divSlug) (eq $mDiv $divName) (eq $mDivSlug $divSlug) (eq (lower $mDiv) (lower $divName)) }}
+              {{ $members = $members | append . }}
+            {{ end }}
+          {{ end }}
+
+          {{/* Hanya tampilkan divisi yang memiliki anggota tim */}}
+          {{ if gt (len $members) 0 }}
+            {{ partial "components/team-division-card" (dict "divName" $divName "divSlug" $divSlug "members" $members) }}
+          {{ end }}
+        {{ end }}
+      </div>
+
+      {{/*
+      =======================================================================
+      OPSI 2 (COMMENTED): Card Jabatan/Posisi & Divisi (Tanpa Foto Besar)
+      Jika ingin memakai tampilan per-jabatan, hapus comment di bawah ini:
+      =======================================================================
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        {{ range .RegularPages }}
+          {{ partial "components/team-role-card" . }}
+        {{ end }}
+      </div>
+      */}}
+
+      {{/*
+      =======================================================================
+      OPSI 3 (COMMENTED): Card Foto Profil Eksekutif (Full Portrait Card)
+      Jika ingin memakai tampilan kartu foto profil individual besar,
+      cukup hapus tanda comment di bawah ini:
+      =======================================================================
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        {{ range .RegularPages }}
+          {{ partial "components/team-card" . }}
+        {{ end }}
+      </div>
+      */}}
+    </div>
+  </section>
+{{ end }}

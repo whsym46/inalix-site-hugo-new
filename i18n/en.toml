@@ -146,3 +146,39 @@ other = "Terms of Use"
 
 [privacy_policy]
 other = "Privacy Policy"
+
+[our_team]
+other = "Our Team"
+
+[meet_the_team]
+other = "The Minds Behind INALIX"
+
+[view_profile]
+other = "View Profile"
+
+[team_roles]
+other = "Divisions & Roles at INALIX"
+
+[personnel]
+other = "Personnel"
+
+[our_divisions]
+other = "Our Divisions"
+
+[divisions_title]
+other = "Divisions & People of INALIX"
+
+[team_personnel]
+other = "Team Personnel"
+
+[member]
+other = "Member"
+
+[members]
+other = "Members"
+
+[view_division_team]
+other = "View Profiles"
+
+
+

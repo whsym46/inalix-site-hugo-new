@@ -1,0 +1,67 @@
+{{ $imgSrc := "" }}
+{{ $image := .Params.photo }}
+{{ if reflect.IsSlice $image }}{{ $image = index $image 0 }}{{ end }}
+{{ if $image }}
+  {{ $res := .Resources.GetMatch $image }}
+  {{ if $res }}{{ $imgSrc = $res.RelPermalink }}{{ else }}{{ $imgSrc = $image | relURL }}{{ end }}
+{{ end }}
+{{ $name := .Params.name | default .Title }}
+
+<article class="group relative bg-white dark:bg-inalix-dark border border-gray-200 dark:border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 flex flex-col h-full">
+  <!-- Top Accent Bar (lights up on hover) -->
+  <div class="h-1.5 w-full bg-gradient-to-r from-primary via-red-500 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+  <!-- Card Body -->
+  <div class="relative pt-8 pb-6 px-6 flex flex-col items-center text-center flex-grow">
+    <!-- Subtle hover glow background -->
+    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl pointer-events-none"></div>
+
+    <!-- Avatar with double ring & shadow -->
+    <div class="relative w-36 h-36 md:w-40 md:h-40 rounded-full p-1.5 ring-2 ring-gray-200 dark:ring-white/10 group-hover:ring-primary/80 transition-all duration-500 shadow-xl bg-white dark:bg-inalix-darker overflow-hidden mb-6 z-10">
+      {{ if $imgSrc }}
+        <img src="{{ $imgSrc }}" alt="{{ $name }}" class="w-full h-full object-cover rounded-full transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+      {{ else }}
+        <div class="w-full h-full rounded-full bg-primary/10 flex items-center justify-center text-primary">
+          <i class="fa-solid fa-user text-5xl"></i>
+        </div>
+      {{ end }}
+    </div>
+
+    <!-- Division Badge -->
+    {{ with .Params.division }}
+      <span class="inline-block text-[11px] font-extrabold uppercase tracking-widest text-primary bg-primary/10 dark:bg-primary/20 px-3.5 py-1 rounded-full mb-3 z-10">
+        {{ humanize . }}
+      </span>
+    {{ end }}
+
+    <!-- Full Name -->
+    <h3 class="text-xl md:text-2xl font-black text-dark dark:text-white uppercase tracking-tight group-hover:text-primary transition-colors z-10">
+      <a href="{{ .RelPermalink }}">
+        {{ $name }}
+      </a>
+    </h3>
+
+    <!-- Job Title / Position -->
+    <p class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1.5 z-10">
+      {{ .Params.title | default "Team Member" }}
+    </p>
+
+    <!-- Office / Location -->
+    {{ with .Params.office }}
+      <div class="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500 mt-3 z-10">
+        <i class="fa-solid fa-location-dot text-primary text-[10px]"></i>
+        <span class="uppercase tracking-wider font-medium">{{ humanize . }}</span>
+      </div>
+    {{ end }}
+  </div>
+
+  <!-- Card Action Footer -->
+  <div class="mt-auto px-6 py-4 border-t border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02] flex items-center justify-between">
+    <span class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">
+      {{ T "view_profile" | default "View Profile" }}
+    </span>
+    <a href="{{ .RelPermalink }}" class="w-9 h-9 rounded-full bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-dark dark:text-white group-hover:bg-primary group-hover:text-white group-hover:border-primary flex items-center justify-center transition-all duration-300 transform group-hover:translate-x-1 shadow-sm" aria-label="{{ $name }}">
+      <i class="fa-solid fa-arrow-right text-xs"></i>
+    </a>
+  </div>
+</article>

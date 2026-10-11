@@ -8,19 +8,19 @@ timeline:
   - year: "2003"
     title: "Founding and Vision"
     description: "These agencies leverage digital technologies and platforms to create, implement, and optimize digital marketing strategies, web development projects, and other online initiatives."
-    image: "/images/slider-new1.jpg"
+    image: "/images/slider-new1.webp"
   - year: "2010"
     title: "First Milestones"
     description: "Key partnerships and collaborations played a significant role, opening new opportunities and accelerating our entrance into previously untapped markets."
-    image: "/images/slider-new2.jpg"
+    image: "/images/slider-new2.webp"
   - year: "2020"
     title: "Embracing Technology"
     description: "We expanded our technological capabilities, integrating cutting-edge solutions to deliver comprehensive airport operations and management systems across the region."
-    image: "/images/slider-new1.jpg"
+    image: "/images/slider-new1.webp"
   - year: "2024"
     title: "Present Day Success"
     description: "Today, we stand as a trusted partner for major infrastructure projects, continuing our commitment to sustainable and innovative IT solutions."
-    image: "/images/slider-new2.jpg"
+    image: "/images/slider-new2.webp"
 culture_banner:
   title: We are true to ourselves, and commit to always perform at our best.
   text: We believe that we are outstanding. Not because we say it, but because we work hard at it. We are dedicated, committed and focused. We believe that every person will reach their personal best and overcome any challenge through a shared culture and ethos.

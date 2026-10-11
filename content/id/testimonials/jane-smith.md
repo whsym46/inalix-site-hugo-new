@@ -1,7 +1,7 @@
 ---
 name: "Jane Smith"
 designation: "Kepala Arsitek"
-image: "/images/slider-new2.jpg"
+image: "/images/slider-new2.webp"
 draft: false
 ---
 Tim di Inalix melampaui ekspektasi kami. Solusi inovatif dan manajemen proyek mereka yang ketat menghasilkan fasilitas yang menetapkan standar baru untuk keberlanjutan dan efisiensi.

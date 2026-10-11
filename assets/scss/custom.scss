@@ -1,9 +1,14 @@
 // Add your own custom styles here
-// Hero Slider Heights
+// Hero Slider Heights & Centering
 .hero-slider,
-.hero-slider .swiper-wrapper,
+.hero-slider .swiper-wrapper {
+  height: 100% !important;
+}
+
 .hero-slider .swiper-slide {
   height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
   padding-bottom: 0 !important;
 }
 

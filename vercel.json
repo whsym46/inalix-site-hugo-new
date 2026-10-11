@@ -8,6 +8,18 @@
       }
     }
   ],
+  "redirects": [
+    {
+      "source": "/team/:slug*",
+      "destination": "/en/team/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/team",
+      "destination": "/en/team",
+      "permanent": true
+    }
+  ],
   "routes": [
     {
       "handle": "filesystem"

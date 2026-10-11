@@ -58,6 +58,20 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      - name: Generate Barcode Redirects (/team/* to /en/team/*)
+        run: |
+          mkdir -p ./public/team
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/en/team/"><script>window.location.replace("/en/team/");</script></head></html>' > ./public/team/index.html
+          if [ -d "./public/en/team" ]; then
+            for dir in ./public/en/team/*/; do
+              slug=$(basename "$dir")
+              if [ "$slug" != "*" ] && [ "$slug" != "page" ]; then
+                mkdir -p "./public/team/$slug"
+                echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=/en/team/$slug/\"><script>window.location.replace(\"/en/team/$slug/\");</script></head></html>" > "./public/team/$slug/index.html"
+              fi
+            done
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

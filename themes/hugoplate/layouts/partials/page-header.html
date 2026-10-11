@@ -1,22 +1,44 @@
 <section class="relative w-full h-[350px] md:h-[450px] flex items-center justify-center overflow-hidden bg-inalix-dark dark:bg-inalix-dark pt-20">
   <!-- Background Image with Overlay -->
   <div class="absolute inset-0 w-full h-full">
-    <!-- Use a default image if no page image is set -->
+    <!-- Use dynamic section image or fallback to default -->
     {{ $bgImage := "" }}
-    {{ if .Params.image }}
-      {{ $bgImage = .Params.image }}
-    {{ else }}
-      {{ $latestProject := index (where site.RegularPages "Section" "projects") 0 }}
-      {{ if and $latestProject $latestProject.Params.image }}
-        {{ $bgImage = $latestProject.Params.image }}
+    
+    {{/* 1. Jika halaman saat ini punya .Params.image */}}
+    {{ $pageImage := .Params.image }}
+    {{ if reflect.IsSlice $pageImage }}{{ $pageImage = index $pageImage 0 }}{{ end }}
+    {{ if $pageImage }}
+      {{ $res := .Resources.GetMatch $pageImage }}
+      {{ if $res }}
+        {{ $bgImage = $res.RelPermalink }}
+      {{ else if or (hasPrefix $pageImage "/") (hasPrefix $pageImage "http") }}
+        {{ $bgImage = $pageImage | relURL }}
       {{ end }}
     {{ end }}
     
-    {{ $bgImage = $bgImage | default "/images/slider-new1.jpg" }}
-    
-    {{ if reflect.IsSlice $bgImage }}
-      {{ $bgImage = index $bgImage 0 }}
+    {{/* 2. Jika kosong, cari gambar dari halaman terbaru di section masing-masing (projects/products/news dll) */}}
+    {{ if and (not $bgImage) .Section }}
+      {{ $sectionPages := where site.RegularPages "Section" .Section }}
+      {{ $latestPage := index $sectionPages 0 }}
+      {{ if and $latestPage $latestPage.Params.image }}
+        {{ $secImg := $latestPage.Params.image }}
+        {{ if reflect.IsSlice $secImg }}{{ $secImg = index $secImg 0 }}{{ end }}
+        {{ if $secImg }}
+          {{ $secRes := $latestPage.Resources.GetMatch $secImg }}
+          {{ if $secRes }}
+            {{ $bgImage = $secRes.RelPermalink }}
+          {{ else if or (hasPrefix $secImg "/") (hasPrefix $secImg "http") }}
+            {{ $bgImage = $secImg | relURL }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
     {{ end }}
+    
+    {{/* 3. Fallback default jika tidak ada gambar section */}}
+    {{ if not $bgImage }}
+      {{ $bgImage = "/images/slider-new1.jpg" | relURL }}
+    {{ end }}
+    
     <img src="{{ $bgImage }}" class="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale" alt="Header">
     <div class="absolute inset-0 bg-black/60"></div>
   </div>

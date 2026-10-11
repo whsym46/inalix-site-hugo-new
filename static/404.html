@@ -5,6 +5,12 @@
     <script>
       (function() {
         var path = window.location.pathname;
+        // Redirect barcode lama /team/... ke /en/team/...
+        if (path === '/team' || path === '/team/' || path.startsWith('/team/')) {
+          var cleanPath = path.replace(/^\/team\/?/, '');
+          window.location.replace('/en/team/' + (cleanPath ? cleanPath + (cleanPath.endsWith('/') ? '' : '/') : ''));
+          return;
+        }
         if (path.startsWith('/id/')) {
           window.location.replace('/id/404.html');
         } else {

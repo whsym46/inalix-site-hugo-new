@@ -1,0 +1,59 @@
+{{ $offices := where .Site.RegularPages "Section" "office" }}
+{{ $headOffice := where $offices "Params.name" "Head Office" | first 1 }}
+{{ $office := index $headOffice 0 }}
+{{ if not $office }}
+  {{ $office = index $offices 0 }}
+{{ end }}
+{{ $phone := "" }}
+{{ $email := "" }}
+{{ if $office }}
+  {{ $phone = $office.Params.phone }}
+  {{ $email = $office.Params.email }}
+{{ end }}
+{{ if not $phone }}
+  {{ $phone = "+62-21-808 788 17" }}
+{{ end }}
+{{ if not $email }}
+  {{ $email = "sales@inalix.com" }}
+{{ end }}
+{{ $phoneClean := replace (replace (replace (replace $phone " " "") "-" "") "(" "") ")" "" }}
+
+<section class="py-16 md:py-20 bg-inalix-dark border-t border-white/5 relative overflow-hidden transition-colors">
+  <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
+    <!-- Sharp, Enterprise Inalix Card: sharp corners, solid border, border-l-4 primary accent -->
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 bg-inalix-dark border border-white/5 border-l-4 border-l-primary p-8 sm:p-10 lg:p-12 shadow-2xl">
+      
+      <!-- Left: Heading & Description -->
+      <div class="max-w-xl text-center lg:text-left">
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight uppercase tracking-tight">
+          {{ T "cta_consultation_title" | safeHTML }}
+        </h3>
+        <p class="text-gray-400 text-sm sm:text-base mt-3 leading-relaxed">
+          {{ T "cta_consultation_desc" | default "Let's discuss how we can elevate your operational efficiency today." }}
+        </p>
+      </div>
+
+      <!-- Center Divider Line (Desktop only) -->
+      <div class="hidden lg:block w-px h-20 bg-white/5"></div>
+
+      <!-- Right: Phone & Email with Sharp Industrial Icon Box -->
+      <div class="flex items-center gap-5 sm:gap-6 shrink-0">
+        <!-- Sharp Red Phone Icon Box (Inalix Brand Box) -->
+        <a href="tel:{{ $phoneClean }}" class="w-14 h-14 sm:w-16 sm:h-16 bg-primary hover:bg-darkmode-primary flex items-center justify-center text-white shadow-md shrink-0 transition-colors duration-300">
+          <i class="fa-solid fa-phone-volume text-xl sm:text-2xl"></i>
+        </a>
+
+        <!-- Phone & Email Link -->
+        <div class="text-left">
+          <a href="tel:{{ $phoneClean }}" class="text-xl sm:text-2xl lg:text-3xl font-black text-white hover:text-primary transition-colors block tracking-wider">
+            {{ $phone }}
+          </a>
+          <a href="mailto:{{ $email }}" class="text-sm sm:text-base font-bold text-gray-300 hover:text-primary transition-colors block mt-1 tracking-wider uppercase">
+            {{ $email }}
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

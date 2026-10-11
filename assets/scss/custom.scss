@@ -1,12 +1,17 @@
 // Add your own custom styles here
-.swiper-wrapper {
-    width: 100%;
-    height: max-content !important;
-    padding-bottom: 64px !important;
-    -webkit-transition-timing-function: linear !important;
-    transition-timing-function: linear !important;
-    position: relative;
-    }
+// Hero Slider Heights
+.hero-slider,
+.hero-slider .swiper-wrapper,
+.hero-slider .swiper-slide {
+  height: 100% !important;
+  padding-bottom: 0 !important;
+}
+
+// Testimonial Slider Widths
+.testimonial-slider .swiper-slide {
+  width: 100% !important;
+  flex-shrink: 0 !important;
+}
     .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: #4F46E5 !important;
     }

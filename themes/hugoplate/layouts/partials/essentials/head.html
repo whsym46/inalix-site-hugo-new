@@ -60,16 +60,14 @@
 <!-- Mermaid -->
 {{ partial "mermaid/assets/js" . }}
 
-<!-- Prevent Flash of Unstyled Content (FOUC) for Dark Mode -->
+<!-- Prevent Flash of Unstyled Content (FOUC) -->
 <script>
   (function() {
-    const defaultTheme = "{{ site.Params.theme_default | default `system` }}";
-    const currentSetting = localStorage.getItem("theme") || defaultTheme;
-    let isDark = currentSetting === "dark";
-    if (currentSetting === "system") {
-      isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    let currentSetting = localStorage.getItem("theme");
+    if (!currentSetting || currentSetting === "system") {
+      currentSetting = "{{ site.Params.theme_default | default `light` }}";
     }
-    if (isDark) {
+    if (currentSetting === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");

@@ -20,7 +20,7 @@
       {{ if $categories }}
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">
           {{ range $i,$p:= $categories }}
-            <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-sm hover:bg-primary hover:text-white transition-colors">
+            <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-sm hover:bg-darkmode-primary hover:text-white transition-colors">
               {{ . | humanize }}
             </a>
           {{ end }}
@@ -66,7 +66,7 @@
                 <span class="text-sm font-bold text-dark dark:text-white uppercase tracking-widest mr-2"><i class="fa-solid fa-tags text-primary mr-2"></i>{{ T "tags" }}:</span>
                 {{ if $tags }}
                   {{ range $i,$p:= $tags }}
-                    <a class="bg-gray-100 dark:bg-white/5 hover:bg-primary dark:hover:bg-primary hover:text-white transition-colors  text-gray-600 dark:text-gray-400 dark:text-gray-300 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-sm"
+                    <a class="bg-gray-100 dark:bg-white/5 hover:bg-darkmode-primary dark:hover:bg-darkmode-primary hover:text-white transition-colors  text-gray-600 dark:text-gray-400 dark:text-gray-300 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-sm"
                       href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/">
                       {{ . | humanize }}
                     </a>
@@ -77,9 +77,9 @@
               <div class="flex items-center gap-4">
                 <span class="text-sm font-bold text-dark dark:text-white uppercase tracking-widest">{{ T "share" | default "Share" }}:</span>
                 <div class="flex gap-2">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-darkmode-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-darkmode-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center  text-gray-600 dark:text-gray-400 dark:text-gray-300 hover:bg-darkmode-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
@@ -162,7 +162,7 @@
       <div class="mt-16 bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-white/5 p-8 shadow-xl flex flex-col md:flex-row justify-between items-center gap-6">
         {{ if .PrevInSection }}
         <a href="{{ .PrevInSection.RelPermalink }}" class="group flex items-center gap-4 text-left w-full md:w-1/2">
-          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-white/5 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
+          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-white/5 flex items-center justify-center text-gray-400 group-hover:bg-darkmode-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
             <i class="fa-solid fa-arrow-left"></i>
           </div>
           <div>
@@ -180,7 +180,7 @@
             <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{{ T "next_post" | default "Next Post" }}</div>
             <h4 class="text-sm font-bold text-dark dark:text-white group-hover:text-primary transition-colors line-clamp-1">{{ .NextInSection.Title }}</h4>
           </div>
-          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-white/5 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
+          <div class="w-12 h-12 rounded-full border border-gray-200 dark:border-white/5 flex items-center justify-center text-gray-400 group-hover:bg-darkmode-primary group-hover:text-white group-hover:border-primary transition-all shrink-0">
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </a>

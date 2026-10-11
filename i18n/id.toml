@@ -180,5 +180,15 @@ other = "Anggota"
 [view_division_team]
 other = "Lihat Profil"
 
+[explore_solutions]
+other = "Jelajahi Solusi"
+
+[cta_consultation_title]
+other = "Dapatkan konsultasi bisnis <span class=\"text-primary\">GRATIS</span> untuk Anda"
+
+[cta_consultation_desc]
+other = "Mari diskusikan bagaimana kami dapat meningkatkan efisiensi operasional Anda hari ini."
+
+
 
 

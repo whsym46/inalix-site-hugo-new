@@ -180,5 +180,15 @@ other = "Members"
 [view_division_team]
 other = "View Profiles"
 
+[explore_solutions]
+other = "Explore Solutions"
+
+[cta_consultation_title]
+other = "Get your <span class=\"text-primary\">FREE</span> business consultation"
+
+[cta_consultation_desc]
+other = "Let's discuss how we can elevate your operational efficiency today."
+
+
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Jane Smith"
+name: "Jane Smith"
 designation: "Kepala Arsitek"
 image: "/images/slider-new2.jpg"
 draft: false

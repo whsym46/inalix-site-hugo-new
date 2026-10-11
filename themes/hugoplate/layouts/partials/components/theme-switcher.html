@@ -2,21 +2,10 @@
 {{ $class := .Class }}
 {{ if site.Params.theme_switcher }}
 <div
-  class="theme-switcher-modern {{ $class }} inline-flex items-center bg-gray-200/50 dark:bg-[#07080a]/80 backdrop-blur-md rounded-md p-1 border border-gray-300 dark:border-white/5 shadow-sm dark:shadow-raycast">
-  <!-- System -->
-  <button data-theme-btn="system" aria-label="System Theme"
-    class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-md transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-    <span class="sr-only">System</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-      stroke-linejoin="round" class="w-4 h-4">
-      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-      <line x1="8" y1="21" x2="16" y2="21"></line>
-      <line x1="12" y1="17" x2="12" y2="21"></line>
-    </svg>
-  </button>
+  class="theme-switcher-modern {{ $class }} inline-flex items-center bg-gray-200/50 dark:bg-[#07080a]/80 backdrop-blur-md rounded-md p-0.5 border border-gray-300/60 dark:border-white/5 shadow-sm">
   <!-- Light -->
   <button data-theme-btn="light" aria-label="Light Theme"
-    class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-md transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+    class="theme-btn relative flex items-center justify-center w-7 h-7 rounded-md transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
     <span class="sr-only">Light</span>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
       stroke-linejoin="round" class="w-4 h-4">
@@ -33,7 +22,7 @@
   </button>
   <!-- Dark -->
   <button data-theme-btn="dark" aria-label="Dark Theme"
-    class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-md transition-colors text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+    class="theme-btn relative flex items-center justify-center w-7 h-7 rounded-md transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
     <span class="sr-only">Dark</span>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
       stroke-linejoin="round" class="w-4 h-4">
@@ -45,13 +34,12 @@
 <style>
   .theme-btn.active {
     background-color: white;
-    color: #111827;
-    /* gray-900 */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #e11d48; /* primary accent */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   }
 
   html.dark .theme-btn.active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     color: white;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 4px rgba(0,0,0,0.5);
     border: 1px solid rgba(255,255,255,0.05);
@@ -60,8 +48,10 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const defaultTheme = "{{ site.Params.theme_default }}";
-    let currentSetting = localStorage.getItem("theme") || defaultTheme || "system";
+    let currentSetting = localStorage.getItem("theme");
+    if (!currentSetting || currentSetting === "system") {
+      currentSetting = "{{ site.Params.theme_default | default `light` }}";
+    }
 
     const updateUI = (setting) => {
       document.querySelectorAll("[data-theme-btn]").forEach(btn => {
@@ -73,28 +63,16 @@
     };
 
     const applyTheme = (setting) => {
-      let isDark = false;
       if (setting === "dark") {
-        isDark = true;
-      } else if (setting === "light") {
-        isDark = false;
-      } else {
-        // system
-        isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      }
-
-      if (isDark) {
         document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
       }
     };
 
-    // Initialize
     updateUI(currentSetting);
     applyTheme(currentSetting);
 
-    // Listen for button clicks
     document.querySelectorAll("[data-theme-btn]").forEach(btn => {
       btn.addEventListener("click", () => {
         const setting = btn.getAttribute("data-theme-btn");
@@ -102,13 +80,6 @@
         updateUI(setting);
         applyTheme(setting);
       });
-    });
-
-    // Listen for system preference changes if 'system' is selected
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
-      if (localStorage.getItem("theme") === "system" || !localStorage.getItem("theme")) {
-        applyTheme("system");
-      }
     });
   });
 </script>

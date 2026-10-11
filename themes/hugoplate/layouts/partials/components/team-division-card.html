@@ -14,7 +14,7 @@
   <!-- Header: Icon & Division Tag -->
   <div class="relative z-10">
     <div class="flex items-center justify-between mb-6">
-      <div class="w-12 h-12 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200/50 dark:border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+      <div class="w-12 h-12 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200/50 dark:border-white/10 flex items-center justify-center text-primary group-hover:bg-darkmode-primary group-hover:text-white transition-all duration-300 shadow-sm">
         {{ if or (eq $divSlug "ict-division") (eq $divSlug "ict") }}
           <i class="fa-solid fa-laptop-code text-lg"></i>
         {{ else if or (eq $divSlug "admin-finance-division") (eq $divSlug "finance") }}
@@ -88,7 +88,7 @@
       <!-- Arrow Button -->
       {{ $firstMember := index $members 0 }}
       <a href="{{ $firstMember.RelPermalink }}" 
-         class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 text-dark dark:text-white group-hover:bg-primary group-hover:text-white flex items-center justify-center transition-all duration-300 transform group-hover:translate-x-1 shadow-sm flex-shrink-0 ml-4"
+         class="w-10 h-10 rounded-full bg-gray-100 dark:bg-white/5 text-dark dark:text-white group-hover:bg-darkmode-primary group-hover:text-white flex items-center justify-center transition-all duration-300 transform group-hover:translate-x-1 shadow-sm flex-shrink-0 ml-4"
          title="{{ T "view_division_team" | default "View Profiles" }}">
         <i class="fa-solid fa-arrow-right text-xs"></i>
       </a>

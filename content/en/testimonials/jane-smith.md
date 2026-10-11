@@ -1,5 +1,5 @@
 ---
-title: "Jane Smith"
+name: "Jane Smith"
 designation: "Chief Architect"
 image: "/images/slider-new2.jpg"
 draft: false

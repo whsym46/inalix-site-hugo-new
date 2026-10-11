@@ -100,7 +100,8 @@
       </button>
       {{ end }}
       {{ end }}
-      {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-theme-light uppercase rounded") }}
+      {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-4 pl-2 py-1 dark:bg-darkmode-theme-light uppercase rounded") }}
+     
 
 
       <!-- navigation btn -->
@@ -136,8 +137,7 @@
 
 
 <style>
-  /* Force white text when header is transparent (at the top) on HOME PAGE only */
-  .nav-transparent .nav-link,
+  /* Header transparent styling at top of home page */
   .nav-transparent .fa-search,
   .nav-transparent label[for="nav-toggle"],
   .nav-transparent .theme-switcher-modern button {
@@ -164,5 +164,62 @@
   .nav-transparent .btn-outline-primary:hover {
     background-color: white !important;
     color: theme('colors.inalix.dark') !important;
+  }
+
+  /* Desktop navbar link colors when transparent */
+  @media (min-width: 1024px) {
+    .nav-transparent .nav-link {
+      color: white !important;
+    }
+  }
+
+  /* Mobile Navigation Menu Card Popup */
+  @media (max-width: 1023px) {
+    #nav-menu {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      margin-top: 0.75rem;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      width: 100%;
+    }
+
+    .dark #nav-menu {
+      background-color: #121723;
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Links inside mobile popup */
+    .nav-transparent #nav-menu .nav-link,
+    #nav-menu .nav-link {
+      color: #1e293b !important;
+      text-align: left;
+      font-weight: 700;
+      padding: 0.75rem 0.5rem;
+    }
+
+    .dark .nav-transparent #nav-menu .nav-link,
+    .dark #nav-menu .nav-link {
+      color: #f8fafc !important;
+    }
+
+    .nav-transparent #nav-menu .nav-link:hover,
+    #nav-menu .nav-link:hover {
+      color: theme('colors.primary') !important;
+    }
+
+    #nav-menu .nav-item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .dark #nav-menu .nav-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    #nav-menu .nav-item:last-child {
+      border-bottom: none;
+    }
   }
 </style>

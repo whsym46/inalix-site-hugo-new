@@ -1,5 +1,5 @@
 ---
-title: "John Doe"
+name: "John Doe"
 designation: "Direktur Operasional"
 image: "/images/slider-new1.jpg"
 draft: false

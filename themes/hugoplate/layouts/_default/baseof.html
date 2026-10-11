@@ -1,9 +1,7 @@
 <!doctype html>
 <html
   itemscope
-  class="{{- if not site.Params.theme_switcher -}}
-    {{- site.Params.theme_default -}}
-  {{- end -}}"
+  class="{{- if and (not site.Params.theme_switcher) (eq site.Params.theme_default `dark`) -}}dark{{- end -}}"
   lang="{{ site.LanguageCode | default `en-US` }}"
   itemtype="http://schema.org/WebPage">
   <head>

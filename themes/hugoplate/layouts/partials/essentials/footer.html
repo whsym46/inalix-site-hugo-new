@@ -50,7 +50,7 @@
           {{ range site.Data.social.main }}
           <li>
             <a target="_blank" aria-label="{{ .name }}" rel="nofollow noopener" href="{{ .link | safeURL }}"
-              class="w-10 h-10 bg-white/5 hover:bg-primary flex items-center justify-center transition-colors text-white">
+              class="w-10 h-10 bg-white/5 hover:bg-darkmode-primary flex items-center justify-center transition-colors text-white">
               <i class="{{ .icon }}"></i>
             </a>
           </li>
@@ -67,30 +67,28 @@
       <div class="flex items-center">
         {{ if site.Params.theme_switcher }}
         <div class="theme-switcher-footer inline-flex items-center bg-white/5 rounded-full p-1 border border-white/5">
-          <button data-theme-btn="system" aria-label="System Theme" class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-full transition-colors text-gray-400 hover:text-white">
-            <i class="fa-solid fa-desktop"></i>
-          </button>
           <button data-theme-btn="light" aria-label="Light Theme" class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-full transition-colors text-gray-400 hover:text-white">
             <i class="fa-regular fa-sun"></i>
           </button>
           <button data-theme-btn="dark" aria-label="Dark Theme" class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-full transition-colors text-gray-400 hover:text-white">
             <i class="fa-regular fa-moon"></i>
           </button>
-          
         </div>
         <style>
           .theme-switcher-footer .theme-btn.active {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #e11d48;
           }
         </style>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
-            const defaultTheme = "{{ site.Params.theme_default }}";
-            let currentSetting = localStorage.getItem("theme") || defaultTheme || "system";
+            let currentSetting = localStorage.getItem("theme");
+            if (!currentSetting || currentSetting === "system") {
+              currentSetting = "{{ site.Params.theme_default | default `light` }}";
+            }
 
             const updateUI = (setting) => {
-              document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+              document.querySelectorAll(".theme-switcher-footer [data-theme-btn]").forEach(btn => {
                 btn.classList.remove("active");
                 if (btn.getAttribute("data-theme-btn") === setting) {
                   btn.classList.add("active");
@@ -99,15 +97,7 @@
             };
 
             const applyTheme = (setting) => {
-              let isDark = false;
               if (setting === "dark") {
-                isDark = true;
-              } else if (setting === "light") {
-                isDark = false;
-              } else {
-                isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-              }
-              if (isDark) {
                 document.documentElement.classList.add("dark");
               } else {
                 document.documentElement.classList.remove("dark");
@@ -117,19 +107,13 @@
             updateUI(currentSetting);
             applyTheme(currentSetting);
 
-            document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+            document.querySelectorAll(".theme-switcher-footer [data-theme-btn]").forEach(btn => {
               btn.addEventListener("click", () => {
                 const setting = btn.getAttribute("data-theme-btn");
                 localStorage.setItem("theme", setting);
                 updateUI(setting);
                 applyTheme(setting);
               });
-            });
-
-            window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
-              if (localStorage.getItem("theme") === "system" || !localStorage.getItem("theme")) {
-                applyTheme("system");
-              }
             });
           });
         </script>
@@ -149,7 +133,7 @@
 
   <!-- Back to top button -->
   <button id="back-to-top"
-    class="absolute bottom-8 right-8 z-50 w-12 h-12 bg-white text-dark hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 opacity-0 invisible shadow-xl">
+    class="absolute bottom-8 right-8 z-50 w-12 h-12 bg-white text-dark hover:bg-darkmode-primary hover:text-white flex items-center justify-center transition-all duration-300 opacity-0 invisible shadow-xl">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 </footer>

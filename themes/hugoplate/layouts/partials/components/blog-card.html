@@ -7,7 +7,7 @@
   
   {{ if $image }}
   <div class="relative w-full aspect-video overflow-hidden border-b border-gray-200 dark:border-white/5">
-    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 z-10"></div>
+    <div class="absolute inset-0 bg-primary/0 group-hover:bg-darkmode-primary/10 transition-colors duration-300 z-10"></div>
     {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700") }}
     
     <!-- Date Badge -->

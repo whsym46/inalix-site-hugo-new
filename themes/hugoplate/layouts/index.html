@@ -1,30 +1,147 @@
 {{ define "main" }}
-<!-- 1. Hero Brutalist -->
-<section class="relative w-full h-[100vh] min-h-[600px] flex items-center overflow-hidden bg-inalix-dark">
-  <!-- Background Image with Overlay -->
-  <div class="absolute inset-0 w-full h-full">
-    <img src="/images/slider-new1.jpg" class="w-full h-full object-cover" alt="Hero">
-    <div class="absolute inset-0 bg-gradient-to-r from-inalix-dark via-inalix-dark/80 to-transparent"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-inalix-dark via-transparent to-transparent"></div>
-    <!-- Red glowing blob on the left -->
-    <div class="absolute top-1/2 left-0 w-[40vw] h-[60vh] bg-primary/40 mix-blend-screen blur-[120px] -translate-y-1/2 rounded-full pointer-events-none"></div>
-  </div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- 1. Hero Dynamic Slider (Airport & Industrial) -->
+<section class="relative w-full min-h-[520px] md:min-h-[650px] md:h-screen overflow-hidden bg-inalix-dark">
+  <div class="swiper hero-slider w-full h-full">
+    <div class="swiper-wrapper w-full h-full">
 
-  <!-- Hero Content -->
-  <div class="container relative z-10 mx-auto px-4 lg:px-8 max-w-7xl">
-    <div class="max-w-4xl">
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase leading-[1.1] tracking-tighter drop-shadow-xl">
-        {{ i18n "hero_airport_title" }}
-      </h1>
-      
-      <div class="mt-12 flex flex-wrap gap-6">
-        <a href="{{ `projects/` | relLangURL }}" class="bg-white group text-dark hover:bg-gray-200 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-colors flex items-center gap-2">
-          Learn More
-          <svg class="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
-        </a>
-        <a href="{{ `contact/` | relLangURL }}" class="bg-transparent border border-white/30 text-white hover:bg-white/5 px-8 py-4 font-bold uppercase tracking-wider text-sm transition-colors">
-          {{ T "contact_us_nav" | default "Contact Us" }}
-        </a>
+      <!-- SLIDE 1: AIRPORT SOLUTIONS -->
+      <div class="swiper-slide relative w-full h-full min-h-[520px] md:min-h-[650px] md:h-screen flex items-center overflow-hidden bg-inalix-dark">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 w-full h-full">
+          <img src="/images/slider-new1.jpg" class="w-full h-full object-cover transform scale-100 transition-transform duration-1000" alt="Airport Solutions">
+          <!-- Light top, gentle text-contrast gradient -->
+          <div class="absolute opacity-0 dark:opacity-100 inset-0 bg-gradient-to-r from-white/10 dark:from-black/80 via-white/20 dark:via-black/40 to-white/10 dark:to-transparent"></div>
+          <div class="absolute opacity-0 dark:opacity-100 inset-0 bg-gradient-to-b from-white/10 dark:from-black/20 via-transparent to-white/10 dark:to-black/60"></div>
+          <!-- Red glowing flare (prominent behind headline like in reference) -->
+          <div class="absolute top-1/2 left-2 md:left-16 w-[300px] h-[300px] md:w-[480px] md:h-[480px] bg-primary dark:bg-primary/60 mix-blend-screen blur-[90px] -translate-y-1/2 rounded-full pointer-events-none"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container relative z-10 mx-auto px-4 lg:px-8 max-w-7xl pt-32 sm:pt-36 md:pt-32 pb-16 md:pb-0">
+          <div class="max-w-4xl">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 bg-primary/25 border border-primary/40 px-3.5 py-1.5 rounded-full mb-4 md:mb-6 text-primary text-[11px] md:text-xs font-black uppercase tracking-widest backdrop-blur-sm">
+              <i class="fa-solid fa-plane-departure text-xs"></i>
+              <span>Airport Solutions</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase leading-[1.08] tracking-tight drop-shadow-2xl mb-6 md:mb-6">
+              {{ i18n "hero_airport_title" | default "Inalix Airport Solutions" }}
+            </h1>
+
+            <!-- Description -->
+            <p class="text-gray-300 text-base sm:text-base md:text-xl leading-relaxed max-w-2xl mb-8 md:mb-10 drop-shadow line-clamp-3 md:line-clamp-none">
+              {{ i18n "hero_airport_desc" }}
+            </p>
+            
+            <!-- Actions -->
+            <div class="flex flex-wrap items-center gap-3.5 md:gap-5">
+              <a href="{{ `projects/` | relLangURL }}" class="bg-primary hover:bg-red-700 text-white px-6 py-3.5 md:px-8 md:py-4 font-bold uppercase tracking-wider text-xs md:text-sm transition-all duration-300 shadow-xl shadow-primary/25 flex items-center gap-2.5 group">
+                {{ T "explore_solutions" | default "Explore Solutions" }}
+                <svg class="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </a>
+              <a href="{{ `contact/` | relLangURL }}" class="bg-white/10 border border-white/20 hover:border-white text-white hover:bg-white/20 px-6 py-3.5 md:px-8 md:py-4 font-bold uppercase tracking-wider text-xs md:text-sm transition-colors backdrop-blur-sm">
+                {{ T "contact_us_nav" | default "Contact Us" }}
+              </a>
+            </div>
+
+            <!-- Key Highlights (Fills bottom space elegantly) -->
+            <div class="mt-8 md:mt-10 pt-5 md:pt-6 border-t border-white/15 flex flex-wrap items-center gap-x-5 md:gap-x-7 gap-y-2 text-gray-300 text-xs md:text-sm">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary text-xs"></i>
+                <span class="font-medium">AODB & FIDS</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary text-xs"></i>
+                <span class="font-medium">BHS & Security</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary text-xs"></i>
+                <span class="font-medium">Airside & Landside IT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: INDUSTRIAL SOLUTIONS -->
+      <div class="swiper-slide relative w-full h-full min-h-[520px] md:min-h-[650px] md:h-screen flex items-center overflow-hidden bg-inalix-dark">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 w-full h-full">
+          <img src="/images/inalix-industrial-solutions.webp" class="w-full h-full object-cover transform scale-100 transition-transform duration-1000" alt="Industrial Solutions">
+          <!-- Light top, gentle text-contrast gradient -->
+          <div class="absolute opacity-0 dark:opacity-100 inset-0 bg-gradient-to-r from-white/10 dark:from-black/80 via-white/20 dark:via-black/40 to-white/10 dark:to-transparent"></div>
+          <div class="absolute opacity-0 dark:opacity-100 inset-0 bg-gradient-to-b from-white/10 dark:from-black/20 via-transparent to-white/10 dark:to-black/60"></div>
+          <!-- Red glowing flare (prominent behind headline like in reference) -->
+          <div class="absolute top-1/2 left-2 md:left-16 w-[300px] h-[300px] md:w-[480px] md:h-[480px] bg-primary dark:bg-primary/60 mix-blend-screen blur-[90px] -translate-y-1/2 rounded-full pointer-events-none"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container relative z-10 mx-auto px-4 lg:px-8 max-w-7xl pt-32 sm:pt-36 md:pt-32 pb-16 md:pb-0">
+          <div class="max-w-4xl">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 bg-primary/25 border border-primary/40 px-3.5 py-1.5 rounded-full mb-4 md:mb-6 text-primary text-[11px] md:text-xs font-black uppercase tracking-widest backdrop-blur-sm">
+              <i class="fa-solid fa-industry text-xs"></i>
+              <span>Industrial Solutions</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase leading-[1.08] tracking-tight drop-shadow-2xl mb-6 md:mb-6">
+              {{ i18n "hero_industrial_title" | default "Inalix Industrial Solutions" }}
+            </h1>
+
+            <!-- Description -->
+            <p class="text-gray-300 text-base sm:text-base md:text-xl leading-relaxed max-w-2xl mb-8 md:mb-10 drop-shadow line-clamp-3 md:line-clamp-none">
+              {{ i18n "hero_industrial_desc" }}
+            </p>
+            
+            <!-- Actions -->
+            <div class="flex flex-wrap items-center gap-3.5 md:gap-5">
+              <a href="{{ `projects/` | relLangURL }}" class="bg-primary hover:bg-red-700 text-white px-6 py-3.5 md:px-8 md:py-4 font-bold uppercase tracking-wider text-xs md:text-sm transition-all duration-300 shadow-xl shadow-primary/25 flex items-center gap-2.5 group">
+                {{ T "explore_solutions" | default "Explore Solutions" }}
+                <svg class="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </a>
+              <a href="{{ `contact/` | relLangURL }}" class="bg-white/10 border border-white/20 hover:border-white text-white hover:bg-white/20 px-6 py-3.5 md:px-8 md:py-4 font-bold uppercase tracking-wider text-xs md:text-sm transition-colors backdrop-blur-sm">
+                {{ T "contact_us_nav" | default "Contact Us" }}
+              </a>
+            </div>
+
+            <!-- Key Highlights (Fills bottom space elegantly) -->
+            <div class="mt-8 md:mt-10 pt-5 md:pt-6 border-t border-white/15 flex flex-wrap items-center gap-x-5 md:gap-x-7 gap-y-2 text-gray-300 text-xs md:text-sm">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary text-xs"></i>
+                <span class="font-medium">Control & Instrumentation</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary text-xs"></i>
+                <span class="font-medium">Mechanical & Electrical</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary text-xs"></i>
+                <span class="font-medium">Supply & Installation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation & Pagination Controls -->
+    <div class="container absolute bottom-0 right-0 left-0 mx-auto px-4 lg:px-8 max-w-7xl pointer-events-none">
+      <div class="absolute bottom-6 right-4 lg:bottom-10 lg:right-8 z-30 flex items-center gap-3 md:gap-5 pointer-events-auto">
+        
+        <!-- Prev & Next Buttons -->
+        <div class="flex items-center gap-2">
+          <button class="hero-prev w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-white/5 hover:bg-darkmode-primary hover:border-primary text-white flex items-center justify-center transition-all duration-300 backdrop-blur-md shadow-lg" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left text-xs"></i>
+          </button>
+          <button class="hero-next w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-white/5 hover:bg-darkmode-primary hover:border-primary text-white flex items-center justify-center transition-all duration-300 backdrop-blur-md shadow-lg" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +158,7 @@
           {{ i18n "hero_airport_desc" }}
         </p>
         <!-- Progress bars -->
+         <!--
         <div class="space-y-6">
           <div>
             <div class="flex justify-between text-sm font-bold uppercase mb-2 dark:text-white"><span>Quality</span><span>95%</span></div>
@@ -51,6 +169,7 @@
             <div class="w-full bg-gray-200 dark:bg-gray-800 h-1"><div class="bg-primary h-1" style="width: 99%"></div></div>
           </div>
         </div>
+        -->
       </div>
       <div class="relative">
         <img src="/images/slider-new2.jpg" alt="Workers" class="w-full h-[500px] object-cover shadow-2xl">
@@ -62,16 +181,16 @@
 </section>
  
 <!-- 4. Dark Accordion Section -->
-<section class="py-24 bg-inalix-dark">
+<section class="py-16 md:py-24 bg-inalix-dark">
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
     <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "our_services" | default "Our Services" }}</h4>
-    <h2 class="text-4xl md:text-5xl font-black text-white uppercase leading-tight mb-16 max-w-2xl">
+    <h2 class="text-3xl md:text-5xl font-black text-white uppercase leading-tight mb-10 md:mb-16 max-w-2xl">
       {{ T "end_to_end_it" | default "END-TO-END IT SOLUTIONS: EMPOWERING AIRPORT OPERATIONS" }}
     </h2>
     
-    <div class="flex flex-col md:flex-row w-full h-[600px] gap-4">
+    <div class="flex flex-col md:flex-row w-full h-auto md:h-[600px] gap-4">
       <!-- Item 1 -->
-      <div class="flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
+      <div class="min-h-[160px] md:min-h-0 flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
         <img src="/images/aodb-our-services.webp" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         <div class="absolute bottom-8 left-6 right-6">
@@ -81,7 +200,7 @@
         <div class="absolute top-8 right-8 text-white/50 text-5xl font-black group-hover:text-primary transition-colors">01</div>
       </div>
       <!-- Item 2 -->
-      <div class="flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
+      <div class="min-h-[160px] md:min-h-0 flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
         <img src="/images/slider-new1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         <div class="absolute bottom-8 left-6 right-6">
@@ -91,7 +210,7 @@
         <div class="absolute top-8 right-8 text-white/50 text-5xl font-black group-hover:text-primary transition-colors">02</div>
       </div>
       <!-- Item 3 -->
-      <div class="flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
+      <div class="min-h-[160px] md:min-h-0 flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
         <img src="/images/bhs-our-services.webp" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         <div class="absolute bottom-8 left-6 right-6">
@@ -101,7 +220,7 @@
         <div class="absolute top-8 right-8 text-white/50 text-5xl font-black group-hover:text-primary transition-colors">03</div>
       </div>
       <!-- Item 4 -->
-      <div class="flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
+      <div class="min-h-[160px] md:min-h-0 flex-1 md:hover:flex-[3] transition-all duration-500 relative overflow-hidden group cursor-pointer bg-black">
         <img src="/images/security-our-services.webp" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         <div class="absolute bottom-8 left-6 right-6">
@@ -161,7 +280,7 @@
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
     <div class="text-center mb-16">
       <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "our_portfolios" | default "Our Portfolios" }}</h4>
-      <h2 class="text-4xl md:text-5xl font-black text-dark uppercase leading-tight">{{ T "case_studies" | default "CASE STUDIES" }}</h2>
+      <h2 class="text-4xl md:text-5xl font-black text-dark dark:text-white uppercase leading-tight">{{ T "case_studies" | default "CASE STUDIES" }}</h2>
       <div class="w-24 h-1.5 bg-primary mx-auto mt-6"></div>
     </div>
     
@@ -175,24 +294,37 @@
   </div>
 </section>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(function() {
+  function initSliders() {
     if (typeof Swiper !== 'undefined') {
-      new Swiper('.testimonial-slider', {
+      // 1. Hero Dynamic Slider
+      new Swiper('.hero-slider', {
         slidesPerView: 1,
         loop: true,
-        spaceBetween: 30,
+        autoHeight: false,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        speed: 1000,
+        autoplay: {
+          delay: 5500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
         navigation: {
-          nextEl: '.testimonial-next',
-          prevEl: '.testimonial-prev',
+          nextEl: '.hero-next',
+          prevEl: '.hero-prev',
         },
       });
+    } else {
+      setTimeout(initSliders, 100);
     }
-  }, 100);
+  }
+  initSliders();
 });
 </script>
 
@@ -224,4 +356,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
   </div>
 </section>
+
+
+<!-- 6.8 Call to Action: Business Consultation Banner -->
+{{ partial "components/cta-consultation.html" . }}
+
 {{ end }}

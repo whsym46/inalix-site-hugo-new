@@ -2,13 +2,11 @@
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
     <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4 text-center">{{ T "testimonials" | default "Testimonials" }}</h4>
     <h2 class="text-3xl md:text-4xl font-black text-dark dark:text-white uppercase leading-tight mb-12 text-center">{{ T "what_clients_say" | default "WHAT OUR CLIENTS SAY" }}</h2>
-    
     <div class="flex flex-col lg:flex-row items-stretch max-w-5xl mx-auto h-auto lg:h-[500px]">
-      
       <!-- STATIC Image on Left -->
       <div class="w-full lg:w-[60%] relative z-10 lg:py-6 h-[300px] lg:h-full">
         {{ $testimonials := where .Site.RegularPages "Type" "testimonials" }}
-        <img src="/images/slider-new1.jpg" alt="{{ T "testimonials" | default "Testimonials" }}" class="w-full h-full object-cover shadow-lg grayscale transition-all duration-700 hover:grayscale-0">
+        <img src="/images/slider-new11.jpg" alt="{{ T "testimonials" | default "Testimonials" }}" class="w-full h-full object-cover shadow-lg grayscale transition-all duration-700 hover:grayscale-0">
       </div>
       
       <!-- SWIPER Card on Right -->
@@ -17,21 +15,21 @@
           
           <i class="fa-solid fa-quote-right text-primary/10 text-8xl absolute top-4 right-4 pointer-events-none"></i>
           
-          <div class="swiper testimonial-slider w-full" style="height: calc(100% - 80px);">
+          <div class="swiper testimonial-slider w-full overflow-hidden flex-1">
             <div class="swiper-wrapper">
               {{ range $testimonials }}
-              <div class="swiper-slide flex flex-col justify-between h-full">
+              <div class="swiper-slide px-2 flex flex-col justify-between shrink-0 w-full h-full">
                 <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 italic relative z-10">
                   "{{ .Content | plainify | truncate 250 }}"
                 </p>
                 <div class="flex items-center gap-4 relative z-10 mt-auto pb-4">
                   {{ if .Params.image }}
                   <div class="w-14 h-14 bg-gray-700 rounded-full overflow-hidden shrink-0 border-2 border-primary">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-full h-full object-cover">
+                    <img src="{{ .Params.image }}" alt="{{ .Name }}" class="w-full h-full object-cover">
                   </div>
                   {{ end }}
                   <div>
-                    <h5 class="text-white font-bold uppercase text-sm tracking-widest">{{ .Title }}</h5>
+                    <h5 class="text-white font-bold uppercase text-sm tracking-widest">{{ .Name }}</h5>
                     <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">{{ .Params.designation }}</p>
                   </div>
                 </div>
@@ -42,10 +40,10 @@
           
           <!-- Nav inside card -->
           <div class="flex gap-3 z-30 relative mt-auto pt-6 border-t border-white/5 h-[80px] shrink-0">
-            <button class="testimonial-prev w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-primary hover:text-white text-white transition-all duration-300 rounded-md group">
+            <button class="testimonial-prev w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-darkmode-primary hover:text-white text-white transition-all duration-300 rounded-md group">
               <i class="fa-solid fa-arrow-left transform group-hover:-translate-x-1 transition-transform"></i>
             </button>
-            <button class="testimonial-next w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-primary hover:text-white text-white transition-all duration-300 rounded-md group">
+            <button class="testimonial-next w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-darkmode-primary hover:text-white text-white transition-all duration-300 rounded-md group">
               <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
             </button>
           </div>
@@ -61,19 +59,26 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(function() {
+  function initTestimonials() {
     if (typeof Swiper !== 'undefined') {
       new Swiper('.testimonial-slider', {
         slidesPerView: 1,
         loop: true,
-        spaceBetween: 30,
-        autoHeight: true,
+        speed: 700,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
         navigation: {
           nextEl: '.testimonial-next',
           prevEl: '.testimonial-prev',
         },
       });
+    } else {
+      setTimeout(initTestimonials, 100);
     }
-  }, 100);
+  }
+  initTestimonials();
 });
 </script>

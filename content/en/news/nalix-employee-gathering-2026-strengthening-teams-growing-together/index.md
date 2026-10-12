@@ -1,5 +1,5 @@
 ---
-title: 'NALIX Employee Gathering 2026: Strengthening Teams, Growing Together'
+title: 'INALIX Employee Gathering 2026: Strengthening Teams, Growing Together'
 draft: false
 image: images/Inalix-Employee-Gathering-2026.webp
 meta_title: 'NALIX Employee Gathering 2026: Strengthening Teams, Growing Together | INALIX'

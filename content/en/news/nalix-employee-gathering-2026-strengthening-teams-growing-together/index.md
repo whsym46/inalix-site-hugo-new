@@ -2,7 +2,7 @@
 title: 'INALIX Employee Gathering 2026: Strengthening Teams, Growing Together'
 draft: false
 image: images/Inalix-Employee-Gathering-2026.webp
-meta_title: 'NALIX Employee Gathering 2026: Strengthening Teams, Growing Together | INALIX'
+meta_title: 'INALIX Employee Gathering 2026: Strengthening Teams, Growing Together | INALIX'
 description: INALIX held its Employee Gathering 2026 from August 25 to 28, 2026, in Lembang, Bandung. The event brought team members together to strengthen relationships, foster collaboration, and celebrate the spirit of togetherness, reinforcing INALIX's commitment to building a positive and collaborative workplace culture.
 categories:
   - News

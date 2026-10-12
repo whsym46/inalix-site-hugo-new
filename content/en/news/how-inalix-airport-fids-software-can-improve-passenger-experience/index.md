@@ -3,10 +3,15 @@ title: How Inalix Airport FIDS Software Can Improve Passenger Experience
 draft: false
 image: images/Inalix-Airport-FIDS.webp
 meta_title: How Inalix Airport FIDS Software Can Improve Passenger Experience  | INALIX
-description: "Learn how the Inalix Flight Information Display System (FIDS) software enhances the passenger experience by providing real-time flight updates, customizable displays, and improved airport operational efficiency."
+description: Learn how the Inalix Flight Information Display System (FIDS) software enhances the passenger experience by providing real-time flight updates, customizable displays, and improved airport operational efficiency.
 categories:
   - News
-tags: []
+tags:
+  - fids
+  - flight information display
+  - passenger experience
+  - airport software
+  - real-time updates
 author: Inalix
 solution: Airport Solutions
 date: 2023-05-19

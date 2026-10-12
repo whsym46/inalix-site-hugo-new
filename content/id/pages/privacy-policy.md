@@ -1,33 +1,44 @@
 ---
-title: "Privacy"
-# meta title
-meta_title: ""
-# meta description
-description: "This is meta description"
-# save as draft
+title: Kebijakan Privasi
+meta_title: Kebijakan Privasi | INALIX
+description: Pelajari bagaimana INALIX mengumpulkan, menggunakan, dan melindungi data pribadi Anda saat menggunakan situs web dan layanan kami.
 draft: false
 ---
 
-#### Responsibility of Contributors
+Di INALIX, kami sangat menghargai privasi Anda dan berkomitmen untuk melindungi setiap data pribadi yang Anda percayakan kepada kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, mengelola, dan menjaga keamanan informasi Anda saat mengakses situs web kami.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+### 1. Informasi yang Kami Kumpulkan
+Kami dapat mengumpulkan informasi pribadi yang Anda berikan secara sukarela saat Anda:
+- Mengisi formulir kontak, permintaan demo, atau konsultasi bisnis (seperti nama lengkap, email perusahaan, nomor telepon, dan nama institusi/perusahaan).
+- Berkomunikasi dengan tim kami melalui email atau saluran resmi lainnya.
+- Mendaftar untuk menerima pembaruan informasi atau buletin teknologi kami.
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+Selain itu, situs web kami juga dapat secara otomatis mencatat data teknis standar seperti alamat IP, tipe peramban (browser), sistem operasi, dan halaman yang dikunjungi untuk keperluan analitik serta keamanan.
 
-#### Gathering of Personal Information
+### 2. Penggunaan Informasi
+Informasi yang dikumpulkan digunakan semata-mata untuk tujuan bisnis yang sah, meliputi:
+- Menanggapi pertanyaan atau permintaan penawaran terkait solusi sistem bandara dan otomasi industri kami.
+- Menyediakan layanan konsultasi teknis dan dukungan pelanggan.
+- Meningkatkan performa, keandalan, dan pengalaman pengguna pada situs web kami.
+- Memenuhi kepatuhan hukum dan peraturan yang berlaku di Indonesia.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+### 3. Perlindungan dan Keamanan Data
+Kami menerapkan langkah-langkah keamanan teknis dan organisasional yang ketat guna melindungi data pribadi Anda dari akses yang tidak sah, pengubahan, pengungkapan, atau perusakan yang melanggar hukum. Akses terhadap data pribadi dibatasi hanya bagi staf yang membutuhkannya untuk menjalankan tugas operasional resmi.
 
-#### Protection of Personal- Information
+### 4. Pengungkapan kepada Pihak Ketiga
+INALIX tidak menjual, menyewakan, atau memperdagangkan data pribadi Anda kepada pihak mana pun. Kami hanya dapat membagikan informasi kepada mitra tepercaya yang membantu operasional layanan kami dengan terikat perjanjian kerahasiaan ketat, atau jika diwajibkan oleh proses hukum yang sah.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+### 5. Penggunaan Cookie
+Situs web kami menggunakan cookie untuk meningkatkan navigasi dan memahami bagaimana pengunjung berinteraksi dengan halaman kami. Anda dapat mengatur peramban untuk menolak penggunaan cookie, meskipun beberapa fitur situs mungkin tidak berfungsi optimal tanpa cookie.
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+### 6. Hak Anda
+Sesuai dengan ketentuan perlindungan data yang berlaku, Anda memiliki hak untuk meminta akses, perbaikan, pembaruan, atau penghapusan data pribadi Anda yang tersimpan di sistem kami. Untuk mengajukan permintaan tersebut, silakan hubungi kami.
 
-#### Privacy Policy Changes
+### 7. Pembaruan Kebijakan
+Kebijakan Privasi ini dapat diperbarui sewaktu-waktu guna menyesuaikan dengan perkembangan teknologi dan regulasi. Setiap perubahan akan diumumkan langsung pada halaman ini.
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but limited to, email addresses, telephone numbers
-4. Any Update come in The technology Customer will get automatic Notification.
+### 8. Hubungi Kami
+Apabila Anda memiliki pertanyaan lebih lanjut mengenai kebijakan privasi ini, silakan hubungi kami melalui:
+
+- **Email:** info@inalix.com
+- **Situs Web:** [inalix.com](https://inalix.com)

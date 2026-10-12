@@ -9,12 +9,12 @@
       
       <!-- Left Side: Info -->
       <div class="w-full lg:w-5/12">
-        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">We are here to help you</h4>
-        <h2 class="text-4xl lg:text-5xl font-black uppercase leading-[1.1] mb-8 ">
-          Let's Start Working <span class="text-primary">Together Now</span>
+        <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "contact_subtitle" | default "Technology Consultation & Solutions" }}</h4>
+        <h2 class="text-4xl lg:text-5xl font-black uppercase leading-[1.1] mb-8">
+          {{ T "contact_main_title" | default "Elevate Your Airport & Industrial Systems <span class=\"text-primary\">With INALIX</span>" | safeHTML }}
         </h2>
-        <p class=" text-gray-600 dark:text-gray-400 text-lg mb-12 border-l-4 border-primary pl-6 py-2">
-          Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email, or visit our offices.
+        <p class="text-gray-600 dark:text-gray-400 text-lg mb-12 border-l-4 border-primary pl-6 py-2 leading-relaxed">
+          {{ T "contact_desc" | default "Connect with our engineering specialists to explore FIDS, A-CDM, Master Clock, aeronautical billing, or industrial automation. We are ready to formulate tailored solutions that optimize your operational efficiency." }}
         </p>
 
         <!-- Offices Loop -->
@@ -24,7 +24,7 @@
           {{ with $officePage }}
           <div class="border border-gray-200 dark:border-white/5 p-8 hover:-translate-y-2 transition-transform duration-300 group shadow-sm hover:shadow-xl">
             
-            <h3 class="text-2xl font-bold uppercase  mb-6 border-b border-gray-100 dark:border-white/5 pb-4">
+            <h3 class="text-2xl font-bold uppercase mb-6 border-b border-gray-100 dark:border-white/5 pb-4">
               {{ .Params.name }} <span class="text-primary text-sm ml-2 font-medium tracking-widest">{{ .Params.location }}</span>
             </h3>
             
@@ -35,7 +35,7 @@
                   <i class="fa-solid fa-location-dot text-primary"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">We are Here:</div>
+                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">{{ T "office_address_label" | default "Office Address" }}:</div>
                   <div class="leading-relaxed font-medium">{{ .Params.address | markdownify }}</div>
                 </div>
               </li>
@@ -47,8 +47,8 @@
                   <i class="fa-solid fa-phone text-primary"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">Call Us:</div>
-                  <a href="tel:{{ .Params.phone | replaceRE ` [^0-9+]` `` }}" class=" hover:text-primary text-lg font-bold transition-colors">{{ .Params.phone }}</a>
+                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">{{ T "call_us_label" | default "Telephone" }}:</div>
+                  <a href="tel:{{ .Params.phone | replaceRE ` [^0-9+]` `` }}" class="hover:text-primary text-lg font-bold transition-colors">{{ .Params.phone }}</a>
                 </div>
               </li>
               {{ end }}
@@ -59,8 +59,8 @@
                   <i class="fa-solid fa-envelope text-primary"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">Email Us:</div>
-                  <a href="mailto:{{ .Params.email }}" class=" hover:text-primary transition-colors font-medium">{{ .Params.email }}</a>
+                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">{{ T "email_us_label" | default "Business Email" }}:</div>
+                  <a href="mailto:{{ .Params.email }}" class="hover:text-primary transition-colors font-medium">{{ .Params.email }}</a>
                 </div>
               </li>
               {{ end }}
@@ -71,7 +71,7 @@
                   <i class="fa-regular fa-clock text-primary"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">Business Hours:</div>
+                  <div class="text-xs text-gray-400 dark:text-gray-600 uppercase font-bold tracking-widest mb-1">{{ T "hours_label" | default "Business Hours" }}:</div>
                   <div class="font-medium">{{ .Params.hours }}</div>
                 </div>
               </li>
@@ -87,25 +87,25 @@
       <div class="w-full lg:w-7/12 mt-12 lg:mt-0">
         <div class="border border-gray-200 dark:border-white/5 p-8 lg:p-12 shadow-xl relative overflow-hidden">
           
-          <h3 class="text-3xl font-black uppercase  mb-2">Drop Us a Line</h3>
-          <p class="text-sm mb-10 pb-6 border-b border-gray-100 dark:border-white/5">Your email address will not be published. Required fields are marked *</p>
+          <h3 class="text-3xl font-black uppercase mb-2">{{ T "form_title" | default "Send an Inquiry or Project Consultation" }}</h3>
+          <p class="text-sm mb-10 pb-6 border-b border-gray-100 dark:border-white/5">{{ T "form_subtitle" | default "Our technical team will review your project requirements and respond within 1 business day. Fields marked with * are required." }}</p>
           
           <form action="{{ site.Params.contact_form_action }}" method="POST" class="relative z-10">
             <div class="mb-6">
-              <input id="name" name="name" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4  rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="Your Name *" type="text" required />
+              <input id="name" name="name" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4 rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="{{ T "form_name_placeholder" | default "Your Name *" }}" type="text" required />
             </div>
             <div class="mb-6">
-              <input id="email" name="email" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4  rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="Your Email *" type="email" required />
+              <input id="email" name="email" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4 rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="{{ T "form_email_placeholder" | default "Corporate Email *" }}" type="email" required />
             </div>
             <div class="mb-6">
-              <input id="phone" name="phone" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4  rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="Contact Phone *" type="tel" required />
+              <input id="phone" name="phone" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4 rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary" placeholder="{{ T "form_phone_placeholder" | default "Contact Phone / WhatsApp *" }}" type="tel" required />
             </div>
             <div class="mb-10">
-              <textarea id="message" name="message" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4  rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary resize-none" placeholder="Your Comment *" rows="5" required></textarea>
+              <textarea id="message" name="message" class="w-full border border-gray-200 dark:border-white/5 focus:border-primary px-6 py-4 rounded-none bg-gray-200 dark:bg-white/5 placeholder-gray-500 dark:placeholder-gray-400 text-gray-600 dark:text-gray-300 outline-none transition-all focus:ring-1 focus:ring-primary resize-none" placeholder="{{ T "form_message_placeholder" | default "Project Details or Your Message *" }}" rows="5" required></textarea>
             </div>
             <button type="submit" class="group relative inline-flex items-center justify-center bg-primary text-white font-bold uppercase tracking-widest px-10 py-5 rounded-none overflow-hidden transition-all hover:bg-dark hover:text-white w-full shadow-md hover:shadow-xl">
               <span class="relative z-10 flex items-center gap-3">
-                GET IN TOUCH 
+                {{ T "form_submit_btn" | default "SEND INQUIRY NOW" }}
                 <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
               </span>
             </button>

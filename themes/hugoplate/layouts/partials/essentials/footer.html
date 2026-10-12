@@ -124,8 +124,8 @@
         <div>{{ site.Params.copyright | markdownify }}</div>
         <div class="hidden md:block w-1 h-1 rounded-full bg-gray-600"></div>
         <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-white transition-colors">{{ T "terms_of_use" | default "Terms of Use" }}</a>
-          <a href="#" class="hover:text-white transition-colors">{{ T "privacy_policy" | default "Privacy Policy" }}</a>
+          <a href="{{ `terms-of-use/` | relLangURL }}" class="hover:text-white transition-colors">{{ T "terms_of_use" | default "Terms of Use" }}</a>
+          <a href="{{ `privacy-policy/` | relLangURL }}" class="hover:text-white transition-colors">{{ T "privacy_policy" | default "Privacy Policy" }}</a>
         </div>
       </div>
     </div>

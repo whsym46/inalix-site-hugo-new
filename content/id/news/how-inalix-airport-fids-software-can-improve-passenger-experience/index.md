@@ -1,12 +1,17 @@
 ---
-title: "Bagaimana Perangkat Lunak FIDS Bandara Inalix Dapat Meningkatkan Pengalaman Penumpang"
+title: Bagaimana Perangkat Lunak FIDS Bandara Inalix Dapat Meningkatkan Pengalaman Penumpang
 draft: false
 image: images/Inalix-Airport-FIDS.webp
 meta_title: How Inalix Airport FIDS Software Can Improve Passenger Experience  | INALIX
-description: "Pelajari bagaimana perangkat lunak Flight Information Display System (FIDS) dari Inalix meningkatkan pengalaman penumpang dengan menyajikan pembaruan penerbangan real-time, tampilan yang dapat disesuaikan, dan efisiensi operasional bandara."
+description: Pelajari bagaimana perangkat lunak Flight Information Display System (FIDS) dari Inalix meningkatkan pengalaman penumpang dengan menyajikan pembaruan penerbangan real-time, tampilan yang dapat disesuaikan, dan efisiensi operasional bandara.
 categories:
   - News
-tags: []
+tags:
+  - fids
+  - tampilan informasi penerbangan
+  - pengalaman penumpang
+  - perangkat lunak bandara
+  - informasi real-time
 author: Inalix
 solution: Airport Solutions
 date: 2023-05-19

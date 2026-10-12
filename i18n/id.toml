@@ -189,6 +189,54 @@ other = "Dapatkan konsultasi bisnis <span class=\"text-primary\">GRATIS</span> u
 [cta_consultation_desc]
 other = "Mari diskusikan bagaimana kami dapat meningkatkan efisiensi operasional Anda hari ini."
 
+[updated]
+other = "Diperbarui"
+
+[contact_subtitle]
+other = "Konsultasi & Solusi Teknologi"
+
+[contact_main_title]
+other = "Diskusikan Kebutuhan Bandara & Industri <span class=\"text-primary\">Bersama Kami</span>"
+
+[contact_desc]
+other = "Hubungi tim spesialis kami untuk mendiskusikan integrasi FIDS, A-CDM, Master Clock, sistem billing penerbangan, atau otomasi industri. Kami siap membantu merancang solusi tepat guna sesuai spesifikasi dan kebutuhan operasional Anda."
+
+[office_address_label]
+other = "Alamat Kantor"
+
+[call_us_label]
+other = "Telepon"
+
+[email_us_label]
+other = "Surel Bisnis"
+
+[hours_label]
+other = "Jam Operasional"
+
+[form_title]
+other = "Kirim Pertanyaan atau Konsultasi Proyek"
+
+[form_subtitle]
+other = "Tim teknis kami akan meninjau kebutuhan Anda dan merespons dalam waktu 1x24 jam kerja. Kolom bertanda * wajib diisi."
+
+[form_name_placeholder]
+other = "Nama Lengkap *"
+
+[form_email_placeholder]
+other = "Email Kantor / Perusahaan *"
+
+[form_phone_placeholder]
+other = "Nomor Kontak / WhatsApp *"
+
+[form_message_placeholder]
+other = "Rincian Kebutuhan atau Pesan Anda *"
+
+[form_submit_btn]
+other = "KIRIM PESAN SEKARANG"
+
+[faq_title]
+other = "Pertanyaan yang Sering Diajukan"
+
 
 
 

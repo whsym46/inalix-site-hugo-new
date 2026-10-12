@@ -189,6 +189,54 @@ other = "Get your <span class=\"text-primary\">FREE</span> business consultation
 [cta_consultation_desc]
 other = "Let's discuss how we can elevate your operational efficiency today."
 
+[updated]
+other = "Updated"
+
+[contact_subtitle]
+other = "Technology Consultation & Solutions"
+
+[contact_main_title]
+other = "Elevate Your Airport & Industrial Systems <span class=\"text-primary\">With INALIX</span>"
+
+[contact_desc]
+other = "Connect with our engineering specialists to explore FIDS, A-CDM, Master Clock, aeronautical billing, or industrial automation. We are ready to formulate tailored solutions that optimize your operational efficiency."
+
+[office_address_label]
+other = "Office Address"
+
+[call_us_label]
+other = "Telephone"
+
+[email_us_label]
+other = "Business Email"
+
+[hours_label]
+other = "Business Hours"
+
+[form_title]
+other = "Send an Inquiry or Project Consultation"
+
+[form_subtitle]
+other = "Our technical team will review your project requirements and respond within 1 business day. Fields marked with * are required."
+
+[form_name_placeholder]
+other = "Your Name *"
+
+[form_email_placeholder]
+other = "Corporate Email *"
+
+[form_phone_placeholder]
+other = "Contact Phone / WhatsApp *"
+
+[form_message_placeholder]
+other = "Project Details or Your Message *"
+
+[form_submit_btn]
+other = "SEND INQUIRY NOW"
+
+[faq_title]
+other = "Frequently Asked Questions"
+
 
 
 

@@ -5,22 +5,22 @@ type: pages
 description: Discover the journey of our company from vision to reality.
 
 timeline:
-  - year: "2003"
-    title: "Founding and Vision"
-    description: "These agencies leverage digital technologies and platforms to create, implement, and optimize digital marketing strategies, web development projects, and other online initiatives."
-    image: "/images/slider-new1.webp"
-  - year: "2010"
-    title: "First Milestones"
-    description: "Key partnerships and collaborations played a significant role, opening new opportunities and accelerating our entrance into previously untapped markets."
-    image: "/images/slider-new2.webp"
-  - year: "2020"
-    title: "Embracing Technology"
-    description: "We expanded our technological capabilities, integrating cutting-edge solutions to deliver comprehensive airport operations and management systems across the region."
-    image: "/images/slider-new1.webp"
-  - year: "2024"
-    title: "Present Day Success"
-    description: "Today, we stand as a trusted partner for major infrastructure projects, continuing our commitment to sustainable and innovative IT solutions."
-    image: "/images/slider-new2.webp"
+  - year: 2002
+    title: Founding & Technological Foundation
+    description: PT INALIX was officially established on June 10th, 2002, with a mission to develop sovereign national IT capabilities, marked by successful FIDS migrations at Batam Hang Nadim Airport and Sepinggan Balikpapan.
+    image: /images/slider-new1.webp
+  - year: 2010
+    title: Nationwide Airport IT Expansion
+    description: Strategic partnerships with PT Angkasa Pura I and PT Angkasa Pura II expanded, deploying INALIX-FIDS, Airport ID-Card systems, and Automatic Announcement Systems across major airports throughout Indonesia.
+    image: /images/slider-new2.webp
+  - year: 2020
+    title: Advanced Aviation & Industrial Solutions
+    description: Expanded technological capabilities into comprehensive airport operation systems, including AODB, A-CDM, Master Clock synchronization, Aeronautical Billing, and industrial automation.
+    image: /images/slider-new1.webp
+  - year: 2024
+    title: Trusted Partner for Modern Infrastructure
+    description: Standing as a premier trusted partner for airport operations and industrial technology, delivering scalable, resilient, and modular IT solutions.
+    image: /images/slider-new2.webp
 culture_banner:
   title: We are true to ourselves, and commit to always perform at our best.
   text: We believe that we are outstanding. Not because we say it, but because we work hard at it. We are dedicated, committed and focused. We believe that every person will reach their personal best and overcome any challenge through a shared culture and ethos.
@@ -57,7 +57,7 @@ faqs:
     answer: |-
       The foundation of Inalix is software developer house, we can make custom web-based software as per customer’s need.
 
-      Technical inquiry is needed as per software requirement that the customers want to de
+      Technical inquiry is needed as per software requirement that the customers wish to develop.
   - question: How to get quotation?
     answer: |-
       Dear customers, please contact us from this page > [this one](https://inalix.com/contact/)

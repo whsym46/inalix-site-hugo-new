@@ -1,12 +1,17 @@
 ---
-title: "Implementasi ACDM Inalix di Bandara Internasional Juanda & Bandara I Gusti Ngurah Rai"
+title: Implementasi ACDM Inalix di Bandara Internasional Juanda & Bandara I Gusti Ngurah Rai
 draft: false
 image: images/Inalix-ACDM-Implementation-Juanda-Airport.webp
 meta_title: Inalix ACDM Implementation at Juanda International Airport & I Gusti Ngurah Rai Airport | INALIX
-description: "Inalix dengan bangga memperkenalkan aplikasi Airport Collaboration Decision Making (ACDM) pelopor di Indonesia, yang diimplementasikan di bandara Juanda dan Ngurah Rai untuk mengoptimalkan operasional penerbangan."
+description: Inalix dengan bangga memperkenalkan aplikasi Airport Collaboration Decision Making (ACDM) pelopor di Indonesia, yang diimplementasikan di bandara Juanda dan Ngurah Rai untuk mengoptimalkan operasional penerbangan.
 categories:
   - News
-tags: []
+tags:
+  - acdm
+  - kolaborasi bandara
+  - bandara juanda
+  - bandara ngurah rai
+  - operasional penerbangan
 author: Inalix
 solution: Airport Solutions
 date: 2023-08-25

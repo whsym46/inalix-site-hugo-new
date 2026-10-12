@@ -1,12 +1,17 @@
 ---
-title: "Solusi Bandara Inalix : FIDS & Digital Signage di Bandara Internasional Ngurah Rai"
+title: Solusi Bandara Inalix - FIDS & Digital Signage di Bandara Internasional Ngurah Rai
 draft: false
 image: images/Inalix-Flight-Information-Display-System-Bali-Airport-1.webp
-meta_title: 'Inalix Airport Solutions : FIDS & Digital Signage at Ngurah Rai International Airport | INALIX'
-description: "Jelajahi implementasi sistem FIDS dan Digital Signage dari Inalix di Bandara Internasional Ngurah Rai, yang menampilkan tayangan informasi yang fleksibel dan dinamis bagi penumpang."
+meta_title: Solusi Bandara Inalix - FIDS & Digital Signage di Bandara Internasional Ngurah Rai | INALIX
+description: Jelajahi implementasi sistem FIDS dan Digital Signage dari Inalix di Bandara Internasional Ngurah Rai, yang menampilkan tayangan informasi yang fleksibel dan dinamis bagi penumpang.
 categories:
   - News
-tags: []
+tags:
+  - fids
+  - digital signage
+  - bandara ngurah rai
+  - bandara bali
+  - tampilan bandara
 author: Inalix
 solution: Airport Solutions
 date: 2022-06-22

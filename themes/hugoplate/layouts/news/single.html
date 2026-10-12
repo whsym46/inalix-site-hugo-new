@@ -1,4 +1,48 @@
 {{ define "main" }}
+  <!-- Author Resolution from Team Data -->
+  {{ $authorName := .Params.author | default "Inalix" }}
+  {{ $authorSlug := $authorName | urlize | lower }}
+  {{ $authorPage := "" }}
+  {{ range where site.RegularPages "Section" "team" }}
+    {{ $tName := .Params.name | default .Title }}
+    {{ $tSlug := .Params.slug | default (.File.BaseFileName | default "") }}
+    {{ if or (eq (lower $tName) (lower $authorName)) (eq (lower $tSlug) $authorSlug) (eq (lower .File.BaseFileName) $authorSlug) (eq (lower .File.TranslationBaseName) $authorSlug) }}
+      {{ $authorPage = . }}
+    {{ end }}
+  {{ end }}
+
+  {{ $authorImgSrc := "" }}
+  {{ $authorRole := "" }}
+  {{ $authorProfileUrl := printf "team/%s/" $authorSlug | relLangURL }}
+  {{ if $authorPage }}
+    {{ $authorProfileUrl = $authorPage.RelPermalink }}
+    {{ $authorRole = $authorPage.Params.title }}
+    {{ $photo := $authorPage.Params.photo }}
+    {{ if reflect.IsSlice $photo }}{{ $photo = index $photo 0 }}{{ end }}
+    {{ if $photo }}
+      {{ $res := $authorPage.Resources.GetMatch $photo }}
+      {{ if $res }}
+        {{ $authorImgSrc = $res.RelPermalink }}
+      {{ else }}
+        {{ $authorImgSrc = $photo | relURL }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <!-- Generate Author Initials Fallback -->
+  {{ $nameParts := split $authorName " " }}
+  {{ $initials := "" }}
+  {{ if gt (len $nameParts) 1 }}
+    {{ range first 2 $nameParts }}
+      {{ if gt (len .) 0 }}
+        {{ $initials = print $initials (substr . 0 1) }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ $initials = substr $authorName 0 2 }}
+  {{ end }}
+  {{ $initials = upper $initials }}
+
   <!-- Custom Hero Banner -->
   {{ $imgSrc := "" }}
   {{ if .Params.image }}
@@ -34,12 +78,18 @@
       <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-gray-400 text-sm font-medium">
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-pen-nib text-primary"></i>
-          <span>{{ T "by" | default "By" }} <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/" class="text-white hover:text-primary transition-colors">{{ .Params.author }}</a></span>
+          <span>{{ T "by" | default "By" }} <a href="{{ $authorProfileUrl }}" class="text-white hover:text-primary transition-colors">{{ $authorName }}</a></span>
         </div>
         <div class="flex items-center gap-2">
           <i class="fa-regular fa-clock text-primary"></i>
           <span>{{ time.Format ":date_long" .PublishDate }}</span>
         </div>
+        {{ if and .Lastmod (gt .Lastmod.Unix .PublishDate.Unix) }}
+        <div class="flex items-center gap-2 text-primary font-semibold">
+          <i class="fa-solid fa-rotate"></i>
+          <span>{{ T "updated" | default "Updated" }}: {{ time.Format ":date_long" .Lastmod }}</span>
+        </div>
+        {{ end }}
       </div>
     </div>
   </div>
@@ -86,14 +136,37 @@
             
             <!-- Author Box -->
             <div class="mt-12 bg-gray-50 dark:bg-white/5 p-8 border-l-4 border-primary flex flex-col md:flex-row items-center md:items-start gap-6">
-              <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                <i class="fa-solid fa-user text-4xl text-gray-400 mt-4 ml-6"></i> <!-- Placeholder -->
+              <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-primary/10 border-2 border-primary/20 flex items-center justify-center relative shadow-sm">
+                {{ if $authorImgSrc }}
+                  <img src="{{ $authorImgSrc }}" alt="{{ $authorName }}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="w-full h-full bg-primary/10 text-primary dark:text-darkmode-primary font-black text-2xl items-center justify-center hidden tracking-wider uppercase select-none">
+                    {{ $initials }}
+                  </div>
+                {{ else }}
+                  <div class="w-full h-full bg-primary/10 text-primary dark:text-darkmode-primary font-black text-2xl flex items-center justify-center tracking-wider uppercase select-none">
+                    {{ $initials }}
+                  </div>
+                {{ end }}
               </div>
-              <div>
-                <h5 class="text-xs uppercase tracking-widest text-primary font-bold mb-1">{{ T "about_author" | default "About Author" }}</h5>
-                <h3 class="text-xl font-bold text-dark dark:text-white mb-3">{{ .Params.author }}</h3>
-                <p class=" text-gray-600 dark:text-gray-400 dark:text-gray-400 text-sm leading-relaxed mb-4">{{ T "author_description" | default "We are committed to delivering the best insights and updates in the aviation and technology sectors. Written by our expert team." }}</p>
-                <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/" class="text-sm font-bold uppercase tracking-widest text-dark dark:text-white hover:text-primary transition-colors">{{ T "view_profile" | default "View Profile" }} <i class="fa-solid fa-arrow-right ml-1"></i></a>
+              <div class="text-center md:text-left flex-1">
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-1">
+                  <h5 class="text-xs uppercase tracking-widest text-primary font-bold">{{ T "about_author" | default "About Author" }}</h5>
+                  {{ if $authorRole }}
+                    <span class="text-gray-400 dark:text-gray-600 hidden sm:inline">•</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold">{{ $authorRole }}</span>
+                  {{ end }}
+                </div>
+                <h3 class="text-xl font-bold text-dark dark:text-white mb-3">{{ $authorName }}</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                  {{ if and $authorPage $authorPage.Params.description }}
+                    {{ $authorPage.Params.description }}
+                  {{ else }}
+                    {{ T "author_description" | default "We are committed to delivering the best insights and updates in the aviation and technology sectors. Written by our expert team." }}
+                  {{ end }}
+                </p>
+                <a href="{{ $authorProfileUrl }}" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-dark dark:text-white hover:text-primary transition-colors">
+                  {{ T "view_profile" | default "View Profile" }} <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
               </div>
             </div>
             

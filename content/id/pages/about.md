@@ -1,48 +1,71 @@
 ---
-title: About Us
+title: Tentang Perusahaan
 type: about
 layout: list
 logo: images/logo_inalix_default.svg
 history_image: /media/img-header-03.webp
-history_title: The History of Inalix
+history_title: Sejarah & Perjalanan INALIX
 culture_banner:
-  title: We are true to ourselves, and commit to always perform at our best.
-  text: We believe that we are outstanding. Not because we say it, but because we work hard at it. We are dedicated, committed and focused. We believe that every person will reach their personal best and overcome any challenge through a shared culture and ethos.
+  title: Kami berintegritas pada jati diri kami dan berkomitmen selalu memberikan performa terbaik.
+  text: Kami percaya pada keunggulan hasil kerja. Bukan sekadar slogan, melainkan dedikasi, fokus, dan kerja keras yang kami buktikan secara nyata. Kami meyakini setiap individu mampu mencapai potensi terbaiknya dan menaklukkan tantangan melalui budaya kerja serta etos yang solid.
   images:
     - image: /media/iAAS.webp
     - image: /media/iFIDS.webp
     - image: /media/iMCS.webp
-values_title: Komitmen kita adalah nilai-nilai kita.
+values_title: Nilai-Nilai & Komitmen Kami
 values:
-  - title: c
-    icon: cc
-    description: c
-solution_title: Got a problem? We can give you the solution
-solution_text: c
-banner_quote: c
+  - title: Kerjasama Tim yang Solid
+    icon: diversity_3
+    description: Kami menghadirkan layanan prima melalui kolaborasi tim, akuntabilitas, dan inovasi berkelanjutan yang tercermin pada tingginya kualitas hasil kerja kami.
+  - title: Andal, Efisien & Tepat Guna
+    icon: handshake
+    description: Seluruh sistem dan program kami dikembangkan berdasarkan kebutuhan riil klien serta dapat disesuaikan (konfigurabel) dengan standar operasional Anda.
+  - title: Kualitas Unggul Berkelanjutan
+    icon: hub
+    description: Ragam solusi sistem bandara dengan desain modular terukur, mudah dikembangkan, dan siap diintegrasikan dengan sistem pihak ketiga melalui API web service.
+solution_title: Menghadapi Kendala Operasional? Kami Siap Memberikan Solusinya
+solution_text: |-
+  Sebagian besar klien datang kepada kami setelah bermitra dengan pihak lain namun belum mendapatkan hasil yang optimal sesuai harapan operasional mereka. Apapun tantangan yang Anda hadapi, tim ahli INALIX siap membantu merealisasikan target Anda, sekaligus menyajikan analisis efisiensi biaya dan waktu sebelum implementasi dimulai.
+
+  INALIX siap menghadirkan solusi teknologi mutakhir yang dirancang khusus untuk memecahkan problematika operasional modern Anda.
+banner_quote: Kami berintegritas pada jati diri kami dan berkomitmen selalu memberikan performa terbaik.
 faqs:
-  - question: c
-    answer: c
+  - question: Apakah sistem bandara satu-satunya solusi yang disediakan INALIX?
+    answer: INALIX menyediakan ragam solusi komprehensif baik untuk operasional bandara maupun sektor industri modern. Kendala operasional Anda dapat diselesaikan melalui solusi rekayasa teknologi kami.
+  - question: Apakah melayani pengadaan material sekaligus instalasi fisik?
+    answer: |-
+      Ya, tentu saja.
+
+      INALIX melayani pengadaan perangkat keras (hardware) sekaligus instalasi, integrasi, dan commissioning di lokasi proyek Anda.
+  - question: Jika perangkat lunak yang kami butuhkan belum ada di daftar, apakah INALIX bisa mengembangkannya?
+    answer: |-
+      Basis utama INALIX adalah software house engineering. Kami memiliki kapabilitas penuh merancang dan membangun perangkat lunak kustom berbasis web sesuai kebutuhan spesifik Anda.
+
+      Diskusi teknis awal diperlukan untuk memetakan spesifikasi kebutuhan sistem yang ingin Anda kembangkan.
+  - question: Bagaimana cara mendapatkan penawaran harga resmi (quotation)?
+    answer: |-
+      Silakan hubungi kami melalui formulir di halaman [Kontak](/id/contact/) kami.
+
+      Anda juga dapat menghubungi kami melalui telepon, email bisnis, atau mengunjungi kantor kami dengan jadwal temu terlebih dahulu.
 sidebar_card:
-  title: OPERATIONAL EXCELLENCE
+  title: KEUNGGULAN OPERASIONAL
   icon: stmicon-notebook_b
-  text: c
+  text: Kami memberikan nilai terbaik bagi mitra kami melalui penyempurnaan alur kerja dan struktur biaya yang efisien secara berkelanjutan.
   bg_image: https://images.unsplash.com/photo-1487611459768-bd414656ea10
 ---
 
-PT. INALIX was established on June 10th, 2002. With the spirits for developing Indonesian Information Technology (IT) and optimizing the knowledge management mechanism, Inalix is intended to create a technology-minded people for the nation.
+PT INALIX didirikan pada 10 Juni 2002. Berakar dari semangat untuk memajukan Teknologi Informasi (TI) nasional serta mengoptimalkan mekanisme manajemen pengetahuan, INALIX hadir untuk menumbuhkan generasi bangsa yang berorientasi pada kemajuan teknologi.
 
-Based on our project curriculums, we have supplied various Airport-IT-products to several airports in Indonesia. Our first success project began in Batam Hang Nadim Airport in 2001, where we were assigned to migrate the existing FIDS (Flight Information Display System) to our new product of FIDS, namely INALIX-FIDS. After a while, we had another assignment in Balikpapan Sepinggan Airport, where we also had to migrate the existing FIDS to Inalix FIDS.
+Berdasarkan rekam jejak proyek kami, INALIX telah memasok beragam produk TI ke berbagai bandara terkemuka di seluruh Indonesia. Keberhasilan proyek pertama kami dimulai di Bandara Internasional Hang Nadim Batam pada tahun 2001, saat kami dipercaya untuk memigrasikan sistem FIDS (*Flight Information Display System*) eksisting ke produk unggulan mandiri kami, yaitu INALIX-FIDS. Keberhasilan tersebut berlanjut pada penugasan di Bandara Sepinggan Balikpapan, di mana kami juga sukses memigrasikan sistem FIDS sebelumnya ke INALIX-FIDS.
 
-Since then PT. Inalix has been committed to seriously entering the nationwide IT business by focusing in developing systems and delivering services for Airport-IT needs.
+Sejak saat itu, PT INALIX berkomitmen penuh untuk berkiprah secara profesional di industri TI nasional dengan berfokus pada riset, perancangan, dan implementasi sistem khusus kebutuhan bandara (*Airport-IT*).
 
-INALIX-FIDS uses Linux Operating System that is stable, reliable and low cost system supported by generic hardware became more acknowledged and accepted by our prime customer, PT. Angkasa Pura I (Persero) as well as PT. Angkasa Pura II (Persero). And as the time went on, more INALIX FIDS has been implemented in other airports in Indonesia such as Sepinggan International Airport – Balikpapan, Adi Sutjipto Airport – Yogyakarta, Polonia International Airport – Medan and Tabing Airport – Padang (the last two airports are managed by PT.(Persero) Angkasa Pura II).
+INALIX-FIDS memanfaatkan sistem operasi Linux yang terbukti stabil, andal, dan berbiaya efisien dengan dukungan perangkat keras generik. Keandalan ini diakui dan dipercaya oleh mitra strategis utama kami, baik PT Angkasa Pura I (Persero) maupun PT Angkasa Pura II (Persero). Seiring berjalannya waktu, INALIX-FIDS telah terpasang dan beroperasi di berbagai bandara di Indonesia, seperti Bandara Internasional Sepinggan – Balikpapan, Bandara Adi Sutjipto – Yogyakarta, Bandara Internasional Polonia – Medan, dan Bandara Tabing – Padang.
 
-As the company grows, more software applications and systems have been implemented. Using Linux as our major specialty, we have developed products such as ID-Card System (implemented in Airports of Ngurah Rai-Denpasar, Sam Ratulangi-Menado, Hasanuddin-Makassar and others) and Automatic Announcement System (implemented in Medan Polonia International Airport).
+Seiring perkembangan perusahaan, portofolio sistem dan aplikasi perangkat lunak kami terus bertambah. Memanfaatkan keahlian mendalam pada ekosistem Linux, kami mengembangkan solusi seperti *Airport ID-Card System* (diimplementasikan di Bandara Ngurah Rai Bali, Sam Ratulangi Manado, Sultan Hasanuddin Makassar, dan lainnya) serta *Automatic Announcement System* (diimplementasikan di Bandara Internasional Polonia Medan).
 
-These successful implementation and the increasing demands from the customers motivate PT. Inalix to become a company that continuously delivering its best products, as well as giving its highest IT-qualified services that vary from consulting and customizing software development and implementation, to constructing and maintaining computer networks and infrastructure component such as PCs, Proxy Server, Mail Server, Web Server and Firewall System.
+Keberhasilan implementasi tersebut serta meningkatnya kepercayaan pelanggan memotivasi PT INALIX untuk terus menghadirkan produk dan layanan TI berkualitas tinggi. Layanan kami mencakup konsultasi teknologi, pengembangan perangkat lunak kustom, hingga pembangunan dan pemeliharaan infrastruktur jaringan komputer, server enterprise, sistem firewall, dan keamanan data.
 
-As a young and flexible enterprise we rely on quality management and processes designed and developed according to current knowledge. Thus, our customers can demand maximum of efficiency, quality and protection of investment.
-In the future Inalix as a fully-nation-owned Company will keep its core principles and implement projects of various sizes quickly and efficiently, as customer satisfaction is our highest priority.
+Sebagai entitas bisnis yang dinamis dan adaptif, kami menerapkan manajemen mutu dan metodologi kerja modern berstandar tinggi. Dengan demikian, setiap mitra kerja kami memperoleh jaminan efisiensi operasional, kualitas unggul, dan proteksi investasi jangka panjang. Ke depan, INALIX sebagai perusahaan karya anak bangsa akan terus menjaga nilai-nilai luhur dan mewujudkan proyek berskala nasional dengan cepat dan presisi, demi kepuasan tertinggi para mitra.
 
-We commited to deliver the best Airport Information technologies.
+Kami berkomitmen mempersembahkan teknologi informasi penerbangan dan industri terbaik bagi kemajuan bangsa.

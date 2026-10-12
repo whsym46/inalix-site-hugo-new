@@ -1,12 +1,17 @@
 ---
-title: "Bagaimana Jam Utama (Master Clock) Bandara Menjaga Keamanan dan Ketepatan Waktu Penerbangan"
+title: Bagaimana Jam Utama (Master Clock) Bandara Menjaga Keamanan dan Ketepatan Waktu Penerbangan
 draft: false
 image: images/Inalix-Master-Clock.webp
 meta_title: How Airport Master Clocks Keep Air Travel Safe and On Time | INALIX
-description: "Pernahkah Anda bertanya-tanya bagaimana bandara melacak waktu dan memastikan penerbangan berangkat dan tiba sesuai jadwal? Jawabannya terletak pada jam utama (master clock) bandara, sebuah sistem penunjuk waktu presisi yang krusial."
+description: Pernahkah Anda bertanya-tanya bagaimana bandara melacak waktu dan memastikan penerbangan berangkat dan tiba sesuai jadwal? Jawabannya terletak pada jam utama (master clock) bandara, sebuah sistem penunjuk waktu presisi yang krusial.
 categories:
   - News
-tags: []
+tags:
+  - master clock
+  - sinkronisasi waktu
+  - keselamatan penerbangan
+  - operasional bandara
+  - ketepatan waktu
 author: Inalix
 solution: Airport Solutions
 date: 2023-06-30

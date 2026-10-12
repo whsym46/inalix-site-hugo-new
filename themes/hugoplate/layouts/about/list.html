@@ -132,7 +132,7 @@
     <div class="row">
       <!-- FAQs -->
       <div class="lg:col-8 mb-10 lg:mb-0">
-        <h2 class="mb-8">Frequently Asked Questions</h2>
+        <h2 class="mb-8">{{ T "faq_title" | default "Frequently Asked Questions" }}</h2>
         <div class="space-y-4">
           {{ range .Params.faqs }}
           <details name="faq-accordion" class="bg-white dark:bg-inalix-dark border-gray-200 dark:border-white/5 rounded-lg group">

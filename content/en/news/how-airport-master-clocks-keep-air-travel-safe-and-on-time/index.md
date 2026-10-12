@@ -3,10 +3,15 @@ title: How Airport Master Clocks Keep Air Travel Safe and On Time
 draft: false
 image: images/Inalix-Master-Clock.webp
 meta_title: How Airport Master Clocks Keep Air Travel Safe and On Time | INALIX
-description: "Have you ever wondered how airports keep track of time and ensure that flights depart and arrive on schedule? The answer lies in the airport master clock, a precision timekeeping system that plays a critical role in air travel. Learn more about how these clocks work and their importance in keeping passengers safe."
+description: Have you ever wondered how airports keep track of time and ensure that flights depart and arrive on schedule? The answer lies in the airport master clock, a precision timekeeping system that plays a critical role in air travel. Learn more about how these clocks work and their importance in keeping passengers safe.
 categories:
   - News
-tags: []
+tags:
+  - master clock
+  - airport synchronization
+  - flight safety
+  - airport operations
+  - air travel
 author: Inalix
 solution: Airport Solutions
 date: 2023-06-30

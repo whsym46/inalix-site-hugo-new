@@ -41,7 +41,7 @@ faqs:
     answer: |-
       The foundation of Inalix is software developer house, we can make custom web-based software as per customer’s need.
 
-      Technical inquiry is needed as per software requirement that the customers want to de
+      Technical inquiry is needed as per software requirement that the customers wish to develop.
   - question: How to get quotation?
     answer: |-
       Dear customers, please contact us from this page > [this one](https://inalix.com/contact/)

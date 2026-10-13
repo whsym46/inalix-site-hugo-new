@@ -11,10 +11,10 @@ name = "Tentang"
 pageRef = "/pages/about"
 weight = 2
 
-[[main]]
-name = "Sejarah"
-pageRef = "/pages/history"
-weight = 3
+# [[main]]
+# name = "Sejarah"
+# pageRef = "/pages/history"
+# weight = 3
 
 [[main]]
 name = "Produk"

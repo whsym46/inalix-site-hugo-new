@@ -12,9 +12,9 @@ pageRef = "/pages/about"
 weight = 2
 
 [[main]]
-name = "History"
-pageRef = "/pages/history"
-weight = 3
+# name = "History"
+# pageRef = "/pages/history"
+# weight = 3
 
 [[main]]
 name = "Products"

@@ -11,7 +11,7 @@ RUN --mount=type=cache,target=/root/.npm \
 
 # 2. Salin konfigurasi dan folder themes/ terlebih dahulu
 # (Agar Hugo mengenali modul/tema lokal tanpa harus meng-copy seluruh konten Markdown)
-COPY hugo.toml go.mod go.sum ./
+COPY hugo.toml go.mod ./
 COPY themes/ ./themes/
 
 # 3. Jalankan hugo mod get dengan aman karena folder themes dan konfigurasi sudah lengkap

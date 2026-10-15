@@ -3,15 +3,15 @@ title: Tentang Perusahaan
 type: about
 layout: list
 logo: images/logo_inalix_default.svg
-history_image: /media/img-header-03.webp
+history_image: /images/img-header-03.webp
 history_title: Sejarah & Perjalanan INALIX
 culture_banner:
   title: Kami berintegritas pada jati diri kami dan berkomitmen selalu memberikan performa terbaik.
   text: Kami percaya pada keunggulan hasil kerja. Bukan sekadar slogan, melainkan dedikasi, fokus, dan kerja keras yang kami buktikan secara nyata. Kami meyakini setiap individu mampu mencapai potensi terbaiknya dan menaklukkan tantangan melalui budaya kerja serta etos yang solid.
   images:
-    - image: /media/iAAS.webp
-    - image: /media/iFIDS.webp
-    - image: /media/iMCS.webp
+    - image: /images/iAAS.webp
+    - image: /images/iFIDS.webp
+    - image: /images/iMCS.webp
 values_title: Nilai-Nilai & Komitmen Kami
 values:
   - title: Kerjasama Tim yang Solid

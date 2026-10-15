@@ -1,7 +1,7 @@
 ---
 title: Airport Collaborative Decision Making (A-CDM) Implementation at Juanda International Airport & Ngurah Rai International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Airport Collaborative Decision Making (A-CDM) Implementation at Juanda International Airport & Ngurah Rai International Airport | INALIX
 description: Implementation of the Airport Collaborative Decision Making (A-CDM) system at Juanda International Airport and Ngurah Rai International Airport to enhance operational coordination, information sharing, and collaborative decision-making among airport stakeholders.  The solution enables more timely and consistent exchange of operational information, supporting greater efficiency and predictability across airport operations.
 categories:

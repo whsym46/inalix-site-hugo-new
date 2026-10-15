@@ -1,7 +1,7 @@
 ---
 title: Implementasi Videowall 3×5 di Bandara Internasional I Gusti Ngurah Rai
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Implementasi Videowall 3×5 di Bandara Internasional I Gusti Ngurah Rai | INALIX
 description: Implementasi sistem Videowall 3×5 di Bandara Internasional I Gusti Ngurah Rai sebagai platform visual berskala besar untuk mendukung penyampaian informasi dan konten digital di lingkungan bandara.  Solusi ini mengintegrasikan beberapa unit display menjadi satu kesatuan layar visual yang memberikan visibilitas lebih luas serta penyajian informasi yang jelas dan efektif.
 categories:

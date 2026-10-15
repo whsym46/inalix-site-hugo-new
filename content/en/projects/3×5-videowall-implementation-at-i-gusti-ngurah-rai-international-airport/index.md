@@ -1,7 +1,7 @@
 ---
 title: 3×5 Videowall Implementation at I Gusti Ngurah Rai International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: 3×5 Videowall Implementation at I Gusti Ngurah Rai International Airport | INALIX
 description: Implementation of a 3×5 videowall system at I Gusti Ngurah Rai International Airport to provide a large-scale visual display platform for delivering information and digital content within the airport environment.  The solution combines multiple displays into a unified visual interface, providing enhanced visibility and effective information presentation across designated airport areas.
 categories:

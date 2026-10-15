@@ -1,7 +1,7 @@
 ---
 title: Implementasi FIDS & AODB di Bandara Internasional Syamsudin Noor
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Implementasi FIDS & AODB di Bandara Internasional Syamsudin Noor | INALIX
 description: Implementasi Flight Information Display System (FIDS) dan Airport Operational Database (AODB) di Bandara Internasional Syamsudin Noor untuk mendukung penyampaian informasi penerbangan yang terintegrasi serta pengelolaan data operasional bandara secara terpusat.  Solusi ini menghubungkan informasi penerbangan untuk penumpang dengan platform data operasional terpusat, sehingga memungkinkan distribusi informasi yang konsisten dan tepat waktu di lingkungan bandara.
 categories:

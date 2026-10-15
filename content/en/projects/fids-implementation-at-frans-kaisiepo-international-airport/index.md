@@ -1,7 +1,7 @@
 ---
 title: FIDS Implementation at Frans Kaisiepo International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: FIDS Implementation at Frans Kaisiepo International Airport | INALIX
 description: Implementation of the Flight Information Display System (FIDS) at Frans Kaisiepo International Airport to provide accurate and real-time flight information across designated passenger areas.  The solution supports reliable and consistent information delivery, enabling passengers to easily access essential flight information throughout the terminal.
 categories:

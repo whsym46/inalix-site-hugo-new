@@ -1,7 +1,7 @@
 ---
 title: Videowall Display, FIDS & Master Clock Installation at Pattimura International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Videowall Display, FIDS & Master Clock Installation at Pattimura International Airport | INALIX
 description: Installation and integration of Videowall Display, Flight Information Display System (FIDS), and Master Clock at Pattimura International Airport to enhance passenger information delivery and support airport operational efficiency.  The project provides an integrated display and time synchronization infrastructure, enabling accurate, timely, and consistent information across designated areas of the airport.
 categories:

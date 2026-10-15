@@ -1,7 +1,7 @@
 ---
 title: Pengadaan & Instalasi FIDS Videowall di Bandara Internasional I Gusti Ngurah Rai
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Pengadaan & Instalasi FIDS Videowall di Bandara Internasional I Gusti Ngurah Rai | INALIX
 description: Pengadaan dan instalasi Flight Information Display System (FIDS) Videowall di Bandara Internasional I Gusti Ngurah Rai untuk meningkatkan penyampaian dan visibilitas informasi penerbangan secara real-time di area terminal.  Proyek ini menghadirkan platform informasi visual berskala besar yang dirancang untuk menyajikan informasi penerbangan secara jelas, akurat, dan mudah diakses oleh penumpang.
 categories:

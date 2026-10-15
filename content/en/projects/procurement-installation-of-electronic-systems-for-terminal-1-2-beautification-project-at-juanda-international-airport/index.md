@@ -1,7 +1,7 @@
 ---
 title: Procurement & Installation of Electronic Systems for Terminal 1 & 2 Beautification Project at Juanda International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Procurement & Installation of Electronic Systems for Terminal 1 & 2 Beautification Project at Juanda International Airport | INALIX
 description: Procurement and installation of electronic systems as part of the Terminal 1 & 2 Beautification Project at Juanda International Airport.  The project covers the supply, installation, and integration of electronic infrastructure to support terminal modernization, operational functionality, and an enhanced passenger environment.
 categories:

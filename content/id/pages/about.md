@@ -2,9 +2,27 @@
 title: Tentang Perusahaan
 type: about
 layout: list
-logo: images/logo_inalix_default.svg
 history_image: /images/img-header-03.webp
 history_title: Sejarah & Perjalanan INALIX
+
+timeline:
+  - year: 2002
+    title: Pendirian & Fondasi Teknologi
+    description: PT INALIX resmi didirikan pada 10 Juni 2002 dengan visi kemandirian teknologi nasional, berawal dari keberhasilan migrasi sistem FIDS di Bandara Internasional Hang Nadim Batam dan Bandara Sepinggan Balikpapan.
+    image: /images/slider-new1.webp
+  - year: 2010
+    title: Ekspansi Sistem Bandara Nasional
+    description: Kemitraan strategis bersama PT Angkasa Pura I dan PT Angkasa Pura II terus berkembang pesat. Solusi INALIX-FIDS, Airport ID-Card System, dan Automatic Announcement System diimplementasikan di berbagai bandara utama di seluruh penjuru Indonesia.
+    image: /images/slider-new2.webp
+  - year: 2020
+    title: Integrasi Solusi Mutakhir & Industri
+    description: Memperluas kapabilitas teknologi ke sistem operasi bandara terpadu, mencakup AODB (Airport Operation Data Base), A-CDM (Airport Collaborative Decision Making), Master Clock terpusat, hingga otomasi industri modern.
+    image: /images/slider-new1.webp
+  - year: 2024
+    title: Transformasi Digital Berkelanjutan
+    description: Berdiri kokoh sebagai mitra terpercaya penyedia solusi Airport IT dan otomasi industri di Indonesia, berkomitmen menghadirkan infrastruktur teknologi yang modular, aman, tangguh, dan adaptif.
+    image: /images/slider-new2.webp
+
 culture_banner:
   title: Kami berintegritas pada jati diri kami dan berkomitmen selalu memberikan performa terbaik.
   text: Kami percaya pada keunggulan hasil kerja. Bukan sekadar slogan, melainkan dedikasi, fokus, dan kerja keras yang kami buktikan secara nyata. Kami meyakini setiap individu mampu mencapai potensi terbaiknya dan menaklukkan tantangan melalui budaya kerja serta etos yang solid.

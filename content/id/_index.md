@@ -1,53 +1,93 @@
 ---
-# Banner
-banner:
-  title: Inalix - Penyedia Solusi Airport & Industri Manufaktur
-  content: Inalix offers wide range of solutions for all of your airport system needs. Our track records can prove our worthy. We develop our own custom system for airport from Flight Information Display System (FIDS), Billing system, to Airport Operation Data Base (AODB). Either Landside or Airside, Inalix has the solutions.
-  image: "/images/banner.png"
-  button:
-    enable: true
-    label: "Kontak"
-    link: "/contact"
-
-# Features
-features:
-  - title: "Beranda"
-    image: "/images/service-1.png"
-    content: "Inalix telah berpengalaman sejak tahun 2002 dalam membangun solusi perangkat lunak untuk bandara dan industri."
-    bulletpoints:
-      - "Sistem yang Kuat & Andal"
-      - "Dukungan Teknis Cepat"
-      - "Pengalaman Lebih Dari 20 Tahun"
-      - "Kerja Sama Tim yang Solid"
-      - "Solusi yang Dapat Disesuaikan"
-      - "Teknologi Mutakhir"
-    button:
-      enable: false
-      label: "Mulai Sekarang"
-      link: "#"
-
-  - title: "Temukan Fitur Utama Solusi Inalix"
-    image: "/images/service-2.png"
-    content: "Inalix menawarkan ekosistem terintegrasi untuk membangun operasional bandara yang cepat, andal, dan aman. Kami menawarkan berbagai fitur mutakhir. Beberapa fitur utamanya adalah:"
-    bulletpoints:
-      - "Ketersediaan Tinggi (High Availability): Arsitektur kuat yang dirancang untuk operasi 24/7."
-      - "Dapat Disesuaikan: Modul dan antarmuka yang dapat disesuaikan dengan kebutuhan operasional spesifik Anda."
-      - "Siap Integrasi: Terhubung secara mulus dengan infrastruktur bandara yang ada dan sistem pihak ketiga."
-    button:
+# 1. Hero Sliders
+hero_sliders:
+  - badge: Solusi Bandara
+    icon: fa-solid fa-plane-departure
+    title: Inalix Solusi Bandara
+    description: Inalix menawarkan berbagai solusi untuk seluruh kebutuhan sistem bandara Anda. Rekam jejak kami membuktikan kualitas kami. Kami mengembangkan sistem kustom mandiri untuk bandara, mulai dari Flight Information Display System (FIDS), Billing system, hingga Airport Operation Data Base (AODB). Baik di sisi darat maupun sisi udara, Inalix memiliki solusinya.
+    image: /images/slider-new1.webp
+    button_primary:
       enable: true
-      label: "Mulai Sekarang"
-      link: "https://github.com/zeon-studio/hugoplate"
-
-  - title: "Alasan Utama Memilih Inalix untuk Operasional Bandara Anda"
-    image: "/images/service-3.png"
-    content: "Dengan Inalix, Anda dapat membangun operasi bandara yang modern, efisien, dan andal tanpa mengorbankan keselamatan atau kemudahan penggunaan."
-    bulletpoints:
-      - "Pemrosesan data real-time instan untuk pengalaman penumpang dan efisiensi operasional yang lebih baik."
-      - "Antarmuka pengguna yang intuitif dan pelatihan komprehensif membuat pembelajaran sistem Inalix menjadi sangat mudah."
-      - "Arsitektur terukur mendukung ukuran bandara apa pun, dari hub regional hingga gerbang internasional."
-      - "Dibangun dengan teknologi mutakhir untuk menjaga operasional Anda tetap mutakhir dengan standar penerbangan terbaru."
-    button:
+      label: Jelajahi Solusi
+      link: projects/
+    button_secondary:
       enable: true
-      label: ""
-      link: ""
+      label: Hubungi Kami
+      link: contact/
+    highlights:
+      - AODB & FIDS
+      - BHS & Security
+      - Airside & Landside IT
+
+  - badge: Solusi Industri
+    icon: fa-solid fa-industry
+    title: Inalix Solusi Industri
+    description: Memberdayakan fasilitas manufaktur, pergudangan, dan industri berat melalui otomasi, integrasi sistem SCADA, kontrol presisi, dan infrastruktur IT modern.
+    image: /images/slider-industri.webp
+    button_primary:
+      enable: true
+      label: Jelajahi Solusi
+      link: projects/
+    button_secondary:
+      enable: true
+      label: Hubungi Kami
+      link: contact/
+    highlights:
+      - Control & Instrumentation
+      - Mechanical & Electrical
+      - Supply & Installation
+
+# 2. Transforming Space Section
+transforming_space:
+  subtitle: Keahlian Terbaik Kami
+  title: MENTRANSFORMASI RUANG ANDA DENGAN PRESISI
+  content: Inalix menawarkan berbagai solusi untuk seluruh kebutuhan sistem bandara Anda. Rekam jejak kami membuktikan kualitas kami. Kami mengembangkan sistem kustom mandiri untuk bandara, mulai dari Flight Information Display System (FIDS), Billing system, hingga Airport Operation Data Base (AODB). Baik di sisi darat maupun sisi udara, Inalix memiliki solusinya.
+  image: /images/slider-new2.webp
+
+# 3. Our Services Accordion
+our_services:
+  subtitle: Layanan Kami
+  title: 'SOLUSI IT END-TO-END: MENDUKUNG OPERASIONAL BANDARA'
+  items:
+    - title: Airport Operation Database
+      description: Pengelolaan data terpusat untuk operasional bandara yang mulus.
+      image: /images/aodb-our-services.webp
+    - title: Flight Information Display
+      description: Pembaruan jadwal penerbangan real-time di seluruh terminal.
+      image: /images/slider-new4.webp
+    - title: Aeronautical Billing System
+      description: Otomasi penagihan dan pendapatan operasional aeronautika bandara.
+      image: /images/slider-new7b.webp
+    - title: Automatic Announcement System
+      description: Pengumuman suara otomatis multi-bahasa untuk terminal bandara.
+      image: /images/slider-new62.webp
+    - title: Master Clock System
+      description: Sinkronisasi waktu presisi tinggi untuk seluruh fasilitas bandara.
+      image: /images/slider-new5.webp
+    - title: Baggage Handling Systems
+      description: Pelacakan bagasi otomatis dan efisien dari check-in hingga pesawat.
+      image: /images/bhs-our-services.webp
+    - title: 'Security & Surveillance'
+      description: Pemantauan keamanan cerdas berbasis AI untuk perimeter bandara.
+      image: /images/security-our-services.webp
+
+# 4. Why Choose Us / Trusted Partner Grid
+why_choose_us:
+  subtitle: Mengapa Memilih Kami
+  title: MITRA SOLUSI IT TERPERCAYA ANDA
+  button_label: Baca Selengkapnya
+  button_link: about/
+  items:
+    - title: Konsultasi Ahli
+      description: Menyediakan pengetahuan industri mendalam dan panduan strategis untuk pengembangan bandara dan industri.
+    - title: Teknologi Inovatif
+      description: Memanfaatkan sistem cerdas terbaru, dari AODB hingga FIDS, untuk memastikan infrastruktur siap masa depan.
+    - title: Pengiriman Tepat Waktu
+      description: Manajemen proyek yang presisi memastikan setiap target tercapai sesuai jadwal.
+    - title: Solusi Berkelanjutan
+      description: Berkomitmen pada praktik pembangunan yang bertanggung jawab terhadap lingkungan dan efisiensi energi.
+    - title: Efisiensi Biaya
+      description: Mengoptimalkan investasi operasional dengan teknologi berefisiensi tinggi yang memberikan nilai jangka panjang maksimal.
+    - title: Solusi Skalabel
+      description: Arsitektur modular fleksibel yang dirancang untuk berkembang secara mulus seiring pertumbuhan infrastruktur bandara Anda.
 ---

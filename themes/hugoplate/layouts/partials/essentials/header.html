@@ -28,45 +28,52 @@
     </button>
 
     <!-- 3. DESKTOP NAVIGATION MENU (Only visible on lg:flex, horizontal inline) -->
-    <ul class="navbar-nav hidden lg:flex items-center space-x-2 xl:space-x-8 lg:order-1 lg:w-auto">
-      {{ $currentPage := . }}
-      {{ range site.Menus.main }}
-      {{ $menuURL := .URL | absLangURL }}
-      {{ $pageURL:= $currentPage.Permalink | absLangURL }}
-      {{ $active := eq $menuURL $pageURL }}
-      {{ if .HasChildren }}
-      <li class="nav-item nav-dropdown group relative">
-        <span class="nav-link {{ if $active }}active{{ end }} inline-flex items-center cursor-pointer">
-          {{ .Name }}
-          <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
-            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-          </svg>
-        </span>
-        <ul class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
-          {{ range .Children }}
-          {{ $childURL := .URL | absLangURL }}
-          {{ $childActive := eq $childURL $pageURL }}
-          <li class="nav-dropdown-item">
-            <a class="nav-dropdown-link {{ if $childActive }}active{{ end }}"
-              href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
-              {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
-              {{ .Name }}
-            </a>
-          </li>
-          {{ end }}
-        </ul>
-      </li>
-      {{ else }}
-      <li class="nav-item">
-        <a class="nav-link {{ if $active }}active{{ end }}"
-          href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
-          {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
-          {{ .Name }}
-        </a>
-      </li>
-      {{ end }}
-      {{ end }}
-    </ul>
+    <div id="desktop-nav-wrapper" class="relative hidden lg:flex items-center lg:order-1 lg:w-auto">
+      <ul id="desktop-nav-menu" class="navbar-nav flex items-center space-x-2 xl:space-x-8 py-1">
+        {{ $currentPage := . }}
+        {{ range site.Menus.main }}
+        {{ $menuURL := .URL | absLangURL }}
+        {{ $pageURL := $currentPage.Permalink | absLangURL }}
+        {{ $isCurrent := eq $menuURL $pageURL }}
+        {{ $isParent := and (ne .URL "/") (ne .URL "") (hasPrefix $pageURL $menuURL) }}
+        {{ $active := or $isCurrent $isParent ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+        {{ if .HasChildren }}
+        <li class="nav-item nav-dropdown group relative">
+          <span class="nav-link uppercase font-bold {{ if $active }}active{{ end }} inline-flex items-center cursor-pointer">
+            <span class="nav-text">{{ .Name }}</span>
+            <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </span>
+          <ul class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
+            {{ range .Children }}
+            {{ $childURL := .URL | absLangURL }}
+            {{ $childActive := or (eq $childURL $pageURL) ($currentPage.IsMenuCurrent "main" .) }}
+            <li class="nav-dropdown-item">
+              <a class="nav-dropdown-link {{ if $childActive }}active{{ end }}"
+                href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+                {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
+                {{ .Name }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </li>
+        {{ else }}
+        <li class="nav-item">
+          <a class="nav-link uppercase font-bold {{ if $active }}active{{ end }}"
+            href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+            {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
+            <span class="nav-text">{{ .Name }}</span>
+          </a>
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+
+      <!-- Magnetic Sliding Line Indicator (Outside ul so space-x margin cannot affect it) -->
+      <span id="nav-indicator" class="pointer-events-none absolute bottom-0 h-[2.5px] bg-primary rounded-full opacity-0 left-0 w-0 z-10 shadow-sm shadow-primary/40" style="transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1), width 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;"></span>
+    </div>
 
     <!-- 4. RIGHT ACTIONS: Search, Language, Quote Button -->
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
@@ -212,5 +219,91 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); // initialize
+
+    // Magnetic sliding nav indicator on desktop
+    const navWrapper = document.getElementById('desktop-nav-wrapper');
+    const navMenu = document.getElementById('desktop-nav-menu');
+    const indicator = document.getElementById('nav-indicator');
+
+    if (navWrapper && navMenu && indicator) {
+      function getActiveElement() {
+        return navMenu.querySelector('.nav-link.active') || navMenu.querySelector('.nav-item.active .nav-link');
+      }
+
+      function moveIndicatorTo(el) {
+        if (!el) return;
+        const target = el.querySelector('.nav-text') || el;
+        const wrapperRect = navWrapper.getBoundingClientRect();
+        const targetRect = target.getBoundingClientRect();
+        
+        // Accurate left offset relative to the wrapper
+        const left = Math.round(targetRect.left - wrapperRect.left);
+        const width = Math.round(targetRect.width);
+
+        indicator.style.left = '0px';
+        indicator.style.transform = 'translateX(' + left + 'px)';
+        indicator.style.width = width + 'px';
+        indicator.style.opacity = '1';
+      }
+
+      function resetToActive() {
+        const activeLink = getActiveElement();
+        if (activeLink) {
+          moveIndicatorTo(activeLink);
+        } else {
+          indicator.style.opacity = '0';
+          indicator.style.width = '0px';
+        }
+      }
+
+      // Initial placement & font load listeners
+      resetToActive();
+      setTimeout(resetToActive, 100);
+      setTimeout(resetToActive, 350);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(resetToActive);
+      }
+      window.addEventListener('load', resetToActive);
+
+      // Deliberate hover delay & graceful leave buffer
+      let hoverTimer = null;
+      let leaveTimer = null;
+      const HOVER_DELAY = 260; // ~260ms: penundaan halus agar pas mouse nyampai teks, garisnya ikut sampai
+      const LEAVE_DELAY = 160; // penundaan sebelum kembali ke menu aktif
+
+      // Hover on each top-level nav item (so dropdowns also keep line in place)
+      const navItems = navMenu.querySelectorAll(':scope > li.nav-item');
+      navItems.forEach(function (item) {
+        const link = item.querySelector('.nav-link');
+        item.addEventListener('mouseenter', function () {
+          clearTimeout(leaveTimer);
+          clearTimeout(hoverTimer);
+          if (link) {
+            hoverTimer = setTimeout(function () {
+              moveIndicatorTo(link);
+            }, HOVER_DELAY);
+          }
+        });
+
+        item.addEventListener('mouseleave', function () {
+          clearTimeout(hoverTimer);
+        });
+      });
+
+      // When cursor leaves the entire nav menu wrapper, glide back to active page after buffer
+      navWrapper.addEventListener('mouseleave', function () {
+        clearTimeout(hoverTimer);
+        clearTimeout(leaveTimer);
+        leaveTimer = setTimeout(function () {
+          resetToActive();
+        }, LEAVE_DELAY);
+      });
+
+      navWrapper.addEventListener('mouseenter', function () {
+        clearTimeout(leaveTimer);
+      });
+
+      window.addEventListener('resize', resetToActive);
+    }
   });
 </script>

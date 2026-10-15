@@ -2,9 +2,27 @@
 title: About Company
 type: about
 layout: list
-logo: images/logo_inalix_default.svg
 history_image: /images/img-header-03.webp
 history_title: The History of Inalix
+
+timeline:
+  - year: 2002
+    title: Founding & Technological Foundation
+    description: PT INALIX was officially established on June 10th, 2002, with a mission to develop sovereign national IT capabilities, marked by successful FIDS migrations at Batam Hang Nadim Airport and Sepinggan Balikpapan.
+    image: /images/slider-new1.webp
+  - year: 2010
+    title: Nationwide Airport IT Expansion
+    description: Strategic partnerships with PT Angkasa Pura I and PT Angkasa Pura II expanded, deploying INALIX-FIDS, Airport ID-Card systems, and Automatic Announcement Systems across major airports throughout Indonesia.
+    image: /images/slider-new2.webp
+  - year: 2020
+    title: Advanced Aviation & Industrial Solutions
+    description: Expanded technological capabilities into comprehensive airport operation systems, including AODB, A-CDM, Master Clock synchronization, Aeronautical Billing, and industrial automation.
+    image: /images/slider-new1.webp
+  - year: 2024
+    title: Trusted Partner for Modern Infrastructure
+    description: Standing as a premier trusted partner for airport operations and industrial technology, delivering scalable, resilient, and modular IT solutions.
+    image: /images/slider-new2.webp
+
 culture_banner:
   title: We are true to ourselves, and commit to always perform at our best.
   text: We believe that we are outstanding. Not because we say it, but because we work hard at it. We are dedicated, committed and focused. We believe that every person will reach their personal best and overcome any challenge through a shared culture and ethos.

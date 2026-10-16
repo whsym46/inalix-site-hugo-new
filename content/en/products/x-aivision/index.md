@@ -5,7 +5,7 @@ image: images/X-AIVISION.webp
 meta_title: X-Aivision | INALIX
 description: X-Aivision
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---

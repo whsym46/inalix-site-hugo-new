@@ -4,8 +4,7 @@ draft: false
 image: images/AODB-Injourney-Airport-Sepinggan.webp
 meta_title: Airport Operational Database (AODB) Implementation at InJourney Airports Sepinggan | INALIX
 description: Implementation of the Airport Operational Database (AODB) system at InJourney Airports Sepinggan to provide a centralized platform for managing, integrating, and distributing airport operational data.  The system supports consistent and timely information exchange across connected airport systems, enabling better coordination and more efficient airport operations.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

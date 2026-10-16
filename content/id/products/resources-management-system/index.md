@@ -5,7 +5,7 @@ image: images/X-RMS.webp
 meta_title: Resources Management System (RMS) | INALIX
 description: Resources Management System
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---

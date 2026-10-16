@@ -5,7 +5,7 @@ image: images/x-aas-heading.webp
 meta_title: Automatic Announcement System (X-AAS) | INALIX
 description: Automatic Announcement System
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---

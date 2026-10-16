@@ -5,7 +5,7 @@ image: images/X-FIDS.webp
 meta_title: Flight Information Display System (X-FIDS) | INALIX
 description: Flight Information Display System
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---

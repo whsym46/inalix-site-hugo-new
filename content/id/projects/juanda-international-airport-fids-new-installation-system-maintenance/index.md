@@ -5,8 +5,7 @@ image:
   - images/slider-new11.webp
 meta_title: Juanda International Airport - FIDS, New Installation & System Maintenance | INALIX
 description: Juanda International Airport - FIDS, New Installation & System Maintenance
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

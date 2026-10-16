@@ -4,8 +4,7 @@ draft: false
 image: images/CCTV System Procurement & Normalization at PJB-UP Muara Tawar.webp
 meta_title: Pengadaan & Normalisasi Sistem CCTV di PJB-UP Muara Tawar | INALIX
 description: Pengadaan dan normalisasi sistem CCTV di PJB-UP Muara Tawar untuk memulihkan serta meningkatkan keandalan, ketersediaan, dan performa infrastruktur pengawasan yang telah tersedia.  Proyek ini mencakup penyediaan perangkat CCTV, pemulihan fungsi sistem, serta optimalisasi infrastruktur untuk mendukung pemantauan dan keamanan di berbagai area operasional.
-categories:
-  - Projects
+categories: Industry
 tags: []
 author: Inalix
 solution: Industrial Solutions

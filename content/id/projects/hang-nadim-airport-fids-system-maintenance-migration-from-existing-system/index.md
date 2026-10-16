@@ -5,8 +5,7 @@ image:
   - images/slider-new2.webp
 meta_title: Hang Nadim Airport - FIDS, System Maintenance & Migration From Existing System | INALIX
 description: Hang Nadim Airport - FIDS, System Maintenance & Migration From Existing System
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

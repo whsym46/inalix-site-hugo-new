@@ -4,8 +4,7 @@ draft: false
 image: images/slider-new5.webp
 meta_title: Sam Ratulangi Airport - FIDS  | INALIX
 description: Sam Ratulangi Airport - FIDS
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

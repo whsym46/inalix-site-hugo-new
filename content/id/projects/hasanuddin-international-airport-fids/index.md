@@ -5,8 +5,7 @@ image:
   - images/Hasanuddin-Airport.webp
 meta_title: Hasanuddin International Airport - FIDS | INALIX
 description: Hasanuddin International Airport - FIDS
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

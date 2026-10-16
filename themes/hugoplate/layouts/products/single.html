@@ -17,7 +17,17 @@
         
         <!-- Left: Text & CTA -->
         <div class="w-full lg:w-1/2 text-center lg:text-left">
-          <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ if .Params.solution }}{{ .Params.solution }}{{ else }}{{ T "our_product" | default "Our Product" }}{{ end }}</h4>
+          {{ $categories := .Params.categories }}
+          {{ if $categories }}
+            {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
+            <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">
+              {{ range $i, $cat := $categories }}
+                <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="hover:underline">{{ . | humanize }}</a>{{ if ne $i (sub (len $categories) 1) }}, {{ end }}
+              {{ end }}
+            </h4>
+          {{ else }}
+            <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">{{ T "our_product" | default "Our Product" }}</h4>
+          {{ end }}
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-tight mb-8">
             {{ .Title }}
           </h1>

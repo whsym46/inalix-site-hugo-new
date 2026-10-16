@@ -4,8 +4,7 @@ draft: false
 image: images/Integrated Airport Systems Implementation at the International Terminal of I Gusti Ngurah Rai International Airport.webp
 meta_title: Integrated Airport Systems Implementation at the International Terminal of I Gusti Ngurah Rai International Airport | INALIX
 description: Implementation of integrated airport systems at the International Terminal of I Gusti Ngurah Rai International Airport, featuring a comprehensive suite of airport technology solutions developed by INALIX.  The project covers FIDS, AAS, AODB, SIOPSKOM, Billing System, and Digital Signage, creating an integrated technology ecosystem to support airport operations, passenger information services, and centralized operational data management.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

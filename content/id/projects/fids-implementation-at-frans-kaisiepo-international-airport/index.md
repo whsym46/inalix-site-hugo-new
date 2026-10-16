@@ -1,11 +1,10 @@
 ---
 title: Implementasi FIDS di Bandara Internasional Frans Kaisiepo
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Implementasi FIDS di Bandara Internasional Frans Kaisiepo | INALIX
 description: Implementasi Flight Information Display System (FIDS) di Bandara Internasional Frans Kaisiepo untuk menyediakan informasi penerbangan yang akurat dan real-time di berbagai area penumpang.  Solusi ini mendukung penyampaian informasi yang andal dan konsisten, sehingga penumpang dapat mengakses berbagai informasi penting terkait penerbangan dengan mudah di area terminal.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

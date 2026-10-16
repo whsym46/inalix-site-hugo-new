@@ -4,8 +4,7 @@ draft: false
 image: images/Redundant Fiber Optic Multiplexer System for AirNav Radio Communication.webp
 meta_title: Sistem Multiplexer Fiber Optic Redundan untuk Komunikasi Radio AirNav | INALIX
 description: Implementasi sistem Multiplexer Fiber Optic (FO) redundan untuk mendukung infrastruktur komunikasi radio AirNav, dengan tujuan meningkatkan keandalan transmisi, ketersediaan sistem, serta kontinuitas komunikasi.  Arsitektur redundan menyediakan jalur transmisi alternatif ketika terjadi gangguan pada jalur utama, sehingga mendukung komunikasi radio yang andal untuk kebutuhan operasional penerbangan.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

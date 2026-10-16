@@ -5,7 +5,7 @@ image: images/X-AODB.webp
 meta_title: Airport Operational Database System (X-AODB) | INALIX
 description: Airport Operational Database System
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---

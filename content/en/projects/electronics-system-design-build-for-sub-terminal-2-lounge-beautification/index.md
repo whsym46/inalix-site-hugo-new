@@ -5,8 +5,7 @@ image:
   - images/Airport-Beautification.webp
 meta_title: Electronics System Design & Build for SUB Terminal 2 Lounge Beautification | INALIX
 description: Design and build of integrated electronic systems as part of the lounge beautification project at SUB Terminal 2.  The project covers the implementation and integration of electronic infrastructure to support the functionality, visual quality, and overall passenger experience within the lounge area.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

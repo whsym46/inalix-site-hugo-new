@@ -4,8 +4,7 @@ draft: false
 image: images/FIDS-Masterclock-Revitalization.webp
 meta_title: Revitalisasi FIDS & Master Clock serta Upgrade Airport Announcement System (AAS) di Bandara Internasional Adi Soemarmo | INALIX
 description: Revitalisasi Flight Information Display System (FIDS) dan Master Clock serta peningkatan Airport Announcement System (AAS) untuk meningkatkan keandalan dan efektivitas sistem informasi penumpang di lingkungan bandara.  Proyek ini berfokus pada pembaruan dan optimalisasi sistem eksisting agar mampu mendukung penyampaian informasi penerbangan, sinkronisasi waktu, dan pengumuman bandara secara lebih terintegrasi dan andal.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

@@ -5,7 +5,7 @@ image: images/X-MC.webp
 meta_title: Master Clock System (X-MC) | INALIX
 description: Master Clock System
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---

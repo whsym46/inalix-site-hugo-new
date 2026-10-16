@@ -4,8 +4,7 @@ draft: false
 image: images/Supervisi Voice Recording untuk Sound Database Automatic Announcement System (AAS).webp
 meta_title: Supervisi Rekaman Suara untuk Database Automatic Announcement System (AAS) | INALIX
 description: Supervisi proses rekaman suara untuk pengembangan database Automatic Announcement System (AAS), dengan memastikan kualitas suara, pelafalan, intonasi, dan kejelasan audio yang konsisten.  Proyek ini bertujuan menghasilkan database audio yang terstruktur dan berkualitas sebagai basis sistem pengumuman otomatis di lingkungan bandara.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

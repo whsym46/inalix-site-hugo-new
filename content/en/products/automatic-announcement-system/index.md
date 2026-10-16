@@ -3,7 +3,7 @@ title: Automatic Announcement System (X-AAS)
 slug: automatic-announcement-system
 image: images/x-aas-heading.webp
 meta_title: Automatic Announcement System (X-AAS) | INALIX
-description: "The INALIX Automatic Announcement System (X-AAS) provides automated, real-time, multilingual voice announcements for passengers without manual intervention."
+description: Automatic Announcement System
 date: 2022-04-04
 categories: []
 tags: []

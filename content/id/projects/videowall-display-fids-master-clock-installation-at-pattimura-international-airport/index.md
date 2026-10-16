@@ -1,7 +1,7 @@
 ---
 title: Instalasi Videowall Display, FIDS & Master Clock di Bandara Internasional Pattimura
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: Instalasi Videowall Display, FIDS & Master Clock di Bandara Internasional Pattimura | INALIX
 description: Instalasi dan integrasi Videowall Display, Flight Information Display System (FIDS), dan Master Clock di Bandara Internasional Pattimura untuk meningkatkan penyampaian informasi kepada penumpang serta mendukung efisiensi operasional bandara.  Proyek ini menghadirkan infrastruktur display dan sinkronisasi waktu yang terintegrasi, sehingga informasi dapat disampaikan secara akurat, tepat waktu, dan konsisten di berbagai area bandara.
 categories:

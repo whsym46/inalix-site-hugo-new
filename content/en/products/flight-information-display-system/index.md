@@ -3,7 +3,7 @@ title: Flight Information Display System (X-FIDS)
 slug: ''
 image: images/X-FIDS.webp
 meta_title: Flight Information Display System (X-FIDS) | INALIX
-description: "The INALIX Flight Information Display System (X-FIDS) provides real-time, dynamic flight information displays for passengers and airport staff across the terminal."
+description: Flight Information Display System
 date: 2022-04-04
 categories: []
 tags: []

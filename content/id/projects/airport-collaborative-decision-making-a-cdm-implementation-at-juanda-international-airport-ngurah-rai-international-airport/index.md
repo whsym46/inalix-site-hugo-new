@@ -1,7 +1,7 @@
 ---
 title: Implementasi Airport Collaborative Decision Making (A-CDM) di Bandara Internasional Juanda & Bandara Internasional I Gusti Ngurah Rai
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: Implementasi Airport Collaborative Decision Making (A-CDM) di Bandara Internasional Juanda & Bandara Internasional I Gusti Ngurah Rai | INALIX
 description: Implementasi sistem Airport Collaborative Decision Making (A-CDM) di Bandara Internasional Juanda dan Bandara Internasional I Gusti Ngurah Rai untuk meningkatkan koordinasi operasional, pertukaran informasi, serta pengambilan keputusan kolaboratif antar pemangku kepentingan bandara.  Solusi ini mendukung pertukaran informasi operasional yang lebih tepat waktu dan konsisten untuk meningkatkan efisiensi dan prediktabilitas operasional bandara.
 categories:

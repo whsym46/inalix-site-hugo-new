@@ -62,6 +62,7 @@
     <div class="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10 text-center lg:text-left">
       {{ $categories:= .Params.categories }}
       {{ if $categories }}
+        {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">
           {{ range $i,$p:= $categories }}
             <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-sm hover:bg-darkmode-primary hover:text-white transition-colors">

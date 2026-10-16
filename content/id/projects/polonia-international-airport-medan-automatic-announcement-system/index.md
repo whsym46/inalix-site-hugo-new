@@ -1,9 +1,10 @@
 ---
-title: Bandara Internasional Polonia Medan - Sistem Pengumuman Otomatis
+title: Polonia International Airport Medan - Automatic Announcement System
 draft: false
-image: images/Automatic-Announcement-System-Polonia-Airport-INALIX.webp
-meta_title: Polonia International Airport Medan - Automatic Announcement System  | INALIX
-description: Perancangan dan implementasi Sistem Pengumuman Otomatis terintegrasi di Bandara Internasional Polonia, menyajikan pembaruan informasi multibahasa secara real-time untuk meningkatkan komunikasi dan efisiensi operasional.
+image:
+  - images/Automatic-Announcement-System-Polonia-Airport-INALIX.webp
+meta_title: Polonia International Airport Medan - Automatic Announcement System | INALIX
+description: Polonia International Airport Medan - Automatic Announcement System
 categories:
   - Projects
 tags: []
@@ -12,12 +13,12 @@ solution: Airport Solutions
 date: 2004-07-08
 ---
 
-Proyek "Pengembangan & Implementasi Sistem Pengumuman Otomatis Bandara di Bandara Polonia Medan" mencakup perancangan, pengembangan, dan penerapan sistem pengumuman otomatis untuk meningkatkan pengalaman penumpang dan merampingkan operasional. Sistem ini diintegrasikan dengan infrastruktur bandara yang ada, memungkinkan pengumuman multibahasa secara real-time di seluruh terminal, meningkatkan efisiensi komunikasi, dan meminimalkan kesalahan manusia (human error). Solusi ini mengoptimalkan alur informasi bagi penumpang, memastikan pembaruan status penerbangan, panggilan naik pesawat (boarding), dan instruksi keselamatan yang tepat waktu, sekaligus menekan biaya operasional dan meningkatkan kualitas layanan secara keseluruhan di Bandara Polonia.
+The "Development & Implementation of the Airport Automatic Announcement System at Polonia Airport Medan" project involved designing, developing, and deploying an automated announcement system to enhance the passenger experience and streamline operations. The system was integrated with the airport’s existing infrastructure, allowing for real-time, multilingual announcements across terminals, improving communication efficiency and minimizing human error. This solution optimized the flow of information for passengers, ensuring timely updates on flight statuses, boarding calls, and safety instructions, all while reducing operational costs and enhancing overall service quality at Polonia Airport.
 
-#### Detail Kasus
+#### Case Details
 
-* Nama Klien: Angkasa Pura II
-* Lokasi Bandara: Bandara Internasional Polonia Medan
-* Mulai: Mei 2004
-* Selesai: Juli 2004
-* Kategori: Sistem Pengumuman Otomatis
+* Client Name: Angkasa Pura II
+* Airport Location: Polonia International Airport Medan
+* Started: May 2004
+* Completed: July 2004
+* Category: Automatic Announcement System

@@ -18,25 +18,51 @@ weight = 2
 
 [[main]]
 name = "Products"
+identifier = "products"
 pageRef = "/products"
-weight = 4
+url = "/products"
+weight = 3
 
+[[main]]
+name = "Airport Solutions"
+url = "/products/airport-solutions"
+parent = "products"
+weight = 1
+
+[[main]]
+name = "Industrial Solutions"
+url = "/products/industrial-solutions"
+parent = "products"
+weight = 2
 
 [[main]]
 name = "Projects"
+identifier = "projects"
 pageRef = "/projects"
-weight = 5
+url = "/projects"
+weight = 4
 
+[[main]]
+name = "Information Technology"
+url = "/projects/information-technology"
+parent = "projects"
+weight = 1
+
+[[main]]
+name = "Industry"
+url = "/projects/industry"
+parent = "projects"
+weight = 2
 
 [[main]]
 name = "News"
 pageRef = "/news"
-weight = 6
+weight = 5
 
 [[main]]
 name = "Contact"
 pageRef = "/pages/contact"
-weight = 7
+weight = 6
 
 
 

@@ -20,5 +20,3 @@ INALIX melaksanakan pekerjaan design & build sistem elektronik sebagai bagian da
 Pekerjaan mencakup perencanaan, instalasi, dan integrasi infrastruktur elektronik yang disesuaikan dengan pengembangan area lounge, dengan tetap memperhatikan keandalan sistem, fungsi operasional, serta keselarasan dengan desain ruang.
 
 Melalui integrasi teknologi dan desain yang fungsional, implementasi ini mendukung terciptanya area lounge bandara yang lebih modern, nyaman, dan memberikan pengalaman yang lebih baik bagi penumpang.
-
-

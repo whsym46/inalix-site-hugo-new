@@ -101,3 +101,28 @@
   }
 }
 
+// ==========================================
+// SMOOTH GLIDE-IN DROPDOWN FLYOUT MENU
+// ==========================================
+.nav-dropdown-flyout {
+  padding-top: 34px;
+  min-width: 280px;
+  width: max-content;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(16px) scale(0.97);
+  will-change: opacity, transform;
+  transition: opacity 220ms ease-out, transform 250ms ease-out, visibility 250ms;
+
+  .nav-dropdown:hover &,
+  .nav-dropdown:focus-within & {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    transition: opacity 450ms cubic-bezier(0.22, 1, 0.36, 1), transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+

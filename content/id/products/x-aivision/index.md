@@ -1,31 +1,33 @@
 ---
-title: "X-Aivision"
+title: X-Aivision
 slug: ''
 image: images/X-AIVISION.webp
 meta_title: X-Aivision | INALIX
-description: "X-AiVision adalah solusi visi komputer canggih berbasis AI yang dirancang untuk bandara guna mendeteksi anomali, memantau keamanan, dan meningkatkan efisiensi operasional."
+description: X-Aivision
 date: 2022-04-04
 categories: []
 tags: []
 author: Inalix
 ---
 
-X-AiVision adalah solusi canggih yang menggunakan kecerdasan buatan (AI) untuk menganalisis, memahami, dan menginterpretasikan gambar dan video digital. Aplikasi ini memungkinkan bisnis untuk meningkatkan efisiensi, akurasi, dan inovasi di berbagai industri. Industri penerbangan telah mengadopsi teknologi computer vision (visi komputer) untuk meningkatkan keselamatan dan efisiensi perjalanan udara. Bidang penggunaannya sangat luas dan mencakup pengenalan dan deteksi pesawat terbang, keamanan bandara, manajemen, dll.
+X-AiVision is an advanced solution that uses artificial intelligence to analyze, understand, and interpret digital images and videos. This application enablesbusinesses to enhance efficiency, accuracy, and innovation across various industries. Aviation industry has been adopt computer vision technology to improve air travel safety and efficiency. The fields of use are very broad and include recognition and detection of airplanes, airport security, management, etc.
 
-Keselamatan dan keamanan dideteksi dengan mengidentifikasi kondisi anomali, pola atau kesalahan yang tidak biasa pada gambar atau video. Penyusup yang memasuki area terlarang akan selalu dipantau. Peringatan, alarm, atau pemberitahuan lainnya, dapat diintegrasikan ke dalam teknologi ini.
+Safety and security are detected by identify anomaly conditions, unusual patterns or errors in images or videos. Intruders who enter restricted areas will be monitored every time. Alerts, alarms, or other notifications, can be integrated into this technology. Flight management more efficient, auto recording of flight activities real time, data analysis more reliable. Future business process predictable.
 
-Inalix AiVision adalah computer vision yang dirancang untuk kebutuhan bandara, siap untuk mencakup kebutuhan sisi udara (airside) dan darat (landside), serta semua area kedatangan, konter check-in, ruang tunggu, gerbang (gate), apron, ban berjalan (conveyor belt), dan lainnya.
+Inalix AiVision is a computer vision designed for airport needs, ready to cover airside and landsite needs, and all arrival areas, check-in counters, waiting rooms, gates, aprons, conveyor belts, and others. Inalix with expert experience at the airport, will facilitate integration with related systems. Interpreting auto recording data to AODB, FIDS, AAS, and other systems is very possible.
 
 ![](images/X-AiVision-BlockOnOff-Monitoring.webp)
 
-### FITUR
+### FEATURES
 
-Fitur utama X-AiVision adalah sebagai berikut:
+[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-aivision.md#features)
 
-- Perekaman Data Real-Time: Sistem merekam semua aktivitas secara real-time, memastikan bahwa data terkait operasional bandara selalu mutakhir dan siap untuk segera digunakan dan dianalisis.
-- Deteksi Anomali Otomatis: Memanfaatkan algoritma AI, X-AiVision dapat mendeteksi pola yang tidak biasa, potensi pelanggaran keamanan, atau masalah operasional.
-- Integrasi dengan Sistem yang Ada: X-AiVision dirancang untuk terintegrasi secara mulus dengan sistem bandara yang ada seperti AODB, FIDS, dan AAS.
-- Peningkatan Analisis Data: Sistem menyediakan alat untuk menganalisis data yang dikumpulkan, memungkinkan pengambilan keputusan yang lebih baik.
-- Kemampuan Prediktif: Dengan menganalisis tren dan data dari waktu ke waktu, X-AiVision membantu memprediksi kebutuhan operasional masa depan.
-- Antarmuka Ramah Pengguna (User-Friendly): Menampilkan antarmuka pengguna yang lugas dan intuitif.
-- Peringatan dan Pemberitahuan yang Dapat Disesuaikan.
+X-AiVision main features are as follows:
+
+- Real-Time Data Recording: The system records all activities in real-time, ensuring that data regarding airport operations is up-to-date and readily available for immediate use and analysis.
+- Automated Anomaly Detection: Utilizing Al algorithms, X-AiVision can detectunusual patterns, potential security breaches, or operational issues, alerting the necessary personnel to take swift action.
+- Integration with Existing Systems: X-AiVision is designed to seamlessly integrate with existing airport systems such as Airport Operational Database Systems (AODB), Flight Information Display Systems (FIDS), and Airport Administration Systems (AAS).
+- Enhanced Data Analysis: The system provides tools for analyzing collected data, allowing for better decision-making and more efficient operational planning.
+- Predictive Capabilities: By analyzing trends and data over time, X-AiVision helps predict future operational needs and potential issues, enabling proactive management of airport resources.
+- User-Friendly Interface: It features a straightforward and intuitive user interface, making it easy for airport staff to monitor, analyze, and respond to various situations.
+- Customizable Alerts and Notifications: X-AiVision can be configured to send custom alerts and notifications to relevant personnel based on specific criteria, enhancing the responsiveness of security and operational teams.

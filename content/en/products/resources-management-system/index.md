@@ -3,7 +3,7 @@ title: Resources Management System (RMS)
 slug: ''
 image: images/X-RMS.webp
 meta_title: Resources Management System (RMS) | INALIX
-description: "The INALIX Resource Management System (RMS) is a real-time planning and operational tool for managing airport resources like parking stands, gates, and check-in desks."
+description: Resources Management System
 date: 2022-04-04
 categories: []
 tags: []

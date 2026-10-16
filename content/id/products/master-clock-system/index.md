@@ -1,26 +1,26 @@
 ---
-title: "Sistem Jam Utama (X-MC)"
+title: Master Clock System (X-MC)
 slug: ''
 image: images/X-MC.webp
 meta_title: Master Clock System (X-MC) | INALIX
-description: "Sistem Jam Utama Inalix (X-MCS) memanfaatkan satelit GPS untuk menyediakan waktu tersinkronisasi yang sangat akurat di seluruh jaringan elektronik bandara."
+description: Master Clock System
 date: 2022-04-04
 categories: []
 tags: []
 author: Inalix
 ---
 
-Sistem Jam Utama Inalix (X-MCS) adalah protokol waktu terpusat yang menyediakan waktu tersinkronisasi dan akurat hingga hitungan detik ke jaringan dengan ukuran berapa pun. X-MCS menggunakan sistem yang memanfaatkan waktu satelit GPS dari seluruh dunia (bergantung pada lokasi) untuk mendapatkan waktu dasar UTC yang akurat dan kemudian didistribusikan ke semua peralatan elektronik yang membutuhkan waktu tersinkronisasi di bandara.
+Inalix Master Clock System (X-MCS) is a centralized time protocol which provides synchronized and accurate time right to the seconds to networks of any size. X-MCS uses a system that utilizes GPS satellites time from all around the world (depends on location) to get an accurate UTC base time and then distributed to all electronic equipment that needs synchronized time in the airport.
 
 ![](images/Inalix-Master-Clock%20%281%29.webp)
 
-X-MCS menggunakan server waktu (time server) dengan osilator presisi dan sangat stabil yang mampu menjembatani gangguan atau hilangnya sinyal sementara. Dengan klien waktu tambahan (slave clocks) berbasis IP dan Power-Over-Ethernet (PoE), Anda tidak perlu lagi menyesuaikan waktu atau mengganti baterai.
+X-MCS uses a time server with a highly stable and precise oscillator that is capable of bridging interferences or a temporary loss of reception. With additional time clients (slave clocks) with IP-based and Power-Over-Ethernet (PoE), you’ll never need to adjust for daylight saving time or replace batteries again.
 
 ![](images/Airport-Master-Clock-System.webp)
 
-### Fitur utama X-MCS adalah sebagai berikut:
+### X-MCS main features are as follows:
 
-- Menyediakan sumber waktu referensi berkualitas tinggi
-- Server dan klien waktu yang kompatibel dengan NTP atau SNTP
-- Tersedia redundansi
-- Cakupan penggunaan yang luas untuk perlengkapan operasional seperti AODB, FIDS, AAS, ABS, CCTV, sistem lain yang menggunakan NTP
+- Provides high quality reference time sources
+- NTP or SNTP compatible time server and clients
+- Redundant available
+- Wide range of use for operational equipment such as AODB, FIDS, AAS, ABS, CCTV, other systems that use NTP

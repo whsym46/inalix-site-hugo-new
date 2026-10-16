@@ -1,7 +1,7 @@
 ---
 title: Digital Signage Implementation at Hang Nadim International Airport
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: Digital Signage Implementation at Hang Nadim International Airport | INALIX
 description: Implementation of a Digital Signage system at Hang Nadim International Airport to support effective visual communication and digital content delivery across designated areas of the terminal.  The solution provides a centralized platform for displaying and managing information and digital content, enabling consistent, flexible, and engaging communication within the airport environment.
 categories:

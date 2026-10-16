@@ -1,7 +1,7 @@
 ---
 title: Implementasi Videowall AOCC di Yogyakarta International Airport (YIA)
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: Implementasi Videowall AOCC di Yogyakarta International Airport (YIA) | INALIX
 description: Implementasi sistem videowall terintegrasi untuk Airport Operations Control Center (AOCC) di Yogyakarta International Airport (YIA) guna mendukung pemantauan dan koordinasi operasional bandara secara terpusat.  Solusi ini menyediakan platform visual berskala besar yang memungkinkan operator memantau berbagai informasi operasional penting serta meningkatkan situational awareness di lingkungan AOCC.
 categories:

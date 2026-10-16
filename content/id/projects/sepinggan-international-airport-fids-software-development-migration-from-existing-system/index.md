@@ -1,9 +1,9 @@
 ---
-title: Bandara Internasional Sepinggan - Pengembangan Perangkat Lunak FIDS & Migrasi dari Sistem Lama
+title: Sepinggan International Airport - FIDS Software Development & Migration from Existing System
 draft: false
 image: images/slider-new8.webp
-meta_title: Sepinggan International Airport - FIDS Software Development & Migration from Existing System  | INALIX
-description: Pengembangan perangkat lunak khusus dan keberhasilan migrasi Sistem Informasi Penerbangan dari sistem lama ke platform modern di Bandara Internasional Sepinggan.
+meta_title: Sepinggan International Airport - FIDS Software Development & Migration from Existing System | INALIX
+description: Sepinggan International Airport - FIDS Software Development & Migration from Existing System
 categories:
   - Projects
 tags: []
@@ -12,12 +12,12 @@ solution: Airport Solutions
 date: 2003-01-15
 ---
 
-Pengembangan FIDS Bandara di Bandara Internasional Sepinggan. Kami juga menyediakan layanan migrasi dari sistem yang sudah ada sebelumnya.
+Development Airport FIDS at Sepinggan International Airpot. We also provide migration from existing system.
 
-#### Detail Kasus
+#### Case Details
 
-* Nama Klien: Angkasa Pura I
-* Lokasi Bandara: Bandara Internasional Sepinggan
-* Mulai: Agustus 2002
-* Selesai: Desember 2002
-* Kategori: FIDS, Migrasi dari Sistem Lama, Pemeliharaan Sistem
+* Client Name: Angkasa Pura I
+* Airport Location: Sepinggan International Airport
+* Started: August 2002
+* Completed: December 2002
+* Category: FIDS, Migration from Existing System, System Maintenance

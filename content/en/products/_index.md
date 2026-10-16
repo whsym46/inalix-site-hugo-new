@@ -2,7 +2,7 @@
 title: Products
 meta_title: Inalix Products & Solutions
 description: Inalix Products
-image: /images/slider-industri.webp
+image: /images/bg.webp
 ---
 
 ## Products

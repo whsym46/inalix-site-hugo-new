@@ -1,7 +1,7 @@
 ---
 title: Upgrade Sistem SIOPSKOM di Bandara Internasional Hang Nadim
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: Upgrade Sistem SIOPSKOM di Bandara Internasional Hang Nadim | INALIX
 description: Peningkatan sistem SIOPSKOM di Bandara Internasional Hang Nadim untuk meningkatkan performa, keandalan, dan kapabilitas sistem dalam mendukung aktivitas operasional dan komunikasi bandara.  Proyek ini berfokus pada modernisasi sistem eksisting serta peningkatan fungsionalitas untuk mendukung operasional bandara sehari-hari secara lebih efektif dan andal.
 categories:

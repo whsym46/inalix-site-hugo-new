@@ -20,5 +20,3 @@ INALIX mengimplementasikan SCADA Chiller Software System sebagai solusi untuk me
 Melalui antarmuka SCADA, operator dapat memantau berbagai parameter dan status operasional sistem secara real-time, mengidentifikasi kondisi maupun alarm yang membutuhkan perhatian, serta melakukan pengendalian dari satu sistem terpusat.
 
 Implementasi ini membantu meningkatkan visibilitas terhadap operasional sistem pendingin, mempercepat respons terhadap kondisi abnormal, serta mendukung pengelolaan infrastruktur bandara yang lebih efektif dan andal.
-
-

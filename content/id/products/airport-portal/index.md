@@ -1,27 +1,29 @@
 ---
-title: "Portal Bandara (X-PORTAL)"
+title: Airport Portal (X-PORTAL)
 slug: ''
 image: images/X-PORTAL.webp
 meta_title: Airport Portal (X-PORTAL) | INALIX
-description: "Portal Bandara INALIX berfungsi sebagai Satu Pintu Informasi, menyediakan pembaruan penerbangan secara real-time bagi petugas bandara, mitra, dan pemangku kepentingan."
+description: INALIX Airport Portal serves as The One Gate to information, the portal used for the airport officers, users, partners and stakeholders.
 date: 2022-04-04
 categories: []
 tags: []
 author: Inalix
 ---
 
-Mitra bandara dan pemangku kepentingan selalu membutuhkan informasi penerbangan terkini, cara biasa untuk mengkomunikasikan pembaruan informasi real-time tersebut biasanya dilakukan menggunakan cara tradisional seperti telepon, walkie-talkie atau mitra akan datang ke unit kantor terkait hanya untuk menanyakan tentang pembaruan informasi penerbangan. Cara-cara usang ini membutuhkan waktu, dan waktu adalah aset yang sangat berharga dalam operasi bandara.
+Airport partners and stakeholders are always in need for updated flight information, the usual way to communicate those real time information update is usually done by using traditional ways such as using phones, walkie-talkie or even partners will come to the related office unit just to ask about the flight information update. These obsolete ways takes time, and time is a very much valuable asset in airport operation.
 
-Portal Bandara INALIX berfungsi sebagai Satu Pintu menuju informasi, portal yang digunakan untuk petugas bandara, pengguna, mitra, dan pemangku kepentingan. Akses informasi satu pintu ini memenuhi semua kebutuhan pembaruan informasi penerbangan yang terjadi di bandara. Portal Bandara memiliki Penerbangan Terjadwal, pembaruan Penerbangan, Informasi Kedatangan-Keberangkatan, status Pesawat, penggunaan Sumber Daya, dan Informasi NOTAM.
+INALIX Airport Portal serves as The One Gate to information, the portal used for the airport officers, users, partners and stakeholders. This one gate information access provides all the needs for flight information update happening in the airport. Airport Portal has the Scheduled Flights, Flights update, Arrival-Departure Information, Aircraft status, Resource usage and NOTAM Information.
 
-Antarmuka Pengguna Grafis berbasis web yang mudah digunakan, tampilan real-time memungkinkan berbagi informasi yang lebih efektif ke semua pengguna dan pemangku kepentingan bandara.
+Easy to use, web-based Graphical User Interface, real-time view allows more effective information sharing to all the airport users and stakeholders.
 
 ![](images/X-Portal-01-820x400.webp)
 
 ![](images/X-Portal-02.webp)
 
-### FITUR PORTAL BANDARA:
+### AIRPORT PORTAL FEATURES:
 
-- PORTAL INFORMASI PENERBANGAN Dengan akses pengguna berdasarkan hak istimewa mereka masing-masing, pengguna dapat melihat informasi penerbangan terkini secara real time tanpa perlu secara manual menanyakan berulang kali tentang pembaruan tersebut ke unit-unit lain di bandara.
-- DASHBOARD Tinjauan ringkasan informasi penerbangan real-time atau bahkan data historis dalam bentuk grafis, widget dapat disesuaikan sesuai kebutuhan.
-- BERBASIS WEB Dapat diakses dari browser web umum yang tersedia pada OS PC biasa di mana saja.
+[](https://github.com/inalix/website-hugo/blob/test/content/english/products/airport-portal.md#airport-portal-features)
+
+- FLIGHT INFORMATION PORTALWith user access based on their respective privileges, user can view the up-to-date flight information in real time without the needs to manually asking repeatedly about the update to the other units in the airport
+- DASHBOARDOverview the real time flight information summary or even the historical data in graphical terms, widgets can be customized as needed.
+- WEB-BASEDAccessible from common web browser available on the usual PC OS everywhere.

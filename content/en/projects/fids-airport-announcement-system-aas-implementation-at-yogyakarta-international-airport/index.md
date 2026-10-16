@@ -1,7 +1,7 @@
 ---
 title: FIDS & Airport Announcement System (AAS) Implementation at Yogyakarta International Airport
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: FIDS & Airport Announcement System (AAS) Implementation at Yogyakarta International Airport | INALIX
 description: Implementation of the Flight Information Display System (FIDS) and Airport Announcement System (AAS) at Yogyakarta International Airport to support integrated passenger information and communication services across the terminal.  The solution combines real-time flight information displays with a centralized announcement system, enabling accurate, timely, and consistent communication throughout the airport.
 categories:

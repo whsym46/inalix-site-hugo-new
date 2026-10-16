@@ -9,7 +9,7 @@ categories:
 tags: []
 author: Inalix
 solution: Airport Solutions
-date: 2026-10-08
+date: 2024-01-08
 ---
 
 **Pengelolaan Data Operasional Bandara Terpusat**

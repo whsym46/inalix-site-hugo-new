@@ -20,5 +20,3 @@ INALIX implemented the SCADA Chiller Software System as a centralized solution f
 Through the SCADA interface, operators can monitor operational parameters and equipment status in real time, identify alarms and conditions that require attention, and manage the system through a centralized platform.
 
 This implementation improves operational visibility, enables faster response to abnormal conditions, and supports more efficient and reliable management of critical airport infrastructure.
-
-

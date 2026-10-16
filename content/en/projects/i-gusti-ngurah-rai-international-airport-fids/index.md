@@ -1,9 +1,10 @@
 ---
 title: I Gusti Ngurah Rai International Airport - FIDS
 draft: false
-image: images/slider-new1.webp
-meta_title: I Gusti Ngurah Rai International Airport - FIDS  | INALIX
-description: "Deployment of an advanced, real-time Flight Information Display System (FIDS) at Ngurah Rai International Airport to seamlessly integrate with existing infrastructure and streamline passenger information dissemination."
+image:
+  - images/slider-new1.webp
+meta_title: I Gusti Ngurah Rai International Airport - FIDS | INALIX
+description: I Gusti Ngurah Rai International Airport - FIDS
 categories:
   - Projects
 tags: []

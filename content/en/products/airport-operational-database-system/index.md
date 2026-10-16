@@ -3,7 +3,7 @@ title: Airport Operational Database System (X-AODB)
 slug: ''
 image: images/X-AODB.webp
 meta_title: Airport Operational Database System (X-AODB) | INALIX
-description: "The INALIX Airport Operation Data Base (X-AODB) serves as a centralized data center, linking multiple IT systems to ensure data integrity and streamline operations."
+description: Airport Operational Database System
 date: 2022-04-04
 categories: []
 tags: []

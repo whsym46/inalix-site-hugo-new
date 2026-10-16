@@ -1,7 +1,7 @@
 ---
 title: Implementasi FIDS untuk Perluasan Bandara SOC di Bandara Internasional Adi Soemarmo
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: Implementasi FIDS untuk Perluasan Bandara SOC di Bandara Internasional Adi Soemarmo | INALIX
 description: Implementasi Flight Information Display System (FIDS) sebagai bagian dari proyek perluasan Bandara SOC di Bandara Internasional Adi Soemarmo untuk mendukung penyampaian informasi penerbangan secara real-time di area terminal yang diperluas.  Solusi ini memperluas infrastruktur layanan informasi penumpang sehingga informasi penerbangan dapat tersedia secara akurat dan konsisten di berbagai area pengembangan terminal.
 categories:

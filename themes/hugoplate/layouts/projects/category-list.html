@@ -1,0 +1,39 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section">
+    <div class="container">
+      <div class="row gx-5">
+        <div class="lg:col-12">
+          <div class="row">
+            {{ $targetCat := .Params.category }}
+            {{ $pages := slice }}
+            {{ range (where site.RegularPages "Section" "projects") }}
+              {{ $cats := .Params.categories }}
+              {{ if $cats }}
+                {{ if not (reflect.IsSlice $cats) }}{{ $cats = slice $cats }}{{ end }}
+                {{ if in $cats $targetCat }}
+                  {{ $pages = $pages | append . }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+
+            {{ if eq (len $pages) 0 }}
+              <div class="col-12 text-center py-16">
+                <p class="text-gray-500 dark:text-gray-400 text-lg">{{ T "no_results" | default "No projects found in this category." }}</p>
+              </div>
+            {{ else }}
+              {{ $paginator := .Paginate $pages }}
+              {{ range $paginator.Pages }}
+                <div class="md:col-6 mb-14">
+                  {{ partial "components/project-card.html" . }}
+                </div>
+              {{ end }}
+            {{ end }}
+          </div>
+          {{ partial "components/pagination.html" . }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

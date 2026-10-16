@@ -36,8 +36,10 @@
         <div class="px-4">
           <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "category" | default "Category" }}</p>
           <h5 class="text-sm font-bold uppercase tracking-wider text-white">
-            {{ if .Params.categories }}
-              {{ range $i, $cat := .Params.categories }}{{ $cat | humanize }}{{ if ne $i (sub (len $.Params.categories) 1) }}, {{ end }}{{ end }}
+            {{ $categories := .Params.categories }}
+            {{ if $categories }}
+              {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
+              {{ range $i, $cat := $categories }}{{ $cat | humanize }}{{ if ne $i (sub (len $categories) 1) }}, {{ end }}{{ end }}
             {{ else }}{{ T "project" | default "Project" }}{{ end }}
           </h5>
         </div>

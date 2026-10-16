@@ -19,8 +19,13 @@
     <div class="flex flex-wrap gap-2 mb-3 items-center text-primary">
       {{ with .Params.solution }}
         <span class="text-xs font-bold uppercase tracking-widest text-primary">{{ . }}</span>
-      {{ end }} ▪ {{ range .Params.categories }}
-        <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="text-xs font-bold uppercase tracking-widest text-primary hover:text-dark transition-colors">{{ . | humanize }}</a>
+      {{ end }}
+      {{ $categories := .Params.categories }}
+      {{ if $categories }}
+        {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
+        ▪ {{ range $categories }}
+          <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="text-xs font-bold uppercase tracking-widest text-primary hover:text-dark transition-colors">{{ . | humanize }}</a>
+        {{ end }}
       {{ end }}
     </div>
 

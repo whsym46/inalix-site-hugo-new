@@ -3,7 +3,7 @@ title: X-Aivision
 slug: ''
 image: images/X-AIVISION.webp
 meta_title: X-Aivision | INALIX
-description: "X-AiVision is an advanced AI-powered computer vision solution designed for airports to detect anomalies, monitor security, and enhance operational efficiency."
+description: X-Aivision
 date: 2022-04-04
 categories: []
 tags: []

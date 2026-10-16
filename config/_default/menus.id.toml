@@ -18,25 +18,51 @@ weight = 2
 
 [[main]]
 name = "Produk"
+identifier = "products"
 pageRef = "/products"
-weight = 4
+url = "/products"
+weight = 3
 
+[[main]]
+name = "Solusi Bandara"
+url = "/products/airport-solutions"
+parent = "products"
+weight = 1
+
+[[main]]
+name = "Solusi Industri"
+url = "/products/industrial-solutions"
+parent = "products"
+weight = 2
 
 [[main]]
 name = "Proyek"
+identifier = "projects"
 pageRef = "/projects"
-weight = 5
+url = "/projects"
+weight = 4
 
+[[main]]
+name = "Teknologi Informasi"
+url = "/projects/information-technology"
+parent = "projects"
+weight = 1
+
+[[main]]
+name = "Industri"
+url = "/projects/industry"
+parent = "projects"
+weight = 2
 
 [[main]]
 name = "Berita"
 pageRef = "/news"
-weight = 6
+weight = 5
 
 [[main]]
 name = "Kontak"
 pageRef = "/pages/contact"
-weight = 7
+weight = 6
 
 
 

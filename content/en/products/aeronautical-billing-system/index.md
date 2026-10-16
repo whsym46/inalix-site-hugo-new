@@ -3,14 +3,15 @@ title: Aeronautical Billing System (X-ABS)
 slug: ''
 image: images/X-ABS.webp
 meta_title: Aeronautical Billing System (X-ABS) | INALIX
-description: "Inalix Aero Billing System (X-ABS) automatically calculates aeronautical billing based on operational data, producing accurate invoices and financial reports."
+description: Aeronautical Billing System
 date: 2022-04-04
-categories: []
-tags: []
+categories: Airport Solutions
+sub_categories: ''
 author: Inalix
+tags: []
 ---
 
-Inalix Aero Billing System (X-ABS) caters to your needs for aeronautical calculation and billing system. X-ABS is able to produce invoices and other financial reports which are automatically calculated in accordance with flight operational database stored within the X-AODB system.
+Test Inalix Aero Billing System (X-ABS) caters to your needs for aeronautical calculation and billing system. X-ABS is able to produce invoices and other financial reports which are automatically calculated in accordance with flight operational database stored within the X-AODB system.
 
 [![](images/Inalix-Aeronautical-Billing-System-Diagram.webp)](https://github.com/inalix/website-hugo/blob/test/images/AODB.webp)
 

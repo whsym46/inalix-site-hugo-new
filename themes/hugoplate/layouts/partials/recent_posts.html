@@ -25,6 +25,7 @@
     <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 flex items-center">
       {{ $cats := .Params.categories }}
       {{ if $cats }}
+        {{ if not (reflect.IsSlice $cats) }}{{ $cats = slice $cats }}{{ end }}
         {{ range first 1 $cats }}
           <span class="text-gray-500">{{ . }}</span>
         {{ end }}

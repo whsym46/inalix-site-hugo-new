@@ -1,26 +1,28 @@
 ---
-title: "Pengambilan Keputusan Kolaborasi Bandara (X-ACDM)"
+title: Airport Collaboration Decision Making (X-ACDM)
 slug: ''
 image: images/X-ACDM.webp
 meta_title: Airport Collaboration Decision Making (X-ACDM) | INALIX
-description: "Inalix Airport CDM (X-ACDM) mengoptimalkan kinerja bandara melalui pengambilan keputusan kolaboratif, berbagi informasi secara real-time dengan seluruh pemangku kepentingan."
+description: Inalix Flight Information Display System is that can be used to manage, control and automate the flow of up to date information to the general public, airport tenants, airport management and airport operational staff throughout the Airport Terminal.
 date: 2022-04-04
 categories: []
 tags: []
 author: Inalix
 ---
 
-Peningkatan operasional adalah tujuan dari banyak bandara. Sementara beberapa bandara masih dapat diperluas dalam hal sumber daya tambahan, bandara lain juga harus melakukan beberapa peningkatan. Airport CDM (A-CDM) adalah kunci menuju peningkatan kinerja bandara. A-CDM adalah tentang mitra yang bekerja sama dan membuat keputusan berdasarkan informasi yang lebih akurat dan berkualitas tinggi, di mana setiap bit informasi memiliki arti yang sama persis bagi setiap mitra yang terlibat.
+Operational Improvement is the goal of many airports. While some airports are still expandable in terms of additional resources, other airports will have to make some improvement as well. Airport CDM (A-CDM) is the key towards improving performance of an airport. A-CDM is all about partners working together and making decisions based on more accurate and higher quality information, where every bit of information has the exact same meaning for every partner involved.
 
-INALIX A-CDM adalah modul untuk memenuhi persyaratan CDM ini. Dengan modul interaktif yang menampilkan semua informasi yang dibutuhkan oleh mitra bandara masing-masing, yang merinci elemen-elemen Berbagi Informasi A-CDM, proses putar balik (Pendekatan Milestone), waktu taksi yang bervariasi, pengurutan pra-keberangkatan dan kondisi yang merugikan.
+INALIX A-CDM is the module to meet this CDM requirements. With interactive module that shows all information needed by respective partners of the airport, which details the elements Airport CDM Information Sharing, the turn-round process (Milestones Approach), variable taxi times, pre-departure sequencing and adverse conditions.
 
-Antarmuka Pengguna Grafis berbasis web yang mudah digunakan, tampilan real-time memungkinkan berbagi informasi yang lebih efektif ke semua pemangku kepentingan yang berpartisipasi dalam A-CDM.
+Easy to use, web-based Graphical User Interface, real-time view allows more effective information sharing to all stakeholders participating in A-CDM.
 
-#### FITUR X-ACDM:
+#### X-ACDM FEATURES:
 
-- PENGAMBILAN KEPUTUSAN DAN INFORMASI KOLABORATIF Pendekatan berbasis milestone, dengan peringatan dan pemberitahuan di setiap milestone untuk mengoptimalkan keputusan bekerja sama dengan mitra A-CDM lainnya.
-- INFORMASI AKURAT DAN TEPAT WAKTU Informasi dapat diakses dan diperbarui oleh setiap mitra A-CDM, dengan pembaruan real-time berdasarkan aturan operasi yang telah ditentukan.
-- PROSEDUR & MEKANISME YANG DAPAT DIADAPTASI Bandara yang berbeda memiliki prosedur yang berbeda, Inalix A-CDM dapat mengadaptasi aturan lokal tersebut tetapi tetap mematuhi standar A-CDM.
-- DASHBOARD A-CDM Dashboard digunakan oleh manajemen Bandara untuk memeriksa informasi kepatuhan dan efektivitas A-CDM di seluruh mitra A-CDM, baik harian maupun historis.
-- BERBASIS WEB Dapat diakses dari browser web umum yang tersedia pada OS PC biasa di mana saja.
-- VERSI APLIKASI SELULER Operasi lebih cepat, pengalaman yang dipersonalisasi, pembaruan & pemberitahuan instan, & memberikan tanggung jawab branding.
+[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-acdm.md#x-acdm-features)
+
+- COLLABORATIVE INFORMATION AND DECISION MAKINGMilestones based approach, with alerts and notifications on each milestone to optimize the decisions in collaboration with other A-CDM partners.
+- ACCURATE AND TIMELY INFORMATIONInformation can be accessed and updated by each A-CDM partners, with real-time update based on designated rules of operation.
+- ADAPTABLE PROCEDURES & MECHANISMDifferent airport have different procedures, Inalix A-CDM can adapt those local rules but still comply with A-CDM standards.
+- A-CDM DASHBOARDDashboard is used for Airport management to check information of A-CDM compliance and effectiveness across the A-CDM partners, be it daily or historical.
+- WEB-BASEDAccessible from common web browser available on the usual PC OS everywhere.
+- MOBILE APP VERSIONFaster operation, personalized experience, instant update & notifications, & give branding responsibility

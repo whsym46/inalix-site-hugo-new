@@ -3,7 +3,7 @@ title: Digital Signage & Videowall System (X-DSVS)
 slug: ''
 image: images/X-DSUS.webp
 meta_title: Digital Signage & Videowall System (X-DSVS) | INALIX
-description: "The INALIX Digital Signage & Videowall System (X-DSVS) displays rich multimedia content across multi-screen frameworks for information, entertainment, and advertising."
+description: Inalix Digital Signage & Videowall System
 date: 2022-04-04
 categories: []
 tags: []

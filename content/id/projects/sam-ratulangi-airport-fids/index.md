@@ -1,9 +1,9 @@
 ---
-title: Bandara Sam Ratulangi - FIDS
+title: Sam Ratulangi Airport - FIDS
 draft: false
 image: images/slider-new5.webp
-meta_title: Sam Ratulangi Airport - FIDS  | INALIX
-description: Implementasi Flight Information Display System (FIDS) Inalix di Bandara Sam Ratulangi untuk meningkatkan standar operasional dan memberikan pengalaman penumpang yang unggul.
+meta_title: Sam Ratulangi Airport - FIDS | INALIX
+description: Sam Ratulangi Airport - FIDS
 categories:
   - Projects
 tags: []
@@ -12,12 +12,12 @@ solution: Airport Solutions
 date: 2003-01-15
 ---
 
-Implementasi FIDS Bandara di Bandara Sam Ratulangi, Sulawesi Utara. Solusi Inalix untuk operasional bandara yang lebih baik dan pengalaman penumpang yang lebih nyaman.
+Implementation of Airport FIDS at Sam Ratulangi Airpot, North Sulawesi. Inalix solution for better Airport operation and better experience for passengers.
 
-#### Detail Kasus
+#### Case Details
 
-* Nama Klien: Angkasa Pura I
-* Lokasi Bandara: Bandara Sam Ratulangi
-* Mulai: Januari 2004
-* Selesai: Maret 2004
-* Kategori: Flight Information Display System
+* Client Name: Angkasa Pura I
+* Airport Location: Sam Ratulangi Airport
+* Started: January 2004
+* Completed: March 2004
+* Category: Flight Information Display System

@@ -1,43 +1,69 @@
 ---
-title: "Sistem Tampilan Informasi Penerbangan (X-FIDS)"
+title: Flight Information Display System (X-FIDS)
 slug: ''
 image: images/X-FIDS.webp
 meta_title: Flight Information Display System (X-FIDS) | INALIX
-description: "Sistem Tampilan Informasi Penerbangan INALIX (X-FIDS) menyediakan tampilan informasi penerbangan yang dinamis dan real-time bagi penumpang serta staf di seluruh terminal."
+description: Flight Information Display System
 date: 2022-04-04
 categories: []
 tags: []
 author: Inalix
 ---
 
-Sistem Tampilan Informasi Penerbangan INALIX (X-FIDS) adalah sistem pilihan untuk menampilkan status informasi penerbangan terkini yang ditujukan bagi penumpang, masyarakat umum, penyewa bandara, manajemen bandara, dan staf operasional bandara di seluruh area Bandara. Informasi penerbangan seperti Maskapai, Tujuan, Asal, Jadwal, status penerbangan, dan informasi lainnya yang dibutuhkan dapat ditampilkan oleh X-FIDS melalui tampilan klien X-FIDS yang dipasang di titik-titik penting bandara untuk memenuhi semua kebutuhan bandara akan pembaruan informasi penerbangan.
+INALIX Flight Information Display System (X-FIDS) is the go to system for displaying up-to-date flight information status that is intended for passengers, general public, airport tenants, airport management and airport operational staff throughout the Airport. Flight information such as Airline, Destination, Origin, Schedule, flight status and other information needed can be displayed by X-FIDS through X-FIDS client display that are installed in the airport’s crucial points and commemorate all of the airport’s need for flight information update.
 
-[![](images/Airport-FIDS.webp)]( )
+![](images/Airport-FIDS.webp)
 
-X-FIDS adalah sistem terminal yang menyediakan informasi real-time bagi pengguna bandara. Sistem publik ini adalah alat komunikasi penting yang tersebar di seluruh bandara dan membutuhkan kemampuan konfigurasi tinggi serta ketersediaan maksimum.
+X-FIDS is the terminal system that provides real time information to airport users. This information includes flights, assigned check-in desks, boarding gates, departure and arrival times, baggage claim allocation. This public information system, which is the essential communication tool between the airport and passengers, is deployed all over the airport and requires high configuration capabilities and maximum availability. FIDS is a modular system, allowing the airport to acquire strictly the required modules facilitating the systems architecture simplification and reducing investment.
 
-### Fitur FIDS
+### FIDS Features
 
-- Tampilan publik real-time untuk penerbangan terjadwal
-- Pembaruan Status Penerbangan (Check-in Open, Check-in Close, Boarding, Landing, Gate Open, Delay, Cancel, dll)
-- Form penerbangan harian
-- Operasi multi-pengguna
-- GUI berbasis web
-- Mendukung Multi Display (LCD, LED, Videowall)
-- Templat kustom untuk setiap tema bandara dan Meja Khusus Maskapai
-- Konfigurasi server redundan tersedia
-- Integrasi pihak ketiga tersedia
-- Pembaruan Data Operasional Penerbangan Secara Real-Time
-- Template FIDS yang dinamis dan editor yang mudah digunakan
+[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-fids.md#fids-features)
 
-## GUI X-FIDS untuk Operator
+X-FIDS main features are as follows:
 
-[![](images/X-FIDS-GUI-for-Operator.webp)]( )
+- Real time public display for scheduled flight
+- Flight Status update (Check-in Open, Check-in Close, Boarding, Landing, Gate Open, Delay, Cancel, etc)
+- Daily flight form
+- Multi-user operation
+- Web-based GUI
+- Multi Display supported (LCD, LED, Videowall, and other airport display)
+- Custom template for each unique airport theme and Airline Special Desk
+- Redundant server configuration available
+- 3rd party integration available (Master Clock System’s NTP, Automatic Announcement System, AFTN & other interfaces needed)
+- Support SoC Display: LG WebOS, while Android & Tizen OS under development
+- Green airport, as in using the most efficient energy in all our platform
+- Real Time Flight Operational Data Update
+- Dynamic FIDS Template
+- Real Time Flight Operational Data Update
+- FIDS Display License available in units or bulks
+- Historical user log, to check your flight data history as well as the user activity
+- User-friendly FIDS Template Editor
+- FIDS Page Slider with scheduling available
+- Emergency button that can be integrated with AODB
+- Dynamic FIDS Template
+- Full redundancy and load balancing with 2N+1 Server configuration
+- FIDS Display Monitoring Module
+- Real Time Flight Operational Data Update
+- Embedded OS Monitor supported
+- 3rd Party Integration available
 
-## Contoh Template X-FIDS
+## X-FIDS GUI for Operator
 
-[![](images/X-FIDS-Template-Examples.webp)]( )
+[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-fids.md#x-fids-gui-for-operator)
 
-### Digital Signage yang ditenagai oleh webOS Signage
+![](images/X-FIDS-GUI-for-Operator.webp)
 
-Sistem FIDS Signage berbasis webOS kami menyediakan aplikasi yang andal dan kuat namun tetap memberikan Total Cost of Ownership (Biaya Kepemilikan) yang lebih rendah.
+## X-FIDS Template Examples
+
+[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-fids.md#x-fids-template-examples)
+
+![](images/X-FIDS-Template-Examples.webp)
+
+### Power your LG Digital Signagewith webOS Signage
+
+[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-fids.md#power-your-lg-digital-signagewith-webos-signage)
+
+webOS Signage is a developer-friendly platform that provides powerful features to leverage in creating rich web apps for LG Digital Signage using HTML5, JavaScript, CSS3, and more.
+
+Our webOS based FIDS Signage provides reliable and robust application and yet provides lower Cost of Ownership.  Utilizing the embedded CPU thus eliminating conventional graphic generator / display controller.

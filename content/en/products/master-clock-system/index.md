@@ -3,7 +3,7 @@ title: Master Clock System (X-MC)
 slug: ''
 image: images/X-MC.webp
 meta_title: Master Clock System (X-MC) | INALIX
-description: "The Inalix Master Clock System (X-MCS) utilizes GPS satellites to provide highly accurate, synchronized time across all airport electronic networks."
+description: Master Clock System
 date: 2022-04-04
 categories: []
 tags: []

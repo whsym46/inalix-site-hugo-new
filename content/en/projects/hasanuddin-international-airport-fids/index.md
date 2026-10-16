@@ -1,9 +1,10 @@
 ---
 title: Hasanuddin International Airport - FIDS
 draft: false
-image: images/Hasanuddin-Airport.webp
-meta_title: Hasanuddin International Airport - FIDS  | INALIX
-description: "Comprehensive development and implementation of the Flight Information Display System (FIDS) at Hasanuddin International Airport, designed to optimize airport operations and elevate the passenger experience."
+image:
+  - images/Hasanuddin-Airport.webp
+meta_title: Hasanuddin International Airport - FIDS | INALIX
+description: Hasanuddin International Airport - FIDS
 categories:
   - Projects
 tags: []

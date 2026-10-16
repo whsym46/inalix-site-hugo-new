@@ -20,5 +20,3 @@ INALIX delivered the design and build of electronic systems as part of the loung
 The project involved the planning, installation, and integration of electronic infrastructure to complement the redesigned lounge environment while ensuring reliable system performance and seamless operation.
 
 Through the integration of technology and functional design, the implementation supports a more modern, comfortable, and enhanced lounge experience for airport passengers.
-
-

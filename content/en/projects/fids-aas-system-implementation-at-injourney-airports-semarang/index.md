@@ -22,5 +22,3 @@ The FIDS provides accurate and real-time flight information across designated ai
 The AAS complements the system by enabling centralized and efficient airport announcements, ensuring important information can be communicated clearly throughout the terminal.
 
 Together, these systems provide a reliable information infrastructure that supports smoother airport operations and a better passenger experience.
-
-

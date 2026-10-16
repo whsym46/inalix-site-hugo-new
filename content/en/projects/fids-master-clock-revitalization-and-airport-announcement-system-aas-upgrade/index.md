@@ -1,16 +1,19 @@
 ---
-title: FIDS & Master Clock Revitalization and Airport Announcement System (AAS) Upgrade
+title: FIDS & Master Clock Revitalization and Airport Announcement System (AAS) Upgrade at Adi Soemarmo International Airport
 draft: false
-image:
-  - images/FIDS-Masterclock-Revitalization.webp
-meta_title: FIDS & Master Clock Revitalization and Airport Announcement System (AAS) Upgrade | INALIX
+image: images/FIDS-Masterclock-Revitalization.webp
+meta_title: FIDS & Master Clock Revitalization and Airport Announcement System (AAS) Upgrade at Adi Soemarmo International Airport | INALIX
 description: Revitalization of the Flight Information Display System (FIDS) and Master Clock, along with an upgrade of the Airport Announcement System (AAS), to enhance the reliability and effectiveness of passenger information systems within the airport.  The project focuses on modernizing and optimizing existing systems to support more integrated and reliable flight information delivery, time synchronization, and airport announcements.
 categories:
   - Projects
 tags: []
 author: Inalix
 solution: Airport Solutions
-date: 2026-10-08
+date: 2025-01-08
+location: ''
+client_name: PT Angkasa Pura II
+started: ''
+completed: ''
 ---
 
 **Airport Information & Communication System Revitalization**
@@ -22,5 +25,3 @@ The FIDS revitalization enhances the delivery of real-time flight information to
 The AAS upgrade further strengthens passenger communication by improving the airport’s capability to deliver clear and effective announcements throughout the terminal.
 
 Together, these improvements provide a more integrated and reliable information ecosystem that supports efficient airport operations and an enhanced passenger experience.
-
-

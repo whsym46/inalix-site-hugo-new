@@ -22,5 +22,3 @@ FIDS menyediakan informasi penerbangan secara akurat dan real-time melalui berba
 AAS melengkapi sistem tersebut dengan menyediakan sistem pengumuman bandara yang terpusat dan efisien, sehingga berbagai informasi penting dapat disampaikan secara jelas dan konsisten di seluruh area terminal.
 
 Integrasi kedua sistem ini menghadirkan infrastruktur informasi yang andal untuk mendukung kelancaran operasional bandara sekaligus meningkatkan pengalaman penumpang.
-
-

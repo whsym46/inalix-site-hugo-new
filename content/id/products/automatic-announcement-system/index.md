@@ -1,29 +1,29 @@
 ---
-title: "Sistem Pengumuman Otomatis (X-AAS)"
+title: Automatic Announcement System (X-AAS)
 slug: automatic-announcement-system
 image: images/x-aas-heading.webp
 meta_title: Automatic Announcement System (X-AAS) | INALIX
-description: "Sistem Pengumuman Otomatis INALIX (X-AAS) menyajikan pengumuman suara multibahasa secara otomatis dan real-time bagi penumpang tanpa campur tangan manual."
+description: Automatic Announcement System
 date: 2022-04-04
 categories: []
 tags: []
 author: Inalix
 ---
 
-Sistem Pengumuman Otomatis INALIX (X-AAS) memberikan otomatisasi real-time dari pengumuman suara untuk penumpang di seluruh terminal. Sistem ini dikonfigurasi sehingga tidak diperlukan campur tangan manusia, sistem secara otomatis menyiarkan melalui pengeras suara publik (public address) yang ada ketika ada pembaruan status penerbangan dari FIDS. X-AAS adalah salah satu sistem penting untuk mendukung operasional bandara, pengumuman otomatis menghilangkan kebutuhan akan pengumuman suara manual yang lama oleh operator ketika ada pembaruan baru pada status penerbangan atau pengumuman informasi harian rutin untuk pengguna bandara.
+INALIX Automatic Announcement System (X-AAS) provides real-time automation of voice announcements for passengers throughout the terminal. The system is configured so that no human intervention is required, the system is automatically broadcast through the existing public address speaker when there’s an update on FIDS flight status. X-AAS is one of the crucial systems to support airport operational, automatic announcement dismiss the needs of the old manual voice announcement by operators when there is a new update on flight status or the regular daily information announcement for airport users.
 
 ![](images/Inalix-AAS-Diagram.webp)
 
-### Fitur **X-AAS**
+### **X-AAS** Features
 
-Fitur utama X-AAS adalah sebagai berikut:
+X-AAS main features are as follows:
 
-- Output suara yang nyata/alami/seperti manusia
-- Pengumuman multibahasa, mulai dari bahasa default Indonesia dan Inggris hingga modul ekstensi bahasa yang dibutuhkan termasuk Mandarin, Jepang, Arab atau bahkan bahasa daerah Indonesia
-- Pengumuman bahasa selektif untuk tujuan spesifik
-- Pengumuman yang dikontrol berdasarkan zona, meminimalkan kebisingan di dalam terminal dengan memilih zona tertentu untuk menyiarkan
-- Desain modular, zona pengumuman yang dapat diperluas
-- Integrasi dengan sistem lain, seperti sistem darurat bandara
-- Skrip Penyiar, buat skrip Anda sendiri menggunakan database suara yang luas.
+- Life-like/natural/human like voice output
+- Multi-language announcement, from the default Bahasa and English to the extension modules of languages needed including Mandarin, Japanese, Arabic or even Indonesian local language
+- Selective language announcement for specific destination
+- Zone controlled announcement, minimize the noise within the terminal by selecting preferred zone to broadcast
+- Modular design, expandable announcing zone
+- Integration with other system, such as airport’s emergency system
+- Announcer Script, make your own script using the wide range of sound database.
 
 ![](images/AAS-Inalix.webp)

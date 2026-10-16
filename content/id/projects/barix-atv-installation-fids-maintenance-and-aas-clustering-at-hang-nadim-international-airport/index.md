@@ -1,7 +1,7 @@
 ---
 title: Instalasi Barix & ATV, Maintenance FIDS, dan Clustering AAS di Bandara Internasional Hang Nadim
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: /media/Aeronautical-Billing.webp
 meta_title: Instalasi Barix & ATV, Maintenance FIDS, dan Clustering AAS di Bandara Internasional Hang Nadim | INALIX
 description: Instalasi perangkat Barix dan ATV, pemeliharaan Flight Information Display System (FIDS), serta clustering Airport Announcement System (AAS) di Bandara Internasional Hang Nadim.  Proyek ini mencakup peningkatan beberapa sistem informasi dan komunikasi bandara untuk meningkatkan keandalan sistem, mengoptimalkan distribusi pengumuman, serta mendukung keberlangsungan layanan informasi penumpang dan operasional bandara.
 categories:

@@ -31,33 +31,47 @@
     <div id="desktop-nav-wrapper" class="relative hidden lg:flex items-center lg:order-1 lg:w-auto">
       <ul id="desktop-nav-menu" class="navbar-nav flex items-center space-x-2 xl:space-x-8 py-1">
         {{ $currentPage := . }}
+        {{ $homeURL := site.Home.Permalink | absLangURL }}
         {{ range site.Menus.main }}
         {{ $menuURL := .URL | absLangURL }}
         {{ $pageURL := $currentPage.Permalink | absLangURL }}
-        {{ $isCurrent := eq $menuURL $pageURL }}
-        {{ $isParent := and (ne .URL "/") (ne .URL "") (hasPrefix $pageURL $menuURL) }}
-        {{ $active := or $isCurrent $isParent ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+        {{ $isHomeMenu := or (eq .PageRef "/") (eq .URL "/") (eq $menuURL $homeURL) }}
+        {{ $active := false }}
+        {{ if $isHomeMenu }}
+          {{ $active = $currentPage.IsHome }}
+        {{ else }}
+          {{ $isCurrent := eq $menuURL $pageURL }}
+          {{ $isParent := and (ne $menuURL $homeURL) (hasPrefix $pageURL $menuURL) }}
+          {{ $active = or $isCurrent $isParent ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+        {{ end }}
         {{ if .HasChildren }}
         <li class="nav-item nav-dropdown group relative">
-          <span class="nav-link uppercase font-bold {{ if $active }}active{{ end }} inline-flex items-center cursor-pointer">
+          <a href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+            class="nav-link uppercase font-bold {{ if $active }}active{{ end }} inline-flex items-center cursor-pointer"
+            {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
             <span class="nav-text">{{ .Name }}</span>
-            <svg class="h-4 w-4 fill-current ml-1" viewBox="0 0 20 20">
+            <svg class="h-4 w-4 fill-current ml-1 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20">
               <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
             </svg>
-          </span>
-          <ul class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
-            {{ range .Children }}
-            {{ $childURL := .URL | absLangURL }}
-            {{ $childActive := or (eq $childURL $pageURL) ($currentPage.IsMenuCurrent "main" .) }}
-            <li class="nav-dropdown-item">
-              <a class="nav-dropdown-link {{ if $childActive }}active{{ end }}"
-                href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
-                {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
-                {{ .Name }}
-              </a>
-            </li>
-            {{ end }}
-          </ul>
+          </a>
+          <!-- Floating Hover Dropdown Card (Aligned with header bottom border, spacious width, no text wrapping, smooth glide) -->
+          <div class="nav-dropdown-flyout absolute left-0 top-full z-50 origin-top">
+            <ul class="bg-white dark:bg-inalix-dark border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl p-2.5 space-y-1 w-full"
+              style="min-width: 280px;">
+              {{ range .Children }}
+              {{ $childURL := .URL | absLangURL }}
+              {{ $childActive := or (eq $childURL $pageURL) ($currentPage.IsMenuCurrent "main" .) }}
+              <li>
+                <a class="flex items-center px-4 py-2.5 text-[15px] font-medium rounded-xl transition-colors {{ if $childActive }}bg-primary/10 text-primary font-bold{{ else }}text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-primary dark:hover:text-primary{{ end }}"
+                  style="white-space: nowrap;"
+                  href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+                  {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
+                  <span>{{ .Name }}</span>
+                </a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
         </li>
         {{ else }}
         <li class="nav-item">
@@ -72,7 +86,7 @@
       </ul>
 
       <!-- Magnetic Sliding Line Indicator (Outside ul so space-x margin cannot affect it) -->
-      <span id="nav-indicator" class="pointer-events-none absolute bottom-0 h-[2.5px] bg-primary rounded-full opacity-0 left-0 w-0 z-10 shadow-sm shadow-primary/40" style="transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1), width 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;"></span>
+      <span id="nav-indicator" class="pointer-events-none absolute bottom-0 h-[2.5px] bg-primary rounded-full opacity-0 left-0 w-0 z-10 shadow-sm shadow-primary/40" style="transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), width 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;"></span>
     </div>
 
     <!-- 4. RIGHT ACTIONS: Search, Language, Quote Button -->
@@ -106,10 +120,44 @@
       <div class="bg-white dark:bg-inalix-dark border border-gray-200 dark:border-white/10 border-t-4 border-t-primary shadow-2xl p-4">
         <ul class="flex flex-col divide-y divide-gray-100 dark:divide-white/5">
           {{ $currentPage := . }}
+          {{ $homeURL := site.Home.Permalink | absLangURL }}
           {{ range site.Menus.main }}
           {{ $menuURL := .URL | absLangURL }}
-          {{ $pageURL:= $currentPage.Permalink | absLangURL }}
-          {{ $active := eq $menuURL $pageURL }}
+          {{ $pageURL := $currentPage.Permalink | absLangURL }}
+          {{ $isHomeMenu := or (eq .PageRef "/") (eq .URL "/") (eq $menuURL $homeURL) }}
+          {{ $active := false }}
+          {{ if $isHomeMenu }}
+            {{ $active = $currentPage.IsHome }}
+          {{ else }}
+            {{ $isCurrent := eq $menuURL $pageURL }}
+            {{ $isParent := and (ne $menuURL $homeURL) (hasPrefix $pageURL $menuURL) }}
+            {{ $active = or $isCurrent $isParent ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+          {{ end }}
+          {{ if .HasChildren }}
+          <li class="py-2.5">
+            <div class="flex items-center justify-between">
+              <a class="block px-2 text-sm font-bold uppercase tracking-wider transition-colors {{ if $active }}text-primary{{ else }}text-dark dark:text-gray-200 hover:text-primary dark:hover:text-primary{{ end }}"
+                href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+                {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
+                {{ .Name }}
+              </a>
+            </div>
+            <!-- Sub menu items on mobile -->
+            <ul class="pl-4 mt-2 space-y-1.5 border-l-2 border-primary/30 dark:border-white/10 ml-2">
+              {{ range .Children }}
+              {{ $childURL := .URL | absLangURL }}
+              {{ $childActive := or (eq $childURL $pageURL) ($currentPage.IsMenuCurrent "main" .) }}
+              <li>
+                <a class="block py-1 px-2 text-xs font-semibold transition-colors {{ if $childActive }}text-primary font-bold{{ else }}text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary{{ end }}"
+                  href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+                  {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
+                  {{ .Name }}
+                </a>
+              </li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ else }}
           <li>
             <a class="block py-2.5 px-2 text-sm font-bold uppercase tracking-wider transition-colors {{ if $active }}text-primary{{ else }}text-dark dark:text-gray-200 hover:text-primary dark:hover:text-primary{{ end }}"
               href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
@@ -117,6 +165,7 @@
               {{ .Name }}
             </a>
           </li>
+          {{ end }}
           {{ end }}
           {{ if site.Params.navigation_button.enable }}
           <li class="pt-4">

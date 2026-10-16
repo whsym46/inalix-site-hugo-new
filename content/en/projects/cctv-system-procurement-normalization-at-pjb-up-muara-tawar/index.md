@@ -4,8 +4,7 @@ draft: false
 image: images/CCTV System Procurement & Normalization at PJB-UP Muara Tawar.webp
 meta_title: CCTV System Procurement & Normalization at PJB-UP Muara Tawar | INALIX
 description: Procurement and normalization of the CCTV system at PJB-UP Muara Tawar to restore and enhance the reliability, availability, and performance of the existing surveillance infrastructure.  The project covers the provision of CCTV equipment, system restoration, and optimization to support effective monitoring and security across designated operational areas.
-categories:
-  - Projects
+categories: Industry
 tags: []
 author: Inalix
 solution: Industrial Solutions

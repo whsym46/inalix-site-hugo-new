@@ -1,11 +1,10 @@
 ---
 title: FIDS & AODB Implementation at Jenderal Ahmad Yani International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: FIDS & AODB Implementation at Jenderal Ahmad Yani International Airport | INALIX
 description: Implementation of the Flight Information Display System (FIDS) and Airport Operational Database (AODB) at Jenderal Ahmad Yani International Airport to support integrated passenger information services and centralized airport operational data management.  The solution enables consistent and timely distribution of operational and flight information across connected airport systems and passenger-facing displays.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

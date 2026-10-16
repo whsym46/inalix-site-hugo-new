@@ -26,30 +26,59 @@
   <!-- Project Info Bar -->
   <div class="bg-inalix-dark dark:bg-inalix-dark border-b border-white/5 w-full py-8 text-white relative z-20">
     <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/5 text-center">
+      <div class="flex flex-wrap justify-center items-center gap-y-6 text-center">
         
-        <div class="px-4">
-          <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "solution" | default "Solution" }}</p>
-          <h5 class="text-sm font-bold uppercase tracking-wider text-primary">{{ if .Params.solution }}{{ .Params.solution }}{{ else }}{{ T "airport_solutions" | default "Airport Solutions" }}{{ end }}</h5>
-        </div>
-        
-        <div class="px-4">
-          <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "category" | default "Category" }}</p>
-          <h5 class="text-sm font-bold uppercase tracking-wider text-white">
-            {{ $categories := .Params.categories }}
-            {{ if $categories }}
-              {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
-              {{ range $i, $cat := $categories }}{{ $cat | humanize }}{{ if ne $i (sub (len $categories) 1) }}, {{ end }}{{ end }}
-            {{ else }}{{ T "project" | default "Project" }}{{ end }}
-          </h5>
-        </div>
-        
-        <div class="px-4">
-          <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "date" | default "Date" }}</p>
-          <h5 class="text-sm font-bold uppercase tracking-wider text-white">{{ time.Format "2006" .PublishDate }}</h5>
-        </div>
-        
-        <div class="px-4">
+        {{ $categories := .Params.categories }}
+        {{ if $categories }}
+          {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
+          <div class="px-6 py-1 border-r border-white/10 last:border-r-0">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "category" | default "Category" }}</p>
+            <h5 class="text-base md:text-lg font-bold uppercase tracking-wider text-primary">
+              {{ range $i, $cat := $categories }}
+                <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="hover:underline">{{ . | humanize }}</a>{{ if ne $i (sub (len $categories) 1) }}, {{ end }}
+              {{ end }}
+            </h5>
+          </div>
+        {{ end }}
+
+        {{ $client := .Params.client_name | default .Params.client }}
+        {{ if $client }}
+          <div class="px-6 py-1 border-r border-white/10 last:border-r-0">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "client" | default "Client" }}</p>
+            <h5 class="text-base md:text-lg font-bold uppercase tracking-wider text-white">{{ $client }}</h5>
+          </div>
+        {{ end }}
+
+        {{ with .Params.location }}
+          <div class="px-6 py-1 border-r border-white/10 last:border-r-0">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "location" | default "Location" }}</p>
+            <h5 class="text-base md:text-lg font-bold uppercase tracking-wider text-white">{{ . }}</h5>
+          </div>
+        {{ end }}
+
+        {{ $started := .Params.started }}
+        {{ $completed := .Params.completed }}
+        {{ if or $started $completed }}
+          <div class="px-6 py-1 border-r border-white/10 last:border-r-0">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "date" | default "Date" }}</p>
+            <h5 class="text-base md:text-lg font-bold uppercase tracking-wider text-white">
+              {{ if and $started $completed }}
+                {{ $started }} - {{ $completed }}
+              {{ else if $started }}
+                {{ $started }}
+              {{ else }}
+                {{ $completed }}
+              {{ end }}
+            </h5>
+          </div>
+        {{ else if .Params.date }}
+          <div class="px-6 py-1 border-r border-white/10 last:border-r-0">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "date" | default "Date" }}</p>
+            <h5 class="text-base md:text-lg font-bold uppercase tracking-wider text-white">{{ time.Format "2006" .PublishDate }}</h5>
+          </div>
+        {{ end }}
+
+        <div class="px-6 py-1">
           <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">{{ T "share" | default "Share" }}</p>
           <div class="flex gap-4 justify-center mt-1">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="text-gray-400 hover:text-primary transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
@@ -66,11 +95,13 @@
     <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
       <div class="bg-white dark:bg-darkmode-theme-light border border-gray-200 dark:border-white/5 p-8 md:p-16 lg:p-20 shadow-xl">
         <div class="content prose prose-lg dark:prose-invert max-w-none 
+                    text-base md:text-lg leading-relaxed
                     prose-headings:font-bold prose-headings:uppercase prose-headings:tracking-wider 
                     prose-a:text-primary hover:prose-a:text-dark 
                     prose-img:shadow-2xl prose-img:border-4 prose-img:border-gray-100 dark:prose-img:border-darkmode-border prose-img:w-full
                     first-letter:text-6xl first-letter:font-black first-letter:text-primary first-letter:float-left first-letter:mr-4 first-letter:mt-1
-                    prose-p: text-gray-600 dark:text-gray-400 dark:prose-p:text-gray-300">
+                    prose-p:text-[1.125em] prose-p:leading-[1.8]
+                    prose-p:text-gray-600 dark:prose-p:text-gray-300">
           {{ .Content }}
         </div>
       </div>

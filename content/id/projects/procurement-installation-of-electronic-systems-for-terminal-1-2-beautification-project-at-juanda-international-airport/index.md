@@ -1,11 +1,10 @@
 ---
 title: Pengadaan & Instalasi Sistem Elektronik untuk Proyek Beautifikasi Terminal 1 & 2 Bandara Internasional Juanda
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Pengadaan & Instalasi Sistem Elektronik untuk Proyek Beautifikasi Terminal 1 & 2 Bandara Internasional Juanda | INALIX
 description: Pengadaan dan instalasi sistem elektronik sebagai bagian dari proyek beautifikasi Terminal 1 & 2 di Bandara Internasional Juanda.  Proyek ini mencakup penyediaan, instalasi, dan integrasi infrastruktur elektronik untuk mendukung modernisasi terminal, fungsi operasional, serta menciptakan lingkungan bandara yang lebih nyaman bagi penumpang.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

@@ -4,8 +4,7 @@ draft: false
 image: images/FIDS System Upgrade at Sultan Hasanuddin International Airport.webp
 meta_title: Upgrade Sistem FIDS di Bandara Internasional Sultan Hasanuddin | INALIX
 description: Peningkatan Flight Information Display System (FIDS) di Bandara Internasional Sultan Hasanuddin untuk meningkatkan performa, keandalan sistem, serta penyampaian informasi penerbangan secara real-time di berbagai area penumpang.  Proyek ini berfokus pada modernisasi dan optimalisasi infrastruktur FIDS eksisting untuk memastikan layanan informasi penerbangan yang akurat, konsisten, dan andal.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

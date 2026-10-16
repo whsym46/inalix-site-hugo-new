@@ -5,7 +5,7 @@ image: images/X-PORTAL.webp
 meta_title: Airport Portal (X-PORTAL) | INALIX
 description: INALIX Airport Portal serves as The One Gate to information, the portal used for the airport officers, users, partners and stakeholders.
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---

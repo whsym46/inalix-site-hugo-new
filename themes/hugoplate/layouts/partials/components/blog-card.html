@@ -20,27 +20,11 @@
   
   <!-- Content -->
   <div class="p-6 md:p-8 flex flex-col flex-grow">
-    <!-- Meta -->
-    {{ $categories:= .Params.categories }}
-    {{ if $categories }}
-      {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
-    {{ end }}
     <div class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
       {{ if .Params.author }}
       <span class="flex items-center gap-2 hover:text-primary transition-colors">
         <i class="fa-solid fa-pen-nib text-primary"></i>
         <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/">{{ .Params.author }}</a>
-      </span>
-      {{ end }}
-      ▪
-      {{ if $categories }}
-      <span class="flex items-center gap-2">
-        <i class="fa-solid fa-folder text-primary"></i>
-        {{ range $i,$p:= $categories }}
-          <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="hover:text-primary transition-colors">
-            {{ . | humanize }}
-          </a>{{ if ne $i (sub (len $categories) 1) }}, {{ end }}
-        {{ end }}
       </span>
       {{ end }}
     </div>

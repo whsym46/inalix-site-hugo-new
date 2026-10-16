@@ -5,8 +5,7 @@ image:
   - images/Automatic-Announcement-System-Polonia-Airport-INALIX.webp
 meta_title: Polonia International Airport Medan - Automatic Announcement System | INALIX
 description: Polonia International Airport Medan - Automatic Announcement System
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

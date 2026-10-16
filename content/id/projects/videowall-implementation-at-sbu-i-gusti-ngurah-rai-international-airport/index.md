@@ -1,11 +1,10 @@
 ---
 title: Implementasi Videowall di SBU, Bandara Internasional I Gusti Ngurah Rai
 draft: false
-image: /media/LG-Videowall.webp
+image: /images/LG-Videowall.webp
 meta_title: Implementasi Videowall di SBU, Bandara Internasional I Gusti Ngurah Rai | INALIX
 description: Implementasi sistem videowall terintegrasi di SBU, Bandara Internasional I Gusti Ngurah Rai untuk mendukung penyajian informasi visual berskala besar serta meningkatkan visibilitas informasi di lingkungan bandara.  Solusi ini mengintegrasikan beberapa unit display menjadi satu platform visual terpadu, sehingga informasi dan konten digital dapat ditampilkan secara jelas, konsisten, dan efektif.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

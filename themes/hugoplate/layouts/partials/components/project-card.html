@@ -15,19 +15,16 @@
   {{ end }}
   
   <div class="p-6 md:p-8 flex flex-col items-start flex-grow">
-    <!-- Solution & Categories -->
-    <div class="flex flex-wrap gap-2 mb-3 items-center text-primary">
-      {{ with .Params.solution }}
-        <span class="text-xs font-bold uppercase tracking-widest text-primary">{{ . }}</span>
-      {{ end }}
-      {{ $categories := .Params.categories }}
-      {{ if $categories }}
-        {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
-        ▪ {{ range $categories }}
+    <!-- Categories -->
+    {{ $categories := .Params.categories }}
+    {{ if $categories }}
+      {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
+      <div class="flex flex-wrap gap-2 mb-3 items-center text-primary">
+        {{ range $categories }}
           <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="text-xs font-bold uppercase tracking-widest text-primary hover:text-dark transition-colors">{{ . | humanize }}</a>
         {{ end }}
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
 
     <h3 class="w-full text-xl md:text-2xl font-black text-dark dark:text-white uppercase mb-4 line-clamp-2 group-hover:text-primary transition-colors">
       <a href="{{ .RelPermalink }}" class="block">{{ .Title }}</a>

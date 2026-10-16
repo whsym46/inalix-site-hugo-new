@@ -4,8 +4,7 @@ draft: false
 image: images/BRI-Videowall.webp
 meta_title: Videowall for Control Center of Bank BRI | INALIX
 description: Implementation of an integrated videowall system for Bank BRI Control Center to support centralized monitoring, information visualization, and operational activities.  The solution provides a large-scale visual platform that enables critical information and monitoring data to be displayed clearly and effectively within the control center environment.
-categories:
-  - Projects
+categories: Industry
 tags: []
 author: Inalix
 solution: Industrial Solutions

@@ -1,11 +1,10 @@
 ---
 title: FIDS Display Procurement & Maintenance at Adi Soemarmo International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: FIDS Display Procurement & Maintenance at Adi Soemarmo International Airport | INALIX
 description: Procurement and maintenance of Flight Information Display System (FIDS) monitors at Adi Soemarmo International Airport to ensure reliable and continuous delivery of flight information across passenger areas.  The project covers the provision, maintenance, and optimization of FIDS display equipment to support consistent system performance and day-to-day airport operations.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

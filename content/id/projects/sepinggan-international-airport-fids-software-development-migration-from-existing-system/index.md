@@ -4,8 +4,7 @@ draft: false
 image: images/slider-new8.webp
 meta_title: Sepinggan International Airport - FIDS Software Development & Migration from Existing System | INALIX
 description: Sepinggan International Airport - FIDS Software Development & Migration from Existing System
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

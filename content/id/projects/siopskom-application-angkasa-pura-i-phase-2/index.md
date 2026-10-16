@@ -4,8 +4,7 @@ draft: false
 image: images/AP1-SIOPSKOM-Phase2.webp
 meta_title: Aplikasi SIOPSKOM - Angkasa Pura I (Phase 2) | INALIX
 description: Aplikasi SIOPSKOM - Angkasa Pura I (Phase 2)
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

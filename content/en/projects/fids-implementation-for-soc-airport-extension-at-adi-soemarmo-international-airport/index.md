@@ -1,11 +1,10 @@
 ---
 title: FIDS Implementation for SOC Airport Extension at Adi Soemarmo International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: FIDS Implementation for SOC Airport Extension at Adi Soemarmo International Airport | INALIX
 description: Implementation of the Flight Information Display System (FIDS) as part of the SOC Airport extension project at Adi Soemarmo International Airport to support reliable and real-time flight information delivery across the expanded terminal areas.  The solution extends the airport’s passenger information infrastructure, ensuring accurate and consistent flight information is accessible throughout the newly developed areas.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

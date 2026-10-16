@@ -23,16 +23,6 @@
   
   <div class="flex flex-col flex-1 px-2">
     <div class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 flex items-center">
-      {{ $cats := .Params.categories }}
-      {{ if $cats }}
-        {{ if not (reflect.IsSlice $cats) }}{{ $cats = slice $cats }}{{ end }}
-        {{ range first 1 $cats }}
-          <span class="text-gray-500">{{ . }}</span>
-        {{ end }}
-      {{ else }}
-        <span class="text-gray-500">News</span>
-      {{ end }}
-      <span class="mx-3 text-gray-400">▪</span>
       <span class="text-gray-500">{{ time.Format "January 2, 2006" .PublishDate }}</span>
     </div>
     

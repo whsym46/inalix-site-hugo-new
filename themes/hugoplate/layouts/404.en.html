@@ -1,23 +1,36 @@
 {{ define "main" }}
-  <section class="section-sm text-center">
+  <section class="section-sm text-center page-404-content pt-28 md:pt-36 pb-20">
     <div class="container">
       <div class="row justify-center">
         <div class="sm:col-10 md:col-8 lg:col-6">
+          <div class="relative mb-6 inline-flex justify-center items-center">
+            <div class="absolute -inset-6 rounded-full bg-primary/10 dark:bg-primary/20 blur-3xl -z-10 pointer-events-none"></div>
+            <img
+              src="{{ "images/404.png" | relURL }}"
+              alt="404 - Page Not Found"
+              class="max-w-[240px] sm:max-w-[300px] md:max-w-[340px] w-full h-auto drop-shadow-lg select-none transition-transform duration-300 hover:scale-105"
+              width="340"
+              height="280"
+            />
+          </div>
           <span
-            class="text-[8rem] block font-bold text-dark dark:text-darkmode-dark">
+            class="text-6xl sm:text-7xl md:text-8xl block font-extrabold text-primary tracking-tight mb-2">
             404
           </span>
-          <h1 class="h2 mb-4">Page not found</h1>
-          <div class="content">
-            <p>
+          <h1 class="h2 mb-4 text-dark dark:text-white font-bold">Page Not Found</h1>
+          <div class="content max-w-lg mx-auto">
+            <p class="text-text dark:text-darkmode-text text-base sm:text-lg">
               The page you are looking for might have been removed, had its name
               changed, or is temporarily unavailable.
             </p>
           </div>
           <a
             href="{{ site.BaseURL | relLangURL }}"
-            class="btn btn-primary mt-8">
-            Back to home
+            class="btn btn-primary mt-8 inline-flex items-center gap-2 px-6 py-3 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all font-semibold">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+            <span>Back to Home</span>
           </a>
         </div>
       </div>

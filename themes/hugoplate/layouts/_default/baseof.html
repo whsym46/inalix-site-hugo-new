@@ -22,7 +22,7 @@
 
   </head>
 
-  <body class="bg-body dark:bg-inalix-dark text-text dark:text-darkmode-text font-primary">
+  <body class="bg-body dark:bg-inalix-dark text-text dark:text-darkmode-text font-primary{{ if or (eq .Kind `404`) (eq .Layout `404`) }} page-404{{ end }}">
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
       {{ partialCached "preloader.html" . }}

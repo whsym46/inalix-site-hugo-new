@@ -10,13 +10,13 @@
   ],
   "redirects": [
     {
-      "source": "/team/:slug*",
-      "destination": "/en/team/:slug*",
+      "source": "/en/:path*",
+      "destination": "/:path*",
       "permanent": true
     },
     {
-      "source": "/team",
-      "destination": "/en/team",
+      "source": "/en",
+      "destination": "/",
       "permanent": true
     }
   ],

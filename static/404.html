@@ -5,20 +5,20 @@
     <script>
       (function() {
         var path = window.location.pathname;
-        // Redirect barcode lama /team/... ke /en/team/...
-        if (path === '/team' || path === '/team/' || path.startsWith('/team/')) {
-          var cleanPath = path.replace(/^\/team\/?/, '');
-          window.location.replace('/en/team/' + (cleanPath ? cleanPath + (cleanPath.endsWith('/') ? '' : '/') : ''));
+        // Redirect URL lama /en/... ke root /...
+        if (path === '/en' || path === '/en/' || path.startsWith('/en/')) {
+          var cleanPath = path.replace(/^\/en\/?/, '');
+          window.location.replace('/' + cleanPath);
           return;
         }
         if (path.startsWith('/id/')) {
           window.location.replace('/id/404.html');
         } else {
-          window.location.replace('/en/404.html');
+          window.location.replace('/404.html');
         }
       })();
     </script>
-    <meta http-equiv="refresh" content="1; url=/en/404.html" />
+    <meta http-equiv="refresh" content="1; url=/404.html" />
   </head>
   <body>
     <p>Page Not Found. Redirecting...</p>

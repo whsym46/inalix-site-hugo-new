@@ -15,7 +15,11 @@ date_update: ''
 
 Operasional bandara yang andal dimulai dari ketersediaan informasi yang akurat dan mudah diakses. Di **Bandara Internasional Jenderal Ahmad Yani, Semarang**, INALIX berhasil menyelesaikan instalasi **Airport Information Display berukuran 98 inci** sebagai bagian dari upaya mendukung peningkatan layanan informasi penumpang dan penguatan infrastruktur informasi digital bandara.
 
+![Airport Information Display 98 Inci di Bandara Internasional Jenderal Ahmad Yani](images/98-inch-FIDS-Installation-Ahmad-Yani-International-Airport.webp "Airport Information Display 98 Inci di Bandara Internasional Jenderal Ahmad Yani")
+
 Dirancang untuk lingkungan yang membutuhkan visibilitas tinggi, display berukuran besar ini menghadirkan sarana penyampaian informasi yang jelas dan mudah diakses. Dengan ukuran layar yang luas, penumpang dan pengunjung bandara dapat melihat berbagai informasi penting secara lebih nyaman, sehingga mendukung pengalaman perjalanan yang lebih baik serta penyampaian informasi yang lebih efisien di area terminal.
+
+![Proses Instalasi Display FIDS di Bandara Internasional Jenderal Ahmad Yani](images/FIDS-Installation-Ahmad-Yani-International-Airport.webp "Proses Instalasi Display FIDS di Bandara Internasional Jenderal Ahmad Yani")
 
 Proses implementasi mencakup berbagai tahapan teknis, mulai dari persiapan lokasi, pemasangan perangkat secara aman, integrasi sistem, konfigurasi, hingga pengujian akhir. Setiap tahapan dilaksanakan dengan memperhatikan persyaratan teknis, kualitas instalasi, dan keandalan operasional untuk memastikan perangkat dapat berfungsi secara optimal dalam lingkungan bandara modern.
 

@@ -19,9 +19,6 @@ Inalix AiVision is a computer vision designed for airport needs, ready to cover 
 ![](images/X-AiVision-BlockOnOff-Monitoring.webp)
 
 ### FEATURES
-
-[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-aivision.md#features)
-
 X-AiVision main features are as follows:
 
 - Real-Time Data Recording: The system records all activities in real-time, ensuring that data regarding airport operations is up-to-date and readily available for immediate use and analysis.

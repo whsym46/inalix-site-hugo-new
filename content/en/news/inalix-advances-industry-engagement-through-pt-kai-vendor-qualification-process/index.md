@@ -1,7 +1,7 @@
 ---
 title: INALIX Advances Industry Engagement Through PT KAI Vendor Qualification Process
 draft: false
-image: images/INALIX Advances Industry Engagement Through PT KAI Vendor Qualification Process.webp
+image: images/inalix-advances-industry-engagement-through-pt-kai-vendor-qualification-process.webp
 meta_title: INALIX Advances Industry Engagement Through PT KAI Vendor Qualification Process | INALIX
 description: INALIX engaged with the Procurement Team of PT Kereta Api Indonesia (Persero) as part of the vendor qualification process, showcasing its technology capabilities, project experience, and integrated solutions while exploring potential collaboration opportunities in Indonesia's transportation infrastructure sector.
 categories:

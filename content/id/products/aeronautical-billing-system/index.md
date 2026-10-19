@@ -16,7 +16,4 @@ Inalix Aero Billing System (X-ABS) caters to your needs for aeronautical calcula
 ![](images/Inalix-Aeronautical-Billing-System-Diagram.webp)
 
 ## X-ABS main features are as follows:
-
-[](https://github.com/inalix/website-hugo/blob/test/content/english/products/aeronautical-billing.md#x-abs-main-features-are-as-follows)
-
 Automatic calculation of Aeronautical billing from operational data Web-based Multi-users and groups of different level of authentication Covers your aeronautical billing needs Default templates are available, customizations are possible Customizable tariff, tariff types, discounts and exchange rates Produce invoices & reports, from daily unscheduled to monthly scheduled Integration with X-AODB or other flight information database system.

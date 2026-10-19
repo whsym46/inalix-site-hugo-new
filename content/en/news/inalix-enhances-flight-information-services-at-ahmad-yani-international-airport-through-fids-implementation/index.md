@@ -15,7 +15,11 @@ date_update: ''
 
 Reliable airport operations begin with reliable information. At **Jenderal Ahmad Yani International Airport, Semarang**, INALIX successfully completed the installation of a **98-inch Airport Information Display**, supporting the airport's commitment to improving passenger information services and strengthening its digital information infrastructure.
 
+![98-Inch Airport Information Display Installation at Jenderal Ahmad Yani International Airport](images/98-inch-FIDS-Installation-Ahmad-Yani-International-Airport.webp "98-Inch Airport Information Display Installation at Jenderal Ahmad Yani International Airport")
+
 Designed for high-visibility environments, the large-format display provides a clear and accessible platform for presenting essential airport information. Its expansive screen size enables passengers and airport visitors to view important updates more conveniently, contributing to a smoother passenger experience and more efficient information delivery throughout the terminal.
+
+![FIDS Display Installation Process at Jenderal Ahmad Yani International Airport](images/FIDS-Installation-Ahmad-Yani-International-Airport.webp "FIDS Display Installation Process at Jenderal Ahmad Yani International Airport")
 
 The implementation involved a comprehensive installation process, from site preparation and secure mounting to system integration, configuration, and final testing. Each stage was carried out with careful attention to technical requirements, installation quality, and operational reliability to ensure the display performs effectively within the demanding environment of a modern airport.
 

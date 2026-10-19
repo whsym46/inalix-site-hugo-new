@@ -25,9 +25,6 @@ Easy to use, web-based Graphical User Interface, real-time view allows more effe
 ![](images/X-RMS-04.webp)
 
 ### X-RMS FEATURES:
-
-[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-rms.md#x-rms-features)
-
 - EASY TO USE With Graphical User Interface, the user only has to Click and Drag to manage the resource plotting to fit the schedule of flight.  See all the resource and time frame, so you can manage more efficiently.
 - PLAN & OPERATIONAL Every resource for every flight, all of that can be managed real-time or you can do some planning ahead of the flight schedule to maximize your resource usage.
 - WEB-BASED Accessible from common web browser available on the usual PC OS everywhere.

@@ -17,7 +17,7 @@ solution: Airport Solutions
 date: 2023-05-19
 ---
 
-[![](images/Inalix-Airport-FIDS.webp)](https://github.com/inalix/website-hugo/blob/test/images/Inalix-Airport-FIDS.webp)
+![](images/Inalix-Airport-FIDS.webp)
 
 Perangkat lunak Inalix Airport FIDS adalah alat yang ampuh yang dapat membantu bandara mengelola operasionalnya dengan lebih efisien dan memberikan pengalaman yang lebih baik bagi penumpang.
 

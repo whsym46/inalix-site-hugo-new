@@ -6,25 +6,38 @@
 {{ $siteLanguages := site.Home.AllTranslations }}
 {{ $pageLink := replace (replace $context.RelPermalink (add $pageLang "/") "") $base.Path "/" }}
 
-{{ if $context.IsTranslated }}
-  <select class="{{ $class }} text-dark dark:text-white bg-transparent dark:bg-transparent hover:bg-gray-200 dark:hover:bg-white/10 outline-none border border-gray-200 dark:border-white/5 cursor-pointer" onchange="location = this.value">
-    {{ range $siteLanguages }}
-      {{ if eq $pageLang .Language.Lang }}
-        <option
-          id="{{ .Language.Lang }}"
-          class="text-dark bg-white dark:text-white dark:bg-inalix-dark"
-          value="{{ replace (add .RelPermalink $pageLink) `//` `/` }}"
-          selected>
-          {{ .Language.LanguageName | upper }}
-        </option>
-      {{ else }}
-        <option
-          id="{{ .Language.Lang }}"
-          class="text-dark bg-white dark:text-white dark:bg-inalix-dark"
-          value="{{ replace (add .RelPermalink $pageLink) `//` `/` }}">
-          {{ .Language.LanguageName | upper }}
-        </option>
+<select class="{{ $class }} text-dark dark:text-white bg-transparent dark:bg-transparent hover:bg-gray-200 dark:hover:bg-white/10 outline-none border border-gray-200 dark:border-white/5 cursor-pointer" onchange="location = this.value">
+  {{ range $siteLanguages }}
+    {{ $langCode := .Language.Lang }}
+    {{ $langName := .Language.LanguageName | default .Language.Lang | upper }}
+    {{ $targetURL := "" }}
+    
+    {{ if eq $pageLang $langCode }}
+      {{ $targetURL = $context.RelPermalink }}
+      <option
+        id="{{ $langCode }}"
+        class="text-dark bg-white dark:text-white dark:bg-inalix-dark"
+        value="{{ $targetURL }}"
+        selected>
+        {{ $langName }}
+      </option>
+    {{ else }}
+      {{ range $context.Translations }}
+        {{ if eq .Language.Lang $langCode }}
+          {{ $targetURL = .RelPermalink }}
+        {{ end }}
       {{ end }}
+      
+      {{ if not $targetURL }}
+        {{ $targetURL = replace (add .RelPermalink $pageLink) `//` `/` }}
+      {{ end }}
+      
+      <option
+        id="{{ $langCode }}"
+        class="text-dark bg-white dark:text-white dark:bg-inalix-dark"
+        value="{{ $targetURL }}">
+        {{ $langName }}
+      </option>
     {{ end }}
-  </select>
-{{ end }}
+  {{ end }}
+</select>

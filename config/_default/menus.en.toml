@@ -6,10 +6,6 @@ name = "Home"
 pageRef = "/"
 weight = 1
 
-[[main]]
-name = "About"
-pageRef = "/pages/about"
-weight = 2
 
 [[main]]
 # name = "History"
@@ -59,10 +55,16 @@ name = "News"
 pageRef = "/news"
 weight = 5
 
+
+[[main]]
+name = "About"
+pageRef = "/pages/about"
+weight = 6
+
 [[main]]
 name = "Contact"
 pageRef = "/pages/contact"
-weight = 6
+weight = 7
 
 
 

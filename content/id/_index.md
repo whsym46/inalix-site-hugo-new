@@ -64,9 +64,6 @@ our_services:
     - title: Master Clock System
       description: Sinkronisasi waktu presisi tinggi untuk seluruh fasilitas bandara.
       image: /images/slider-new5.webp
-    - title: Baggage Handling Systems
-      description: Pelacakan bagasi otomatis dan efisien dari check-in hingga pesawat.
-      image: /images/bhs-our-services.webp
     - title: 'Security & Surveillance'
       description: Pemantauan keamanan cerdas berbasis AI untuk perimeter bandara.
       image: /images/security-our-services.webp

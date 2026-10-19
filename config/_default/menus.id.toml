@@ -7,11 +7,6 @@ pageRef = "/"
 weight = 1
 
 [[main]]
-name = "Tentang"
-pageRef = "/pages/about"
-weight = 2
-
-[[main]]
 # name = "Sejarah"
 # pageRef = "/pages/history"
 # weight = 3
@@ -59,10 +54,16 @@ name = "Berita"
 pageRef = "/news"
 weight = 5
 
+
+[[main]]
+name = "Tentang"
+pageRef = "/pages/about"
+weight = 6
+
 [[main]]
 name = "Kontak"
 pageRef = "/pages/contact"
-weight = 6
+weight = 7
 
 
 

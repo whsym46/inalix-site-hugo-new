@@ -64,9 +64,6 @@ our_services:
     - title: Master Clock System
       description: High-precision time synchronization for airport facilities.
       image: /images/slider-new5.webp
-    - title: Baggage Handling Systems
-      description: Automated and efficient tracking from check-in to aircraft.
-      image: /images/bhs-our-services.webp
     - title: 'Security & Surveillance'
       description: Advanced AI-driven security monitoring for airport perimeters.
       image: /images/security-our-services.webp

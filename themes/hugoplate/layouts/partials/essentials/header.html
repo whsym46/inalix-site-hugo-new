@@ -1,5 +1,5 @@
 {{ $is404 := or (eq .Kind `404`) (eq .Layout `404`) }}
-<header id="main-header" class="header fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 {{ if $is404 }}bg-white dark:bg-inalix-dark border-b border-gray-200 dark:border-white/10 shadow-sm{{ else }}border-b border-transparent{{ end }}">
+<header id="main-header" class="header fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 {{ if $is404 }}bg-white dark:bg-inalix-dark border-b border-gray-200 dark:border-white/10 shadow-sm{{ else }}border-b border-transparent nav-transparent{{ end }}">
   <nav id="main-nav"
     class="navbar w-full px-4 lg:px-8 py-2 flex flex-wrap lg:flex-nowrap items-center">
     
@@ -14,7 +14,7 @@
     <!-- Mobile Backdrop Overlay: Clicking anywhere outside closes the popup -->
     <div id="nav-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 hidden lg:hidden"></div>
     <button id="nav-toggle-btn" type="button" aria-label="Toggle navigation menu"
-      class="order-3 cursor-pointer flex items-center justify-center p-1 lg:hidden text-dark dark:text-white lg:order-1 relative z-40 focus:outline-none">
+      class="order-3 cursor-pointer flex items-center justify-center p-1 lg:hidden text-dark dark:text-white lg:order-1 relative z-40 focus:outline-none transition-colors hover:text-primary">
       <svg id="show-button" class="h-6 w-6 block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <title>Menu Open</title>
         <line x1="4" y1="6" x2="20" y2="6"></line>
@@ -185,7 +185,7 @@
               {{ $childURL := .URL | absLangURL }}
               {{ $childActive := or (eq $childURL $pageURL) ($currentPage.IsMenuCurrent "main" .) }}
               <li>
-                <a class="block py-1 px-2 text-xs font-semibold transition-colors {{ if $childActive }}text-primary font-bold{{ else }}text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary{{ end }}"
+                <a class="block py-1 px-2 text-sm uppercase font-semibold transition-colors {{ if $childActive }}text-primary font-bold{{ else }}text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary{{ end }}"
                   href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
                   {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
                   {{ .Name }}

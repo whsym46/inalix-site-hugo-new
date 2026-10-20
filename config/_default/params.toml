@@ -47,7 +47,7 @@ link = "contact"
 [search]
 enable = true
 primary_color = "#FF0000"
-include_sections = ["blog"]
+include_sections = ["products", "projects", "news"]
 show_image = true
 show_description = true
 show_tags = true

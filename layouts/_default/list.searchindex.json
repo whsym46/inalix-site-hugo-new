@@ -1,0 +1,59 @@
+{{- $allSections := slice -}}
+{{- range site.Home.Sections -}}
+  {{- $allSections = $allSections | append .Section -}}
+{{- end -}}
+
+{{- $include_all_sections := site.Params.search.include_all_sections -}}
+
+{{- $search_sections := $allSections -}}
+{{- if not $include_all_sections -}}
+{{- $search_sections = site.Params.search.include_sections | default site.Params.mainSections -}}
+{{- end -}}
+
+{{- $searchablePages := (where site.RegularPages "Section" "in" $search_sections) -}}
+{{- if site.Params.search.include_list_pages -}}
+{{- $searchablePages = (where site.Pages "Section" "in" $search_sections) -}}
+{{- end -}}
+
+{{- $totalPagesLength := len $searchablePages -}}
+
+[{{- range $i, $e := $searchablePages -}}
+{{- if not .Params.ignoreSearch -}}
+
+{{- $date:= time.Format ":date_long" .PublishDate -}}
+
+{{- $imageParam := .Params.image -}}
+{{- if reflect.IsSlice $imageParam -}}
+  {{- $imageParam = index $imageParam 0 -}}
+{{- end -}}
+
+{{- $imageSrc := "" -}}
+{{- if $imageParam -}}
+  {{- $res := $e.Resources.GetMatch $imageParam -}}
+  {{- if $res -}}
+    {{- $imageSrc = $res.RelPermalink -}}
+  {{- else if fileExists (add "static/" (string $imageParam)) -}}
+    {{- $imageSrc = $imageParam | relURL -}}
+  {{- else if fileExists (add "assets/" (string $imageParam)) -}}
+    {{- $imageSrc = (resources.Get (string $imageParam)).RelPermalink -}}
+  {{- else -}}
+    {{- $imageSrc = $imageParam | relURL -}}
+  {{- end -}}
+{{- end -}}
+
+{
+  "section": "{{.Section | humanize}}",
+  "slug": "{{- .RelPermalink -}}",
+  "title": "{{- htmlEscape .Title -}}",
+  "description": "{{- htmlEscape (.Description | default .Params.description | default .Summary) -}}",
+  "date": "{{- $date -}}",
+  "image": {{- if $imageSrc -}}{{- printf `<img src="%s" alt="%s" class="img" />` $imageSrc (htmlEscape .Title) | jsonify -}}{{- else -}}""{{- end -}},
+  "imageSM": {{- if $imageSrc -}}{{- printf `<img src="%s" alt="%s" class="img" />` $imageSrc (htmlEscape .Title) | jsonify -}}{{- else -}}""{{- end -}},
+  "searchKeyword": "{{- htmlEscape .Params.search_keyword -}}",
+  "categories": "{{- if .Params.categories -}}{{- delimit (apply (cond (reflect.IsSlice .Params.categories) .Params.categories (slice .Params.categories)) "string" ".") ", " -}}{{- end -}}",
+  "tags": "{{- if .Params.tags -}}{{- delimit (apply (cond (reflect.IsSlice .Params.tags) .Params.tags (slice .Params.tags)) "string" ".") ", " -}}{{- end -}}",
+  "content": {{- $e.Plain | jsonify -}}
+}{{- if ne $i (sub $totalPagesLength 1) -}},{{- end -}}
+
+{{- end -}}
+{{- end -}}]

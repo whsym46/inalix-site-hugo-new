@@ -6,9 +6,18 @@
     {{ $res := .Resources.GetMatch $imagePath }}
     {{ if $res }}{{ $imgSrc = $res.RelPermalink }}{{ else }}{{ $imgSrc = $imagePath | relURL }}{{ end }}
   {{ end }}
+  {{ if not $imgSrc }}
+    {{ $fallback := site.Params.product_fallback_image | default "images/img-product-placeholder.webp" }}
+    {{ $fallbackRes := resources.Get $fallback }}
+    {{ if $fallbackRes }}
+      {{ $imgSrc = $fallbackRes.RelPermalink }}
+    {{ else }}
+      {{ $imgSrc = $fallback | relURL }}
+    {{ end }}
+  {{ end }}
   
   {{ if $imgSrc }}
-  <div class="relative w-full h-64 overflow-hidden border-b border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/[0.02] flex items-center justify-center p-4">
+  <div class="relative w-full h-64 overflow-hidden border-b border-gray-200 dark:border-white/5 bg-white dark:bg-white/[0.02] flex items-center justify-center p-4">
     <div class="absolute inset-0 bg-primary/0 group-hover:bg-darkmode-primary/10 transition-colors duration-300 z-10 pointer-events-none"></div>
     <img src="{{ $imgSrc }}" class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-700" alt="{{ .Title }}" />
   </div>

@@ -64,8 +64,8 @@
       class="border-t border-white/5 pt-8 pb-16 md:pb-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
       
       <!-- Theme Switcher in Footer -->
+      {{ if site.Params.theme_switcher }}
       <div class="flex items-center">
-        {{ if site.Params.theme_switcher }}
         <div class="theme-switcher-footer inline-flex items-center bg-white/5 rounded-full p-1 border border-white/5">
           <button data-theme-btn="light" aria-label="Light Theme" class="theme-btn relative flex items-center justify-center w-8 h-8 rounded-full transition-colors text-gray-400 hover:text-white">
             <i class="fa-regular fa-sun"></i>
@@ -117,9 +117,9 @@
             });
           });
         </script>
-        {{ end }}
       </div>
-
+      {{ end }}
+      
       <div class="text-gray-500 text-sm flex flex-col md:flex-row items-center gap-4 pr-0 md:pr-16 text-center md:text-right">
         <div>{{ site.Params.copyright | markdownify }}</div>
         <div class="hidden md:block w-1 h-1 rounded-full bg-gray-600"></div>

@@ -63,14 +63,21 @@
 <!-- Prevent Flash of Unstyled Content (FOUC) -->
 <script>
   (function() {
-    let currentSetting = localStorage.getItem("theme");
-    if (!currentSetting || currentSetting === "system") {
-      currentSetting = "{{ site.Params.theme_default | default `light` }}";
-    }
-    if (currentSetting === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
+    {{ if site.Params.theme_switcher }}
+      let currentSetting = localStorage.getItem("theme");
+      if (!currentSetting || currentSetting === "system") {
+        currentSetting = "{{ site.Params.theme_default | default `light` }}";
+      }
+      if (currentSetting === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    {{ else }}
+      if (localStorage.getItem("theme")) {
+        localStorage.removeItem("theme");
+      }
       document.documentElement.classList.remove("dark");
-    }
+    {{ end }}
   })();
 </script>

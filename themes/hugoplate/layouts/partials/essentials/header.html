@@ -36,17 +36,36 @@
         {{ range site.Menus.main }}
         {{ $menuURL := .URL | absLangURL }}
         {{ $pageURL := $currentPage.Permalink | absLangURL }}
-        {{ $isHomeMenu := or (eq .PageRef "/") (eq .URL "/") (eq $menuURL $homeURL) }}
+        {{ $isHomeMenu := and (ne .URL "#") (ne .URL "") (or (eq .PageRef "/") (eq .URL "/") (eq $menuURL $homeURL)) }}
         {{ $active := false }}
-        {{ if $isHomeMenu }}
-          {{ $active = $currentPage.IsHome }}
+        {{ if or $currentPage.IsHome (eq $currentPage.RelPermalink "/") (eq $currentPage.RelPermalink "/id/") (eq $currentPage.RelPermalink "/en/") }}
+          {{ if $isHomeMenu }}
+            {{ $active = true }}
+          {{ end }}
         {{ else }}
-          {{ $isCurrent := eq $menuURL $pageURL }}
-          {{ $isParent := and (ne $menuURL $homeURL) (hasPrefix $pageURL $menuURL) }}
-          {{ $active = or $isCurrent $isParent ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+          {{ $isCurrent := and (ne .URL "#") (eq $menuURL $pageURL) }}
+          {{ $isParent := and (ne .URL "#") (ne $menuURL $homeURL) (hasPrefix $pageURL $menuURL) }}
+          {{ $hasChildActive := false }}
+          {{ range .Children }}
+            {{ $childURL := .URL | absLangURL }}
+            {{ if or (eq $childURL $pageURL) (hasPrefix $pageURL $childURL) }}
+              {{ $hasChildActive = true }}
+            {{ end }}
+          {{ end }}
+          {{ $active = or $isCurrent $isParent $hasChildActive }}
         {{ end }}
         {{ if .HasChildren }}
         <li class="nav-item nav-dropdown group relative">
+          {{ $hasNoLink := or (eq .URL "#") (not .URL) (eq .URL "") (eq .URL "javascript:void(0)") }}
+          {{ if $hasNoLink }}
+          <span
+            class="nav-link uppercase font-bold {{ if $active }}active{{ end }} inline-flex items-center cursor-default select-none">
+            <span class="nav-text">{{ .Name }}</span>
+            <svg class="h-4 w-4 fill-current ml-1 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </span>
+          {{ else }}
           <a href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
             class="nav-link uppercase font-bold {{ if $active }}active{{ end }} inline-flex items-center cursor-pointer"
             {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
@@ -55,6 +74,7 @@
               <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
             </svg>
           </a>
+          {{ end }}
           <!-- Floating Hover Dropdown Card (Aligned with header bottom border, spacious width, no text wrapping, smooth glide) -->
           <div class="nav-dropdown-flyout absolute left-0 top-full z-50 origin-top">
             <ul class="bg-white dark:bg-inalix-dark border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl p-2.5 space-y-1 w-full"
@@ -125,23 +145,39 @@
           {{ range site.Menus.main }}
           {{ $menuURL := .URL | absLangURL }}
           {{ $pageURL := $currentPage.Permalink | absLangURL }}
-          {{ $isHomeMenu := or (eq .PageRef "/") (eq .URL "/") (eq $menuURL $homeURL) }}
+          {{ $isHomeMenu := and (ne .URL "#") (ne .URL "") (or (eq .PageRef "/") (eq .URL "/") (eq $menuURL $homeURL)) }}
           {{ $active := false }}
-          {{ if $isHomeMenu }}
-            {{ $active = $currentPage.IsHome }}
+          {{ if or $currentPage.IsHome (eq $currentPage.RelPermalink "/") (eq $currentPage.RelPermalink "/id/") (eq $currentPage.RelPermalink "/en/") }}
+            {{ if $isHomeMenu }}
+              {{ $active = true }}
+            {{ end }}
           {{ else }}
-            {{ $isCurrent := eq $menuURL $pageURL }}
-            {{ $isParent := and (ne $menuURL $homeURL) (hasPrefix $pageURL $menuURL) }}
-            {{ $active = or $isCurrent $isParent ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+            {{ $isCurrent := and (ne .URL "#") (eq $menuURL $pageURL) }}
+            {{ $isParent := and (ne .URL "#") (ne $menuURL $homeURL) (hasPrefix $pageURL $menuURL) }}
+            {{ $hasChildActive := false }}
+            {{ range .Children }}
+              {{ $childURL := .URL | absLangURL }}
+              {{ if or (eq $childURL $pageURL) (hasPrefix $pageURL $childURL) }}
+                {{ $hasChildActive = true }}
+              {{ end }}
+            {{ end }}
+            {{ $active = or $isCurrent $isParent $hasChildActive }}
           {{ end }}
           {{ if .HasChildren }}
           <li class="py-2.5">
             <div class="flex items-center justify-between">
+              {{ $hasNoLink := or (eq .URL "#") (not .URL) (eq .URL "") (eq .URL "javascript:void(0)") }}
+              {{ if $hasNoLink }}
+              <span class="block px-2 text-sm font-bold uppercase tracking-wider select-none {{ if $active }}text-primary{{ else }}text-dark dark:text-gray-200{{ end }}">
+                {{ .Name }}
+              </span>
+              {{ else }}
               <a class="block px-2 text-sm font-bold uppercase tracking-wider transition-colors {{ if $active }}text-primary{{ else }}text-dark dark:text-gray-200 hover:text-primary dark:hover:text-primary{{ end }}"
                 href="{{ if findRE `^http` .URL }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
                 {{ if findRE `^http` .URL }} target="_blank" rel="noopener" {{ end }}>
                 {{ .Name }}
               </a>
+              {{ end }}
             </div>
             <!-- Sub menu items on mobile -->
             <ul class="pl-4 mt-2 space-y-1.5 border-l-2 border-primary/30 dark:border-white/10 ml-2">

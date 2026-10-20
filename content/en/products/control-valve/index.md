@@ -1,7 +1,7 @@
 ---
 title: Control Valve
 slug: ''
-image: ''
+image: /images/img-product-placeholder.webp
 meta_title: Control Valve | INALIX
 description: '-'
 date: 2026-10-20

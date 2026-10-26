@@ -1,8 +1,8 @@
 ---
-title: Ashcroft Pressure Gauge
+title: Pressure Gauge
 slug: ''
 image: images/Ashcroft pressure gauge.webp
-meta_title: Ashcroft Pressure Gauge | INALIX
+meta_title: Pressure Gauge | INALIX
 description: Ashcroft Pressure Gauge adalah instrumen pengukuran tekanan yang dirancang untuk memantau tekanan cairan dan gas dalam berbagai aplikasi industri. Dengan pilihan rentang tekanan, ukuran dial, dan material yang beragam, produk ini mendukung pemantauan tekanan yang andal pada sistem proses dan peralatan industri.
 date: 2026-10-20
 categories: Industrial Solutions

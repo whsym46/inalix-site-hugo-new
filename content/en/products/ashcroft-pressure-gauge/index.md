@@ -3,14 +3,14 @@ title: Pressure Gauge
 slug: ''
 image: images/Ashcroft pressure gauge.webp
 meta_title: Pressure Gauge | INALIX
-description: The Ashcroft Pressure Gauge is a pressure measurement instrument designed to monitor liquid and gas pressure across a wide range of industrial applications. Available in various pressure ranges, dial sizes, and materials, it supports reliable pressure monitoring in process systems and industrial equipment.
+description: Pressure Gauge is a pressure measurement instrument designed to monitor liquid and gas pressure across a wide range of industrial applications. Available in various pressure ranges, dial sizes, and materials, it supports reliable pressure monitoring in process systems and industrial equipment.
 date: 2026-10-20
 categories: Industrial Solutions
 sub_categories: control-instrument
 author: Inalix
 ---
 
-# Ashcroft Pressure Gauge
+# Pressure Gauge
 
 ## Short Description
 

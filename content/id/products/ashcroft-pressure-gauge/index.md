@@ -10,7 +10,7 @@ sub_categories: control-instrument
 author: Inalix
 ---
 
-Ashcroft Pressure Gauge merupakan instrumen pengukuran tekanan dari Ashcroft, produsen instrumen pengukuran dan pemantauan tekanan, temperatur, serta perangkat terkait untuk aplikasi industri. Produk ini digunakan untuk mengukur tekanan fluida dalam sistem perpipaan, pompa, kompresor, tangki, dan berbagai peralatan proses.
+Pressure Gauge merupakan instrumen pengukuran tekanan dari Ashcroft, produsen instrumen pengukuran dan pemantauan tekanan, temperatur, serta perangkat terkait untuk aplikasi industri. Produk ini digunakan untuk mengukur tekanan fluida dalam sistem perpipaan, pompa, kompresor, tangki, dan berbagai peralatan proses.
 
 Tersedia dalam berbagai konfigurasi, Ashcroft Pressure Gauge dapat dipilih berdasarkan rentang tekanan, ukuran dial, material casing dan wetted parts, jenis koneksi proses, serta kondisi operasional. Pilihan model tertentu juga tersedia dengan fitur tambahan untuk mendukung kebutuhan aplikasi yang melibatkan getaran, lingkungan korosif, atau persyaratan proses khusus.
 

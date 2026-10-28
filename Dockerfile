@@ -25,4 +25,5 @@ COPY . .
 RUN npm run build
 
 FROM nginx:alpine3.21-slim AS static
+COPY ./server/nginx-default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /src/public /usr/share/nginx/html

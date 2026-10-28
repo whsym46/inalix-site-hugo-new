@@ -1,15 +1,18 @@
 ---
 title: Implementasi SCADA Chiller Software System di InJourney Airports Denpasar
 draft: false
-image:
-  - images/SCADA Chiller Software System Implementation.webp
+image: images/SCADA-InJourney-Implementation.webp
 meta_title: Implementasi SCADA Chiller Software System di InJourney Airports Denpasar | INALIX
 description: Implementasi sistem perangkat lunak SCADA (Supervisory Control and Data Acquisition) untuk mendukung monitoring dan pengendalian sistem chiller secara terpusat di InJourney Airports Denpasar.  Sistem ini memberikan visibilitas terhadap kondisi operasional chiller secara real-time, sehingga proses pemantauan, pengendalian, dan pengelolaan sistem pendingin bandara dapat dilakukan secara lebih efektif dan terintegrasi.
 categories: Information Technology
 tags: []
 author: Inalix
-solution: Airport Solutions
 date: 2026-10-07
+location: ''
+client_name: ''
+started: ''
+completed: ''
+solution: Airport Solutions
 ---
 
 **Centralized Chiller Monitoring & Control**

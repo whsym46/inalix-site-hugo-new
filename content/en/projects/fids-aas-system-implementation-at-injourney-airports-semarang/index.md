@@ -1,8 +1,8 @@
 ---
-title: FIDS & AAS System Implementation at Injourney Airports Semarang
+title: FIDS & AAS System Implementation at Injourney Airports Semarang tes
 draft: false
 image: images/FIDS-Ahmad-Yani-International-Airport.webp
-meta_title: FIDS & AAS System Implementation at Injourney Airports Semarang | INALIX
+meta_title: FIDS & AAS System Implementation at Injourney Airports Semarang tes | INALIX
 description: Implementation of an integrated Flight Information Display System (FIDS) and Airport Announcement System (AAS) to support efficient passenger information delivery and airport operations at InJourney Airports Semarang.  The solution enables real-time flight information distribution across airport display points while providing a centralized announcement system for clear, timely, and consistent passenger communication.
 categories: Information Technology
 tags: []

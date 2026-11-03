@@ -1,8 +1,8 @@
 ---
-title: Test I Gusti Ngurah Rai International Airport - FIDS
+title: I Gusti Ngurah Rai International Airport - FIDS
 draft: false
 image: images/slider-new1.webp
-meta_title: Test I Gusti Ngurah Rai International Airport - FIDS | INALIX
+meta_title: I Gusti Ngurah Rai International Airport - FIDS | INALIX
 description: I Gusti Ngurah Rai International Airport - FIDS
 categories: Information Technology
 tags: []

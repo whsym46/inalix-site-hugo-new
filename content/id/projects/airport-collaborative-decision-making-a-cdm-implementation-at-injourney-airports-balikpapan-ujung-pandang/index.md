@@ -1,7 +1,7 @@
 ---
 title: Implementasi Airport Collaborative Decision Making (A-CDM) di InJourney Airports Balikpapan & Ujung Pandang
 draft: false
-image: ''
+image: images/ACDM-Milestone-1024x323.webp
 meta_title: Implementasi Airport Collaborative Decision Making (A-CDM) di InJourney Airports Balikpapan & Ujung Pandang | INALIX
 description: Implementasi sistem Airport Collaborative Decision Making (A-CDM) di InJourney Airports Balikpapan dan Ujung Pandang untuk meningkatkan koordinasi, pertukaran informasi, serta pengambilan keputusan kolaboratif antar pemangku kepentingan dalam operasional bandara.  Solusi ini mendukung kolaborasi operasional yang lebih efektif melalui pertukaran informasi yang tepat waktu dan konsisten dalam ekosistem bandara.
 categories: Information Technology

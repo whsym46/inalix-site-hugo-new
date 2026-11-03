@@ -1,18 +1,18 @@
 ---
 title: Pengadaan & Instalasi Sistem Elektronik untuk Proyek Beautifikasi Terminal 1 & 2 Bandara Internasional Juanda
 draft: false
-image: /images/Aeronautical-Billing.webp
+image: images/T2-Juanda-Airport.webp
 meta_title: Pengadaan & Instalasi Sistem Elektronik untuk Proyek Beautifikasi Terminal 1 & 2 Bandara Internasional Juanda | INALIX
 description: Pengadaan dan instalasi sistem elektronik sebagai bagian dari proyek beautifikasi Terminal 1 & 2 di Bandara Internasional Juanda.  Proyek ini mencakup penyediaan, instalasi, dan integrasi infrastruktur elektronik untuk mendukung modernisasi terminal, fungsi operasional, serta menciptakan lingkungan bandara yang lebih nyaman bagi penumpang.
 categories: Information Technology
 tags: []
 author: Inalix
-solution: Airport Solutions
 date: 2024-05-08
 location: Surabaya, Indonesia
 client_name: PT Angkasa Pura I
 started: '2024'
 completed: '2024'
+solution: Airport Solutions
 ---
 
 **Integrasi Sistem Elektronik untuk Peningkatan Area Terminal**

@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: AI Murni Slum Shut Valve Replacement for GTS at Block 2 CCGT Plant, PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Replacement of the Slum Shut Valve in the Gas Turbine System (GTS) at Block 2 of the Combined Cycle Gas Turbine (CCGT) Power Plant, PT PLN Nusantara Power UP Muara Karang.  The project involved the replacement of critical valve equipment to support the reliability of the gas turbine fuel system, maintain operational performance, and ensure the proper functioning of the associated gas supply system.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical
 author: Inalix

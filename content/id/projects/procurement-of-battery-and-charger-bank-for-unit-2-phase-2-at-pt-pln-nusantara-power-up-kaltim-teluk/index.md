@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Pengadaan Battery dan Charger 1 Bank untuk Unit 2 Tahap 2 PT PLN Nusantara Power UP Kaltim Teluk | INALIX
 description: Pengadaan satu bank baterai beserta sistem charger untuk Unit 2 Tahap 2 di PT PLN Nusantara Power UP Kaltim Teluk.  Proyek ini bertujuan untuk mendukung keandalan sistem catu daya listrik unit pembangkit, memastikan ketersediaan sumber daya DC cadangan bagi peralatan penting, serta menunjang keberlangsungan operasional pembangkit.
-categories: Industry
+categories: Industrial
 tags: []
 author: Inalix
 date: 2025-03-13

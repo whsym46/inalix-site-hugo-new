@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Penggantian Essential Motor Operated Valve (MOV) pada HRSG dan Steam Turbine Blok 2 PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Penggantian Motor Operated Valve (MOV) pada sistem essential Heat Recovery Steam Generator (HRSG) dan Steam Turbine (ST) Blok 2 PT PLN Nusantara Power UP Muara Karang.  Pekerjaan ini dilaksanakan untuk mendukung keandalan peralatan, menjaga kinerja operasional, serta memastikan kesiapan sistem valve kritis pada fasilitas pembangkit listrik.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical
 author: Inalix

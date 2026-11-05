@@ -1,6 +1,6 @@
 ---
 title: Proyek Industri
-category: Industry
+category: Industrial
 image: /images/slider-industri.webp
 meta_title: Proyek Industri | INALIX
 layout: category-list

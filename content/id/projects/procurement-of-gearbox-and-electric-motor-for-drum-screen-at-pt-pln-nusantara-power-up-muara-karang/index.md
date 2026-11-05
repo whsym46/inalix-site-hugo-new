@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Pengadaan Gearbox dan Motor Listrik untuk Drum Screen PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Pengadaan gearbox dan motor listrik untuk sistem Drum Screen di PT PLN Nusantara Power UP Muara Karang.  Pengadaan ini bertujuan untuk mendukung keandalan operasional sistem Drum Screen dengan memastikan ketersediaan komponen penggerak utama yang dibutuhkan untuk menunjang fungsi dan kinerja peralatan.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical & Electrical
 author: Inalix

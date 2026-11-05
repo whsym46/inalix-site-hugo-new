@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Pengadaan Battery Charger dan Battery Storage System untuk EDG Phase 1 PLTGU Blok 1 PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Pengadaan Battery Charger dan Battery Storage System untuk Emergency Diesel Generator (EDG) Phase 1 di PLTGU Blok 1 PT PLN Nusantara Power UP Muara Karang.  Proyek ini bertujuan untuk mendukung keandalan sistem kelistrikan EDG dengan memastikan ketersediaan catu daya DC yang andal bagi proses starting generator darurat serta kebutuhan fungsi pendukung lainnya.
-categories: Industry
+categories: Industrial
 tags:
   - Electrical
 author: Inalix

@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Pengadaan Motor Close Cooling Water Pump PT PLN Nusantara Power UP Paiton | INALIX
 description: Pengadaan motor listrik untuk Close Cooling Water Pump di PT PLN Nusantara Power UP Paiton.  Pengadaan ini bertujuan untuk mendukung keandalan sistem pendingin dengan memastikan ketersediaan motor penggerak pompa yang sesuai dengan kebutuhan operasional, sehingga kinerja peralatan pendingin pada fasilitas pembangkit dapat terjaga.
-categories: Industry
+categories: Industrial
 tags:
   - Electrical
 author: Inalix

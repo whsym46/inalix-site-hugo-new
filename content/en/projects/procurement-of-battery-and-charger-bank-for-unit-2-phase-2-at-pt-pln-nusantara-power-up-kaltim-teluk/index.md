@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Procurement of Battery and Charger Bank for Unit 2, Phase 2 at PT PLN Nusantara Power UP Kaltim Teluk | INALIX
 description: Procurement of one battery bank and charger system for Unit 2, Phase 2 at PT PLN Nusantara Power UP Kaltim Teluk.  The project aims to support the reliability of the unit's electrical power supply system, ensuring the availability of backup DC power for essential equipment and supporting the continuity of power plant operations.
-categories: Industry
+categories: Industrial
 tags: []
 author: Inalix
 date: 2025-03-13

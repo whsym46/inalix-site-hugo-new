@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Procurement of Gearbox and Electric Motor for Drum Screen at PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Procurement of a gearbox and electric motor for the Drum Screen system at PT PLN Nusantara Power UP Muara Karang.  The procurement aims to support the operational reliability of the drum screen system by ensuring the availability of essential drive components required for equipment operation and performance.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical & Electrical
 author: Inalix

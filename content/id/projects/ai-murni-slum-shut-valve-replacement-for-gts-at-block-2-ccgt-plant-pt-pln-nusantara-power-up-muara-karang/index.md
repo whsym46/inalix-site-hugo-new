@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: AI Murni Penggantian Slum Shut Valve GTS PLTGU Blok 2 PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Pekerjaan penggantian Slum Shut Valve pada Gas Turbine System (GTS) PLTGU Blok 2 PT PLN Nusantara Power UP Muara Karang.  Pekerjaan ini mencakup penggantian komponen valve kritis untuk mendukung keandalan sistem gas turbin, menjaga kinerja operasional, serta memastikan fungsi sistem penyaluran gas berjalan dengan baik.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical
 author: Inalix

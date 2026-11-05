@@ -1,6 +1,6 @@
 ---
 title: Industrial Projects
-category: Industry
+category: Industrial
 image: /images/slider-industri.webp
 meta_title: Industrial Projects | INALIX
 layout: category-list

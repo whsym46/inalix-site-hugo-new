@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Procurement of Close Cooling Water Pump Motor at PT PLN Nusantara Power UP Paiton | INALIX
 description: Procurement of an electric motor for the Close Cooling Water Pump at PT PLN Nusantara Power UP Paiton.  The project aims to support the reliability of the cooling water system by ensuring the availability of a suitable motor to drive the pump and maintain the operational performance of essential cooling equipment within the power generation facility.
-categories: Industry
+categories: Industrial
 tags:
   - Electrical
 author: Inalix

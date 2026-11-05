@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Procurement of Battery Charger and Battery Storage System for EDG Phase 1, Block 1 CCGT Plant at PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Procurement of a battery charger and battery storage system for the Emergency Diesel Generator (EDG) Phase 1 at Block 1 of the Combined Cycle Gas Turbine (CCGT) Power Plant at PT PLN Nusantara Power UP Muara Karang.  The project supports the reliability of the EDG electrical system by ensuring the availability of a dependable DC power supply for emergency generator starting and essential auxiliary functions.
-categories: Industry
+categories: Industrial
 tags:
   - Electrical
 author: Inalix

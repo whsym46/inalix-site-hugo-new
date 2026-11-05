@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Mill Gearbox Repair Services at PT PLN Nusantara Power UP Rembang | INALIX
 description: Repair services for the mill gearbox at PT PLN Nusantara Power UP Rembang to support the reliability and performance of the power plant's milling system.  The work was carried out to restore gearbox functionality, maintain equipment performance, and support the operational continuity of the power generation facility.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical
 author: Inalix

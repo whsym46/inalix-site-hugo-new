@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Pengadaan Battery Storage dan Battery Charger System untuk GTG 1.1 PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Pengadaan sistem penyimpanan baterai (Battery Storage) dan Battery Charger untuk Gas Turbine Generator (GTG) 1.1 di PT PLN Nusantara Power UP Muara Karang.  Pengadaan ini bertujuan untuk mendukung keandalan sistem kelistrikan generator dengan memastikan ketersediaan sumber catu daya DC yang andal bagi sistem starting, peralatan kontrol, serta berbagai fungsi pendukung penting lainnya.
-categories: Industry
+categories: Industrial
 tags:
   - Electrical
 author: Inalix

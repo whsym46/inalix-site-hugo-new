@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Procurement of Overhaul Consumables for Units 3 & 4, 2025 at PT PLN Nusantara Power UP Cirata | INALIX
 description: Procurement of consumable materials to support the 2025 overhaul activities for Units 3 and 4 at PT PLN Nusantara Power UP Cirata.  The procurement was intended to ensure the availability of essential materials required for scheduled maintenance, supporting equipment reliability and the readiness of the power generation units.
-categories: Industry
+categories: Industrial
 tags:
   - Material Consumable
 author: Inalix

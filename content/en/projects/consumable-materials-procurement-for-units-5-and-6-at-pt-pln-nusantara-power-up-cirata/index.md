@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Consumable Materials Procurement for Units 5 and 6 at PT PLN Nusantara Power UP Cirata | INALIX
 description: Procurement of consumable materials for Units 5 and 6 at PT PLN Nusantara Power UP Cirata to support the operational and maintenance requirements of the power generation facility.  The supply of these materials is intended to ensure the availability of essential operational supplies, maintain equipment reliability, and support the continuity of power plant maintenance activities.
-categories: Industry
+categories: Industrial
 tags: []
 author: Inalix
 date: 2026-07-03

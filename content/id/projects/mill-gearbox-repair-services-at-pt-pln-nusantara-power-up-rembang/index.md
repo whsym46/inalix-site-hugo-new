@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Jasa Perbaikan Gearbox Mill PT PLN Nusantara Power UP Rembang | INALIX
 description: Pekerjaan jasa perbaikan gearbox mill di PT PLN Nusantara Power UP Rembang untuk mendukung keandalan dan kinerja sistem penggilingan pada fasilitas pembangkit listrik.  Pekerjaan ini bertujuan untuk memulihkan fungsi gearbox, menjaga performa peralatan, serta mendukung keberlangsungan operasional unit pembangkit.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical
 author: Inalix

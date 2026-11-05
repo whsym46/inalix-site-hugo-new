@@ -4,7 +4,7 @@ draft: false
 image: ''
 meta_title: Penggantian Inner Part Control Valve HRSG Blok 2 PT PLN Nusantara Power UP Muara Karang | INALIX
 description: Pekerjaan penggantian komponen internal (inner part) Control Valve pada sistem Heat Recovery Steam Generator (HRSG) Blok 2 PT PLN Nusantara Power UP Muara Karang.  Pekerjaan ini dilaksanakan untuk memulihkan kinerja valve, menjaga ketepatan pengaturan aliran fluida, serta mendukung keandalan sistem HRSG pada fasilitas pembangkit listrik.
-categories: Industry
+categories: Industrial
 tags:
   - Mechanical
 author: Inalix

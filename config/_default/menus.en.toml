@@ -44,8 +44,8 @@ parent = "projects"
 weight = 1
 
 [[main]]
-name = "Industry"
-url = "/projects/industry"
+name = "Industrial"
+url = "/projects/industrial"
 parent = "projects"
 weight = 2
 

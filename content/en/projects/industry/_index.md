@@ -1,8 +1,8 @@
 ---
-title: Industry Projects
+title: Industrial Projects
 category: Industry
-meta_title: Industry Projects | INALIX
-description: Industrial engineering, control automation, and infrastructure projects by Inalix.
 image: /images/slider-industri.webp
+meta_title: Industrial Projects | INALIX
 layout: category-list
+description: Industrial engineering, control automation, and infrastructure projects by Inalix.
 ---

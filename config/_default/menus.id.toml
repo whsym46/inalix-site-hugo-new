@@ -55,7 +55,7 @@ weight = 5
 
 
 [[main]]
-name = "Tentang"
+name = "Tentang Kami"
 pageRef = "/pages/about"
 weight = 6
 
@@ -69,7 +69,7 @@ weight = 7
 
 # footer menu
 [[footer]]
-name = "Tentang"
+name = "Tentang Kami"
 pageRef = "/pages/about"
 weight = 1
 

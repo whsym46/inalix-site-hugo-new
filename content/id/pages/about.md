@@ -1,5 +1,9 @@
 ---
 title: Tentang Perusahaan
+slug: about-us
+aliases:
+  - /about
+  - /about/
 type: about
 layout: list
 history_image: /images/img-header-03.webp

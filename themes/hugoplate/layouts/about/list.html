@@ -38,6 +38,96 @@
   </div>
 </section>
 
+<!-- Timeline Journey Section (Merged from History) -->
+{{ with .Params.timeline }}
+<section class="py-20 md:py-28 bg-gray-50 dark:bg-inalix-darker overflow-hidden border-y border-gray-200 dark:border-white/5">
+  <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+    
+    <div class="text-center mb-16">
+      <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-3">Milestones &amp; Journey</h4>
+      <h2 class="text-3xl md:text-5xl font-black text-dark dark:text-white uppercase leading-tight">Our Journey Through The Years</h2>
+      <div class="w-20 h-1 bg-primary mx-auto mt-5"></div>
+    </div>
+
+    <!-- Timeline Container -->
+    <div id="timeline-container" class="relative ml-4 md:ml-0 md:border-l-0 pb-12 pt-8">
+      
+      <!-- Desktop Center Line Background -->
+      <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gray-200 dark:bg-gray-800 -translate-x-1/2"></div>
+      
+      <!-- Animated Line -->
+      <div id="timeline-line" class="absolute left-0 md:left-1/2 top-0 w-[2px] bg-primary transform md:-translate-x-1/2 z-0" style="height: 0%; transition: height 0.1s linear;"></div>
+      
+      <div class="space-y-16 md:space-y-24">
+        {{ range $index, $item := . }}
+        <div class="relative flex flex-col md:flex-row items-center {{ if eq (mod $index 2) 1 }}md:flex-row-reverse{{ end }}">
+          
+          <!-- Timeline Node (Dot) -->
+          <div class="absolute left-[-5px] md:left-1/2 top-0 md:top-8 w-3 h-3 bg-primary rounded-none md:-translate-x-1/2 z-10 rotate-45 timeline-dot opacity-0 transition-opacity duration-500 delay-150"></div>
+          
+          <!-- Content Side -->
+          <div class="w-full md:w-1/2 pl-8 md:pl-0 {{ if eq (mod $index 2) 0 }}md:pr-16 md:text-right{{ else }}md:pl-16 text-left{{ end }} pt-0">
+            <div class="inline-block px-6 py-2 bg-dark dark:bg-black text-white font-black text-2xl tracking-widest mb-6">{{ .year }}</div>
+            <h3 class="text-2xl md:text-3xl font-black text-dark dark:text-white uppercase mb-4 leading-tight">{{ .title }}</h3>
+            <div class="text-gray-600 dark:text-gray-400 leading-relaxed text-base md:text-lg prose dark:prose-invert {{ if eq (mod $index 2) 0 }}md:text-right md:ml-auto{{ end }}">
+              {{ .description | markdownify }}
+            </div>
+          </div>
+          
+          <!-- Image Side -->
+          <div class="w-full md:w-1/2 pl-8 md:pl-0 mt-8 md:mt-0 {{ if eq (mod $index 2) 0 }}md:pl-16{{ else }}md:pr-16{{ end }}">
+            {{ if .image }}
+            <div class="bg-white dark:bg-inalix-dark p-3 shadow-xl border border-gray-200 dark:border-white/5 group">
+              <div class="overflow-hidden relative">
+                <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <img src="{{ .image | relURL }}" alt="{{ .title }}" class="w-full h-auto aspect-video object-cover transform group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0">
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('scroll', function() {
+  const container = document.getElementById('timeline-container');
+  const line = document.getElementById('timeline-line');
+  const dots = document.querySelectorAll('.timeline-dot');
+  if(!container || !line) return;
+  
+  const rect = container.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  const startOffset = windowHeight / 2;
+  
+  let percentage = 0;
+  if (rect.top < startOffset) {
+    const scrolled = startOffset - rect.top;
+    percentage = (scrolled / rect.height) * 100;
+  }
+  
+  percentage = Math.max(0, Math.min(100, percentage));
+  line.style.height = percentage + '%';
+  
+  dots.forEach(dot => {
+    const dotRect = dot.getBoundingClientRect();
+    if (dotRect.top < startOffset) {
+      dot.classList.remove('opacity-0');
+      dot.classList.add('opacity-100');
+    } else {
+      dot.classList.add('opacity-0');
+      dot.classList.remove('opacity-100');
+    }
+  });
+});
+</script>
+{{ end }}
+
 <!-- Culture Banner Section -->
 {{ with .Params.culture_banner }}
 <section class="section-sm bg-white dark:bg-inalix-dark border-gray-200 dark:border-white/5">

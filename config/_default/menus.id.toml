@@ -7,30 +7,56 @@ pageRef = "/"
 weight = 1
 
 [[main]]
-name = "Tentang"
-pageRef = "/pages/about"
-weight = 2
-
-[[main]]
-name = "Sejarah"
-pageRef = "/pages/history"
-weight = 3
+# name = "Sejarah"
+# pageRef = "/pages/history"
+# weight = 3
 
 [[main]]
 name = "Produk"
-pageRef = "/products"
-weight = 4
+identifier = "products"
+url = "#"
+weight = 3
 
+[[main]]
+name = "Solusi Bandara"
+url = "/products/airport-solutions"
+parent = "products"
+weight = 1
+
+[[main]]
+name = "Solusi Industri"
+url = "/products/industrial-solutions"
+parent = "products"
+weight = 2
 
 [[main]]
 name = "Proyek"
+identifier = "projects"
 pageRef = "/projects"
-weight = 5
+url = "/projects"
+weight = 4
 
+[[main]]
+name = "Teknologi Informasi"
+url = "/projects/information-technology"
+parent = "projects"
+weight = 1
+
+[[main]]
+name = "Industrial"
+url = "/projects/industrial"
+parent = "projects"
+weight = 2
 
 [[main]]
 name = "Berita"
 pageRef = "/news"
+weight = 5
+
+
+[[main]]
+name = "Tentang Kami"
+pageRef = "/pages/about"
 weight = 6
 
 [[main]]
@@ -43,7 +69,7 @@ weight = 7
 
 # footer menu
 [[footer]]
-name = "Tentang"
+name = "Tentang Kami"
 pageRef = "/pages/about"
 weight = 1
 

@@ -17,7 +17,7 @@ solution: Airport Solutions
 date: 2023-06-30
 ---
 
-[![](images/Inalix-Master-Clock.webp)](https://github.com/inalix/website-hugo/blob/test/images/Inalix-Master-Clock.webp)
+![](images/Inalix-Master-Clock.webp)
 
 Pernahkah Anda bertanya-tanya bagaimana bandara melacak waktu dan memastikan bahwa penerbangan berangkat dan tiba sesuai jadwal? Jawabannya terletak pada jam utama (master clock) bandara, sebuah sistem penunjuk waktu berpresisi tinggi yang memainkan peran penting dalam perjalanan udara.
 

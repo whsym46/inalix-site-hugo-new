@@ -4,8 +4,7 @@ draft: false
 image: images/Wall Display Procurement & Installation for Ngurah Rai Meeting Room at AP1 Head Office.webp
 meta_title: Wall Display Procurement & Installation for Ngurah Rai Meeting Room at AP1 Head Office | INALIX
 description: Procurement and installation of an integrated wall display system for the Ngurah Rai Meeting Room at AP1 Head Office to support presentations, information visualization, and collaborative meeting activities.  The solution provides a large-format visual platform designed to deliver clear and effective content presentation while enhancing the functionality of the meeting room environment.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

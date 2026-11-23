@@ -25,9 +25,9 @@ culture_banner:
   title: We are true to ourselves, and commit to always perform at our best.
   text: We believe that we are outstanding. Not because we say it, but because we work hard at it. We are dedicated, committed and focused. We believe that every person will reach their personal best and overcome any challenge through a shared culture and ethos.
   images:
-    - image: /media/iAAS.webp
-    - image: /media/iFIDS.webp
-    - image: /media/iMCS.webp
+    - image: /images/iAAS.webp
+    - image: /images/iFIDS.webp
+    - image: /images/iMCS.webp
 values_title: Our Commitment is Our Values
 values:
   - title: Solid Teamwork

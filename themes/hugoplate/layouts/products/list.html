@@ -9,11 +9,33 @@
         <div class="lg:col-12">
           <div class="row">
             
-            {{ $paginator:= .Paginate .RegularPages }}
-            {{ range $paginator.Pages }}
-              <div class="md:col-6 mb-14">
-                {{ partial "components/product-card" . }}
+            {{ $pages := slice }}
+            {{ if .Params.category }}
+              {{ $targetCat := .Params.category }}
+              {{ range (where site.RegularPages "Section" "products") }}
+                {{ $cats := .Params.categories }}
+                {{ if $cats }}
+                  {{ if not (reflect.IsSlice $cats) }}{{ $cats = slice $cats }}{{ end }}
+                  {{ if in $cats $targetCat }}
+                    {{ $pages = $pages | append . }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              {{ $pages = .RegularPages }}
+            {{ end }}
+
+            {{ if and (.Params.category) (eq (len $pages) 0) }}
+              <div class="col-12 text-center py-16">
+                <p class="text-gray-500 dark:text-gray-400 text-lg">{{ T "no_results" | default "No products found in this category." }}</p>
               </div>
+            {{ else }}
+              {{ $paginator:= .Paginate $pages }}
+              {{ range $paginator.Pages }}
+                <div class="md:col-6 mb-14">
+                  {{ partial "components/product-card" . }}
+                </div>
+              {{ end }}
             {{ end }}
           </div>
           {{ partial "components/pagination.html" . }}

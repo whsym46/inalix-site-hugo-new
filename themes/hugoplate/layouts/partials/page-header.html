@@ -4,7 +4,7 @@
     <!-- Use dynamic section image or fallback to default -->
     {{ $bgImage := "" }}
     
-    {{/* 1. Jika halaman saat ini punya .Params.image */}}
+    {{/* 1. Jika halaman saat ini punya .Params.image (termasuk _index.md pada list page) */}}
     {{ $pageImage := .Params.image }}
     {{ if reflect.IsSlice $pageImage }}{{ $pageImage = index $pageImage 0 }}{{ end }}
     {{ if $pageImage }}
@@ -13,10 +13,12 @@
         {{ $bgImage = $res.RelPermalink }}
       {{ else if or (hasPrefix $pageImage "/") (hasPrefix $pageImage "http") }}
         {{ $bgImage = $pageImage | relURL }}
+      {{ else }}
+        {{ $bgImage = $pageImage | relURL }}
       {{ end }}
     {{ end }}
     
-    {{/* 2. Jika kosong, cari gambar dari halaman terbaru di section masing-masing (projects/products/news dll) */}}
+    {{/* 2. Jika di _index.md kosong, fallback cari gambar dari postingan terbaru di section tersebut */}}
     {{ if and (not $bgImage) .Section }}
       {{ $sectionPages := where site.RegularPages "Section" .Section }}
       {{ $latestPage := index $sectionPages 0 }}
@@ -29,12 +31,14 @@
             {{ $bgImage = $secRes.RelPermalink }}
           {{ else if or (hasPrefix $secImg "/") (hasPrefix $secImg "http") }}
             {{ $bgImage = $secImg | relURL }}
+          {{ else }}
+            {{ $bgImage = $secImg | relURL }}
           {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
-    
-    {{/* 3. Fallback default jika tidak ada gambar section */}}
+
+    {{/* 3. Fallback default jika postingan terbaru pun tidak ada gambar */}}
     {{ if not $bgImage }}
       {{ $bgImage = "/images/slider-new1.webp" | relURL }}
     {{ end }}

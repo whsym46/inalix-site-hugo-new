@@ -15,8 +15,9 @@ logo_text = "Inalix"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
-theme_switcher = true
+theme_switcher = false
 theme_default = "light" # available options [light/dark/system]
+product_fallback_image = "images/img-product-placeholder.webp"
 # Main Sections
 mainSections = ["blog"]
 # contact form action
@@ -46,7 +47,7 @@ link = "contact"
 [search]
 enable = true
 primary_color = "#FF0000"
-include_sections = ["blog"]
+include_sections = ["products", "projects", "news"]
 show_image = true
 show_description = true
 show_tags = true

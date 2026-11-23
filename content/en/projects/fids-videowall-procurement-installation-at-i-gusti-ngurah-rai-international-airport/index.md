@@ -1,11 +1,10 @@
 ---
 title: FIDS Videowall Procurement & Installation at I Gusti Ngurah Rai International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: FIDS Videowall Procurement & Installation at I Gusti Ngurah Rai International Airport | INALIX
 description: Procurement and installation of the Flight Information Display System (FIDS) Videowall at I Gusti Ngurah Rai International Airport to enhance the delivery and visibility of real-time flight information within the terminal.  The project provides a large-scale visual information platform designed to deliver clear, accurate, and accessible flight information while supporting an improved passenger experience.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

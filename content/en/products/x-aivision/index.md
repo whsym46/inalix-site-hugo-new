@@ -3,9 +3,9 @@ title: X-Aivision
 slug: ''
 image: images/X-AIVISION.webp
 meta_title: X-Aivision | INALIX
-description: "X-AiVision is an advanced AI-powered computer vision solution designed for airports to detect anomalies, monitor security, and enhance operational efficiency."
+description: X-Aivision
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---
@@ -19,9 +19,6 @@ Inalix AiVision is a computer vision designed for airport needs, ready to cover 
 ![](images/X-AiVision-BlockOnOff-Monitoring.webp)
 
 ### FEATURES
-
-[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-aivision.md#features)
-
 X-AiVision main features are as follows:
 
 - Real-Time Data Recording: The system records all activities in real-time, ensuring that data regarding airport operations is up-to-date and readily available for immediate use and analysis.

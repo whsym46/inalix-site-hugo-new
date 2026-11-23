@@ -4,8 +4,7 @@ draft: false
 image: images/Domestic Terminal Renovation at I Gusti Ngurah Rai International Airport.webp
 meta_title: Implementasi Sistem Bandara Terintegrasi untuk Renovasi Terminal Domestik Bandara Internasional I Gusti Ngurah Rai | INALIX
 description: Implementasi solusi sistem bandara terintegrasi sebagai bagian dari proyek Renovasi Terminal Domestik Bandara Internasional I Gusti Ngurah Rai.  INALIX menghadirkan berbagai sistem yang dikembangkan secara mandiri, meliputi FIDS, AAS, AODB, SIOPSKOM, dan Billing System, serta mengintegrasikannya dengan Master Clock dan Digital Signage untuk mendukung operasional terminal dan layanan informasi penumpang secara menyeluruh.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

@@ -1,11 +1,10 @@
 ---
 title: Implementasi Digital Signage di Bandara Internasional Hang Nadim
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Implementasi Digital Signage di Bandara Internasional Hang Nadim | INALIX
 description: Implementasi sistem Digital Signage di Bandara Internasional Hang Nadim untuk mendukung komunikasi visual dan penyampaian konten digital secara efektif di berbagai area terminal.  Solusi ini menyediakan platform terpusat untuk mengelola dan menampilkan informasi serta konten digital secara konsisten dan fleksibel di lingkungan bandara.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

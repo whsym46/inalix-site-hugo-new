@@ -1,5 +1,5 @@
-# Redirect barcode team lama (inalix.com/team/slug -> inalix.com/en/team/slug)
-/team/*    /en/team/:splat    301!
-/team      /en/team/          301!
+# Redirect legacy /en/ URLs ke root (tanpa /en/)
+/en/*      /:splat            301!
+/en        /                  301!
 
-/* /en/404.html 404
+/* /404.html 404

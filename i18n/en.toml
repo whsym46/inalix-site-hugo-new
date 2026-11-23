@@ -237,6 +237,99 @@ other = "SEND INQUIRY NOW"
 [faq_title]
 other = "Frequently Asked Questions"
 
+# Product Single Page & Call To Action
+[ready_optimize]
+other = "Ready to optimize your operations?"
+
+[contact_team]
+other = "Contact our team of experts today to discuss how"
+
+[can_be_integrated]
+other = "can be integrated into your infrastructure."
+
+[get_custom_quote]
+other = "Get A Custom Quote"
+
+[our_product]
+other = "Our Product"
+
+[product_default_desc]
+other = "Discover our premium solutions designed for efficiency, sustainability, and innovation."
+
+[request_demo]
+other = "Request Demo"
+
+[premium_solution]
+other = "Premium Solution"
+
+[page_contents]
+other = "Page Contents"
+
+# Projects & Case Studies
+[case_study]
+other = "Case Study"
+
+[solution]
+other = "Solution"
+
+[airport_solutions]
+other = "Airport Solutions"
+
+[category]
+other = "Category"
+
+[project]
+other = "Project"
+
+[date]
+other = "Date"
+
+[more_portfolios]
+other = "More Portfolios"
+
+[other_projects]
+other = "OTHER PROJECTS"
+
+[no_results]
+other = "No items found in this category."
+
+# News & Articles
+[by]
+other = "By"
+
+[about_author]
+other = "About Author"
+
+[author_description]
+other = "We are committed to delivering the best insights and updates in the aviation and technology sectors. Written by our expert team."
+
+[search]
+other = "Search"
+
+[search_placeholder]
+other = "Click to Search..."
+
+[recent_news]
+other = "Recent News"
+
+[previous_post]
+other = "Previous Post"
+
+[next_post]
+other = "Next Post"
+
+[articles_by]
+other = "Articles by"
+
+[no_articles_author]
+other = "No articles published by this author yet."
+
+[client]
+other = "Client"
+
+[location]
+other = "Location"
+
 
 
 

@@ -66,6 +66,7 @@ input#nav-toggle:checked~#nav-menu {
   @apply text-dark hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary block py-1 font-semibold transition;
 }
 
+
 //theme-switcher
 .theme-switcher {
   @apply inline-flex;

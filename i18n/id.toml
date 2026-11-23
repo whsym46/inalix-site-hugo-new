@@ -237,6 +237,95 @@ other = "KIRIM PESAN SEKARANG"
 [faq_title]
 other = "Pertanyaan yang Sering Diajukan"
 
+# Product Single Page & Call To Action
+[ready_optimize]
+other = "Siap mengoptimalkan operasional Anda?"
 
+[contact_team]
+other = "Hubungi tim ahli kami hari ini untuk mendiskusikan bagaimana"
 
+[can_be_integrated]
+other = "dapat diintegrasikan ke dalam infrastruktur Anda."
 
+[get_custom_quote]
+other = "Dapatkan Penawaran Khusus"
+
+[our_product]
+other = "Produk Kami"
+
+[product_default_desc]
+other = "Temukan solusi unggulan kami yang dirancang untuk efisiensi, keberlanjutan, dan inovasi."
+
+[request_demo]
+other = "Minta Demo"
+
+[premium_solution]
+other = "Solusi Premium"
+
+[page_contents]
+other = "Daftar Isi"
+
+# Projects & Case Studies
+[case_study]
+other = "Studi Kasus"
+
+[solution]
+other = "Solusi"
+
+[airport_solutions]
+other = "Solusi Bandara"
+
+[category]
+other = "Kategori"
+
+[project]
+other = "Proyek"
+
+[date]
+other = "Tanggal"
+
+[more_portfolios]
+other = "Portofolio Lainnya"
+
+[other_projects]
+other = "PROYEK LAINNYA"
+
+[no_results]
+other = "Tidak ada hasil yang ditemukan dalam kategori ini."
+
+# News & Articles
+[by]
+other = "Oleh"
+
+[about_author]
+other = "Tentang Penulis"
+
+[author_description]
+other = "Kami berkomitmen untuk memberikan wawasan dan pembaruan terbaik di sektor penerbangan dan teknologi. Ditulis oleh tim ahli kami."
+
+[search]
+other = "Cari"
+
+[search_placeholder]
+other = "Klik untuk Mencari..."
+
+[recent_news]
+other = "Berita Terbaru"
+
+[previous_post]
+other = "Artikel Sebelumnya"
+
+[next_post]
+other = "Artikel Selanjutnya"
+
+[articles_by]
+other = "Artikel oleh"
+
+[no_articles_author]
+other = "Belum ada artikel yang diterbitkan oleh penulis ini."
+
+[client]
+other = "Klien"
+
+[location]
+other = "Lokasi"

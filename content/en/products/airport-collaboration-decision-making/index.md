@@ -3,9 +3,9 @@ title: Airport Collaboration Decision Making (X-ACDM)
 slug: ''
 image: images/X-ACDM.webp
 meta_title: Airport Collaboration Decision Making (X-ACDM) | INALIX
-description: "Inalix Airport CDM (X-ACDM) optimizes airport performance through collaborative decision-making, sharing real-time information with all stakeholders."
+description: Inalix Flight Information Display System is that can be used to manage, control and automate the flow of up to date information to the general public, airport tenants, airport management and airport operational staff throughout the Airport Terminal.
 date: 2022-04-04
-categories: []
+categories: Airport Solutions
 tags: []
 author: Inalix
 ---
@@ -17,9 +17,6 @@ INALIX A-CDM is the module to meet this CDM requirements. With interactive modul
 Easy to use, web-based Graphical User Interface, real-time view allows more effective information sharing to all stakeholders participating in A-CDM.
 
 #### X-ACDM FEATURES:
-
-[](https://github.com/inalix/website-hugo/blob/test/content/english/products/x-acdm.md#x-acdm-features)
-
 - COLLABORATIVE INFORMATION AND DECISION MAKINGMilestones based approach, with alerts and notifications on each milestone to optimize the decisions in collaboration with other A-CDM partners.
 - ACCURATE AND TIMELY INFORMATIONInformation can be accessed and updated by each A-CDM partners, with real-time update based on designated rules of operation.
 - ADAPTABLE PROCEDURES & MECHANISMDifferent airport have different procedures, Inalix A-CDM can adapt those local rules but still comply with A-CDM standards.

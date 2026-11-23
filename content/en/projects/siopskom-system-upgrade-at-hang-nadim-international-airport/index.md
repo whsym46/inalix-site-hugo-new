@@ -1,11 +1,10 @@
 ---
 title: SIOPSKOM System Upgrade at Hang Nadim International Airport
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: SIOPSKOM System Upgrade at Hang Nadim International Airport | INALIX
 description: Upgrade of the SIOPSKOM system at Hang Nadim International Airport to enhance system performance, reliability, and operational capabilities in supporting airport communication and operational activities.  The project focuses on modernizing the existing system and improving its functionality to provide more reliable and efficient support for day-to-day airport operations.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

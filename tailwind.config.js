@@ -29,7 +29,7 @@ if (theme.fonts.font_family.secondary) {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./hugo_stats.json"],
-  safelist: [{ pattern: /^swiper-/ }],
+  safelist: [{ pattern: /^swiper-/ }, "page-404", "header-404", "is-404", "nav-transparent"],
   darkMode: "class",
   theme: {
     screens: {

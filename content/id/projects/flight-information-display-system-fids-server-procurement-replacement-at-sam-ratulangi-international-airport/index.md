@@ -1,11 +1,10 @@
 ---
 title: Pengadaan & Penggantian Server Flight Information Display System (FIDS) di Bandara Internasional Sam Ratulangi
 draft: false
-image: /media/Aeronautical-Billing.webp
+image: /images/Aeronautical-Billing.webp
 meta_title: Pengadaan & Penggantian Server Flight Information Display System (FIDS) di Bandara Internasional Sam Ratulangi | INALIX
 description: Pengadaan dan penggantian server Flight Information Display System (FIDS) di Bandara Internasional Sam Ratulangi untuk meningkatkan keandalan, performa, dan keberlangsungan sistem dalam menyajikan informasi penerbangan secara real-time.  Proyek ini berfokus pada peningkatan infrastruktur utama FIDS guna memastikan sistem dapat beroperasi secara stabil serta mendukung layanan informasi penumpang yang andal di lingkungan bandara.
-categories:
-  - Projects
+categories: Information Technology
 tags: []
 author: Inalix
 solution: Airport Solutions

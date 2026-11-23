@@ -17,7 +17,7 @@ solution: Airport Solutions
 date: 2023-08-25
 ---
 
-[![](images/Inalix-ACDM-Implementation-Juanda-Airport.webp)](https://github.com/inalix/website-hugo/blob/test/images/Inalix-ACDM-Implementation-Juanda-Airport.webp)
+![](images/Inalix-ACDM-Implementation-Juanda-Airport.webp)
 
 Inalix takes immense pride in introducing the pioneering Inalix ACDM, a homegrown Airport Collaboration Decision Making application in Indonesia. This marks a significant leap forward for the nation’s aviation industry. Notably, Inalix ACDM will be implemented at two prominent locations, namely Angkasa Pura 1 in Surabaya and Denpasar. This achievement solidifies Inalix’s commitment to revolutionizing airport operations through cutting-edge technology.
 

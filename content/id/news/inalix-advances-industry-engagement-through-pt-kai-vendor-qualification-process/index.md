@@ -1,7 +1,7 @@
 ---
 title: INALIX Memperkuat Hubungan Industri melalui Proses Kualifikasi Vendor PT KAI
 draft: false
-image: images/INALIX Advances Industry Engagement Through PT KAI Vendor Qualification Process.webp
+image: images/inalix-advances-industry-engagement-through-pt-kai-vendor-qualification-process.webp
 meta_title: INALIX Memperkuat Hubungan Industri melalui Proses Kualifikasi Vendor PT KAI | INALIX
 description: INALIX menerima kunjungan Tim Pengadaan PT Kereta Api Indonesia (Persero) dalam rangka proses kualifikasi vendor, sekaligus memperkenalkan kapabilitas teknologi, pengalaman proyek, dan solusi terintegrasi yang dimiliki perusahaan. Kegiatan ini menjadi langkah strategis dalam menjajaki peluang kolaborasi di sektor infrastruktur transportasi Indonesia.
 categories:

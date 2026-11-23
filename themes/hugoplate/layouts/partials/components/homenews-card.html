@@ -10,6 +10,7 @@
   </h4>
   {{ $categories:= .Params.categories }}
   {{ if $categories }}
+    {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
     <ul class="mb-4">
       <li class="mr-4 inline-block">
         <a href="{{ `authors/` | relLangURL }}{{ .Params.Author | urlize }}/">

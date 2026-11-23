@@ -6,31 +6,58 @@ name = "Home"
 pageRef = "/"
 weight = 1
 
-[[main]]
-name = "About"
-pageRef = "/pages/about"
-weight = 2
 
 [[main]]
-name = "History"
-pageRef = "/pages/history"
-weight = 3
+# name = "History"
+# pageRef = "/pages/history"
+# weight = 3
 
 [[main]]
 name = "Products"
-pageRef = "/products"
-weight = 4
+identifier = "products"
+url = "#"
+weight = 3
 
+[[main]]
+name = "Airport Solutions"
+url = "/products/airport-solutions"
+parent = "products"
+weight = 1
+
+[[main]]
+name = "Industrial Solutions"
+url = "/products/industrial-solutions"
+parent = "products"
+weight = 2
 
 [[main]]
 name = "Projects"
+identifier = "projects"
 pageRef = "/projects"
-weight = 5
+url = "/projects"
+weight = 4
 
+[[main]]
+name = "Information Technology"
+url = "/projects/information-technology"
+parent = "projects"
+weight = 1
+
+[[main]]
+name = "Industrial"
+url = "/projects/industrial"
+parent = "projects"
+weight = 2
 
 [[main]]
 name = "News"
 pageRef = "/news"
+weight = 5
+
+
+[[main]]
+name = "About Us"
+pageRef = "/pages/about"
 weight = 6
 
 [[main]]
@@ -43,7 +70,7 @@ weight = 7
 
 # footer menu
 [[footer]]
-name = "About"
+name = "About Us"
 pageRef = "/pages/about"
 weight = 1
 

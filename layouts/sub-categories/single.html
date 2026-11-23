@@ -1,0 +1,44 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section">
+    <div class="container">
+      <div class="row gx-5">
+        <div class="lg:col-12">
+          <div class="row">
+            {{ $currentSlug := .Slug | default .File.TranslationBaseName | urlize | lower }}
+            {{ $pages := slice }}
+            {{ range (where site.RegularPages "Section" "products") }}
+              {{ $sub := .Params.sub_categories }}
+              {{ if $sub }}
+                {{ if not (reflect.IsSlice $sub) }}{{ $sub = slice $sub }}{{ end }}
+                {{ $subNormalized := slice }}
+                {{ range $sub }}
+                  {{ $trimmed := trim . " '" }}
+                  {{ if and (ne $trimmed "") (ne $trimmed "''") }}
+                    {{ $subNormalized = $subNormalized | append ($trimmed | urlize | lower) }}
+                  {{ end }}
+                {{ end }}
+                {{ if in $subNormalized $currentSlug }}
+                  {{ $pages = $pages | append . }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+
+            {{ if eq (len $pages) 0 }}
+              <div class="col-12 text-center py-16">
+                <p class="text-gray-500 dark:text-gray-400 text-lg">{{ T "no_results" | default "No products found in this category." }}</p>
+              </div>
+            {{ else }}
+              {{ range $pages }}
+                <div class="md:col-6 mb-14">
+                  {{ partial "components/product-card" . }}
+                </div>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

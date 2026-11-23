@@ -27,11 +27,48 @@
         <!-- Left: Text & CTA -->
         <div class="w-full lg:w-1/2 text-center lg:text-left">
           {{ $categories := .Params.categories }}
-          {{ if $categories }}
-            {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
-            <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4">
-              {{ range $i, $cat := $categories }}
-                <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="hover:underline">{{ . | humanize }}</a>{{ if ne $i (sub (len $categories) 1) }}, {{ end }}
+          {{ $subCategories := .Params.sub_categories }}
+          {{ $validSub := slice }}
+          {{ if $subCategories }}
+            {{ if not (reflect.IsSlice $subCategories) }}{{ $subCategories = slice $subCategories }}{{ end }}
+            {{ range $subCategories }}
+              {{ $trimmed := trim . " '" }}
+              {{ if and (ne $trimmed "") (ne $trimmed "''") }}
+                {{ $validSub = $validSub | append $trimmed }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ if or $categories (gt (len $validSub) 0) }}
+            <h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-4 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              {{ if $categories }}
+                {{ if not (reflect.IsSlice $categories) }}{{ $categories = slice $categories }}{{ end }}
+                {{ range $i, $cat := $categories }}
+                  {{ if and (ne $cat "") (ne $cat "''") }}
+                    {{ if gt $i 0 }}<span class="text-primary/60">•</span>{{ end }}
+                    <a href="{{ `categories/` | relLangURL }}{{ $cat | urlize | lower }}/" class="hover:underline">{{ $cat | humanize }}</a>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+
+              {{ if and $categories (gt (len $validSub) 0) }}
+                <span class="text-primary/60">•</span>
+              {{ end }}
+
+              {{ if gt (len $validSub) 0 }}
+                {{ range $i, $sub := $validSub }}
+                  {{ if gt $i 0 }}<span class="text-primary/60">•</span>{{ end }}
+                  {{ $subSlug := $sub | urlize | lower }}
+                  {{ $subTitle := $sub | humanize | upper }}
+                  {{ $subPage := site.GetPage (printf "sub-categories/%s" $subSlug) }}
+                  {{ if not $subPage }}
+                    {{ $subPage = site.GetPage (printf "/sub-categories/%s" $subSlug) }}
+                  {{ end }}
+                  {{ if $subPage }}
+                    {{ $subTitle = $subPage.Title | upper }}
+                  {{ end }}
+                  <a href="{{ (printf "sub-categories/%s/" $subSlug) | relLangURL }}" class="hover:underline">{{ $subTitle }}</a>
+                {{ end }}
               {{ end }}
             </h4>
           {{ else }}
